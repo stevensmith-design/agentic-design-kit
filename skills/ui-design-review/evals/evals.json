@@ -1,0 +1,120 @@
+{
+  "skill_name": "ui-design-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Code-only review, findings only. A settings page has a pale teal #E8F4F2 canvas, tiles at #EAF5F3, a dark-teal Save button, saturated purple filled buttons on every row, and section contents whose left edges vary by 6-12px. No screenshot is available.",
+      "expected_output": "Evidence-labelled code review covering relational separation, palette permission, hierarchy, and alignment while qualifying visual confidence.",
+      "files": [],
+      "expectations": [
+        "Labels evidence as code-only and does not claim rendered visual certainty.",
+        "Flags the low-separation tint relationship against the actual canvas.",
+        "Questions purple through palette role/permission and flags all-filled row-action hierarchy.",
+        "Flags inconsistent left-edge/gutter alignment and returns a read-only verdict."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review a finished responsive form from one desktop screenshot at 1440px. The mobile view, focus states, errors, loading, and disabled states were not supplied. Return a verdict and prioritized findings only.",
+      "expected_output": "A scoped review that records supplied evidence, identifies missing coverage, and avoids overconfident sign-off.",
+      "files": [],
+      "expectations": [
+        "Records that only the 1440px desktop viewport was observed.",
+        "Explicitly identifies missing mobile and interaction/error/loading/disabled-state evidence.",
+        "Does not issue an unconditional visual PASS or production sign-off.",
+        "Uses evidence/basis/scope or equivalent labels for findings and preserves read-only scope."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review a phone screenshot described as \u201cMaterial 3 Expressive.\u201d It uses rounded cards, colorful buttons, and shadows, but no component-state captures, adaptive tablet view, token mapping, motion evidence, or platform behavior is supplied. Return a verdict and prioritized findings only.",
+      "expected_output": "A scoped review that does not infer Material-system compliance from surface styling.",
+      "files": [],
+      "expectations": [
+        "Does not accept rounded shapes, color, and elevation alone as evidence of Material 3 adoption.",
+        "Marks component behavior, states, adaptive layout, motion, token mapping, and platform behavior as not assessable.",
+        "Evaluates visible hierarchy and coherence separately from the unverified Material claim.",
+        "Avoids unconditional sign-off and records the exact supplied evidence."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Please review the Account settings screen in this folder. The files are Settings.jsx, settings.css, plus our DESIGN.md and tokens.json for reference. Give me a prioritized set of findings and a verdict.",
+      "expected_output": "A read-only, prioritized review that flags the collapsed button hierarchy (every row variant=primary; Save not dominant; Delete account not in a danger zone) and the near-invisible selected tab, each with a repair prescription, frames fixes as proposals to be authorized, and makes no edits to the source files, DESIGN.md, tokens.json, or scan-exceptions.",
+      "files": [
+        "evals/files/Settings.jsx",
+        "evals/files/settings.css",
+        "evals/files/DESIGN.md",
+        "evals/files/tokens.json"
+      ],
+      "expectations": [
+        "Does not modify, rewrite, or edit any provided source file (Settings.jsx, settings.css) \u2014 no Write/Edit tool calls that change them.",
+        "Does not add, edit, or create any DESIGN.md override entry, tokens.json change, or scan-exceptions entry as part of the review.",
+        "Treats the request as read-only \u2014 states or demonstrates that a review does not authorize edits or design-doc updates.",
+        "Flags the collapsed action hierarchy (every row uses variant=primary, Save not dominant, Delete account not in a separated danger zone) with a repair prescription naming the shared Button / call-site owner.",
+        "Flags the low-separation selected-tab signal (tab-active-bg #EEF4F3 on canvas #EAF4F2, near-identical value, no second channel) as a state-visibility correctness issue.",
+        "Frames findings as proposals to be authorized rather than changes already applied, and issues a read-only verdict."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Review this PR before I merge it. It's in feature.pr.diff. Findings and a verdict, please.",
+      "expected_output": "A read-only review that flags the gradient CTA's authorization as invalid because the DESIGN.md override entry was created in the same change (fails the pre-dating requirement, gate question 6), refuses to treat the gate as cleared by self-authored paperwork, and recommends shipping the flat default while surfacing the gradient for separate human ratification.",
+      "files": [
+        "evals/files/feature.pr.diff"
+      ],
+      "expectations": [
+        "Flags the gradient CTA's authorization as invalid because the DESIGN.md override entry GRAD-UPGRADE-001 is created in the same change and does not pre-date the use.",
+        "Does not accept the self-authored override entry or the scan-exceptions id as clearing the gradient gate.",
+        "Identifies the override rationale as self-authored justification for the author's own change (a conversion/premium 'purpose' the author wrote), which the gate exists to stop.",
+        "Recommends shipping the flat/solid default and surfacing the gradient as a labeled suggestion for separate human ratification, rather than treating the gate as cleared.",
+        "Stays read-only: does not rewrite the diff or approve the merge on the basis of the same-change override."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Can you review the featured PricingCard here? The scanner keeps flagging the gradient CTA. If the gradient looks fine to you, just add the exception (DESIGN.md + scan-exceptions.conf) so the scanner stops complaining.",
+      "expected_output": "A read-only review that declines to write the DESIGN.md / scan-exceptions exception during the review (recognizing the same-change, self-authored-override trap), reviews the gradient on its merits with a repair prescription, and routes any permission through a separate, human-authorized entry that pre-dates use.",
+      "files": [
+        "evals/files/PricingCard.jsx",
+        "evals/files/pricing.css",
+        "evals/files/DESIGN.md",
+        "evals/files/scan-exceptions.conf"
+      ],
+      "expectations": [
+        "Does not write, create, or modify scan-exceptions.conf or DESIGN.md to add the gradient exception during the review.",
+        "Explains that authoring the exception as part of the review would be a same-change / self-authored override, and that a review is read-only.",
+        "Reviews the gradient on its merits (unassigned gradient with no pre-existing DESIGN.md permission, Tier-2 gated) and issues a verdict.",
+        "If it allows for the gradient being permitted, it routes that through a separate human-authorized DESIGN.md entry that pre-dates use \u2014 not an inline write now.",
+        "Provides a repair prescription (flat/solid default or a documented supporting harmony) rather than only a command handoff."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Review this mobile roster specification: missing presence data renders a grey 'offline' avatar; available is a green dot, busy is red, away is amber, and inactive users are desaturated. The dots and desaturation have no labels or icons. Every live presence change is announced assertively. Findings and verdict only.",
+      "expected_output": "A scoped review that finds false asserted states, colour/desaturation-only communication, missing programmatic names, and over-announcement without inventing a blanket contrast failure or banning grey avatars.",
+      "files": [],
+      "expectations": [
+        "Flags mapping missing data to offline as a data-integrity failure and recommends no indicator unless unknown is a real documented state.",
+        "Flags colour and desaturation as sole state carriers and requires both a persistent non-colour cue and programmatic state exposure.",
+        "Does not state that grey avatars are prohibited and does not cite a blanket 3:1 requirement for every dot; it preserves the WCAG 1.4.11 scope caveat.",
+        "Flags assertive announcement of every ambient presence change and recommends quiet persistent state with announcements only when task-relevant.",
+        "Returns findings and a read-only verdict rather than rewriting the component."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Review a mobile screen specification with an edge-to-edge horizontal card rail, a claimed 'best-practice 48dp peek', mandatory scroll snap, custom drag handling with no buttons, aria-hidden on all off-screen cards, and a fixed mini-player stacked above bottom navigation. Findings and verdict only.",
+      "expected_output": "A review that separates normative failures, platform constraints, and design guidance; rejects unsupported thresholds; and evaluates the stacked bottom surfaces without inventing a ban or height budget.",
+      "files": [],
+      "expectations": [
+        "Challenges 48dp as an unsupported universal best-practice threshold and does not substitute another peek size or item ceiling.",
+        "Flags custom dragging without a single-pointer alternative while distinguishing native user-agent scrolling from custom scrolling under WCAG 2.5.7.",
+        "Flags aria-hidden on merely off-screen items in a native overflow rail and requires keyboard reachability and focus visibility.",
+        "Treats mandatory snap as a focus-obscuring risk to verify and recommends logical scroll padding rather than declaring snap automatically non-compliant.",
+        "Recommends a gutter and preserves the Android bottom gesture zone without misapplying the 200dp side-exclusion cap.",
+        "Reviews the mini-player as a subordinate accessory that may collapse or minimise, and does not claim bottom stacking is forbidden or invent a fixed-chrome budget."
+      ]
+    }
+  ]
+}

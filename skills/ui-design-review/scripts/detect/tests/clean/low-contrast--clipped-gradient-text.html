@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clipped gradient text is not transparent text</title>
+<!-- The ink is the clipped background, not `color: transparent`. Reading the transparent colour
+     reported 1.00:1 on an upstream classic landing demo. Gradient text is scan.sh's rule. -->
+<style>
+  body { background: #f7f6f2; color: #1d1d1b; font-family: Georgia, serif; line-height: 1.5; }
+  .mark {
+    font-size: 28px; font-weight: 700;
+    background: linear-gradient(90deg, #1b2a3a, #23402e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+</style>
+</head>
+<body>
+  <p class="mark">Harbour timetable</p>
+  <p>Sailings run every forty minutes from the north quay.</p>
+</body>
+</html>

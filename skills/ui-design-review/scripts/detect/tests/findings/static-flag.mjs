@@ -1,0 +1,1 @@
+console.log(JSON.stringify({ files: 1, findings: [{ rule: 'transition-all', severity: 'warning', family: 'motion', file: 'a.css', line: 3, snippet: 'transition: all .2s', message: 'm', fix: 'f' }] })); process.exit(1);

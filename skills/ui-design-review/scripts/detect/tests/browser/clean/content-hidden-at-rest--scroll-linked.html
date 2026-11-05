@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixture</title>
+<style>
+html{font-family:Georgia,serif;color:#1f1f1c;background:#f7f6f2;line-height:1.55}
+body{margin:0}
+main{max-width:68ch;margin:0 auto;padding:48px 24px}
+.spacer{height:1100px}
+.fade{opacity:0}
+</style>
+</head>
+<body>
+<main>
+<h1>Field season</h1>
+<p>Field notes are kept in the shared drive and reviewed every Thursday by the whole crew.</p>
+<div class="spacer"></div>
+<section class="fade"><h2>Spring pass</h2><p>Each plot gets a photograph from the same post, a count of flowering stems and a short note on grazing pressure.</p><p>Field notes are kept in the shared drive and reviewed every Thursday by the whole crew.</p><p>Each plot gets a photograph from the same post, a count of flowering stems and a short note on grazing pressure.</p></section>
+<div class="spacer"></div>
+</main>
+<script>const s = document.querySelector('.fade');
+const set = () => { const r = s.getBoundingClientRect(); s.style.opacity = String(Math.max(0, Math.min(1, (innerHeight * 0.9 - r.top) / (innerHeight * 0.3)))); };
+addEventListener('scroll', set, { passive: true }); set();</script>
+</body>
+</html>

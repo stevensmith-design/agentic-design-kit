@@ -1,0 +1,13 @@
+/* FIXTURE (pass, with a warning): --color-primary, --bg-app and --text-body are each
+   consumed via var(). --radius-card is declared and nothing resolves it — an orphan.
+   It inflates the apparent system and the next author reads it as sanctioned
+   vocabulary, so a retired treatment quietly returns. WARN, never FAIL: no
+   relationship is broken, so it must not change the exit code. */
+:root{
+  --color-primary:#0F766E;
+  --bg-app:#EEF3F1;
+  --text-body:16px;
+  --radius-card:12px;
+}
+.app{ background:var(--bg-app); font-size:var(--text-body); }
+.btn{ background:var(--color-primary); }

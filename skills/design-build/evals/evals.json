@@ -1,0 +1,292 @@
+{
+  "skill_name": "design-build",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a marketing landing page for Tessellate, a scheduling tool for touring musicians. Single self-contained HTML file. The design system is in DESIGN.md and tokens.json — follow it.",
+      "expected_output": "A built page, rendered and looked at, with the post-build review run unprompted and its findings either repaired in one pass or reported as outstanding.",
+      "files": [],
+      "expectations": [
+        "Reads DESIGN.md and tokens.json in full before writing markup.",
+        "Names the direction source as system-led (DESIGN.md and tokens.json exist) and states the structural picks in the system's vocabulary, without introducing a starter.",
+        "Writes a short direction recap before implementation without using distance or records to select the aesthetic.",
+        "Renders the artifact at desktop, 768 and 375px and views the rendered image, not only the source or scanner output.",
+        "Writes the stamp and the log entry, and check-records.mjs is clean.",
+        "Invokes /design-review in a fresh context and reports the state it returned, never its own verdict."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build a landing page for Kilnwork, a marketplace for studio ceramics. There is no DESIGN.md in this project yet.",
+      "expected_output": "The missing design system is created first via ui-design-system's Create mode, and only then is the page built against it.",
+      "files": [],
+      "expectations": [
+        "Names the direction source: no brief detail, references or system, so the route is starter-led, and /starter-directions asks its questions and recommends before any direction is committed.",
+        "Notices the design system is absent and does not proceed straight to building a page.",
+        "Applies ui-design-system in Create mode, working through Intent and Principles before token values.",
+        "Does not invent brand facts to fill gaps; asks or records them as open questions instead.",
+        "Only builds the page once the system exists, and then builds against it."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build a pricing page for Halyard. DESIGN.md here describes Northwind Analytics — a different product, with its own palette and brand rationale.",
+      "expected_output": "The mismatch is raised and resolved before the page is built, rather than the page being built on another product's system and the conflict mentioned afterwards.",
+      "files": [],
+      "expectations": [
+        "Detects that the installed design system belongs to a different product.",
+        "Stops and raises the conflict rather than building the page and noting it later.",
+        "Does not silently edit DESIGN.md or tokens.json to fit the new product.",
+        "Names creating a fitting system as the resolution, not proceeding with the mismatched one."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Add a billing settings screen to this app. It already has an account screen, a members screen and a notifications screen.",
+      "expected_output": "The new screen is checked for consistency against the existing screens, not only against its own correctness.",
+      "files": [],
+      "expectations": [
+        "Reads the existing screens before building, to match component vocabulary rather than inventing a parallel one.",
+        "Counts component implementations and flags a second implementation of anything that already exists.",
+        "Checks the new screen's spacing, text roles and elevation against the established scales, not only against the token file.",
+        "Treats a divergence from the other screens as a finding even when the new screen is internally consistent."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Build the first product page for Fieldnote. There is no DESIGN.md or tokens.json, but brand.json contains a valid machine-readable visual brand.",
+      "expected_output": "The machine-readable brand is routed through brand-to-system to derive and strictly validate the design-system contract before the page is built.",
+      "files": [],
+      "expectations": [
+        "Notices the machine-readable brand and invokes brand-to-system rather than retyping it through ui-design-system Create.",
+        "Derives both tokens.json and a four-layer DESIGN.md before implementation begins.",
+        "Runs strict token validation on the derived system and does not describe that mechanical pass as a visual review.",
+        "Still commits to a direction before system derivation and renders and delegates the finished implementation for independent review."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Build my portfolio homepage. Brief: I'm a sound designer for games; the site should feel like an instrument at rest — a near-black ground, a field of faint points that drifts toward the cursor, and one warm glow behind the work samples. Unusual type is welcome; I want a unique, authored result, not something that looks like a template. References: (1) a generative-art gallery — role: surface and atmosphere (point field, dark ground); (2) a museum exhibition microsite — role: structure (one work per screen, long captions); (3) a synth manufacturer's product page — role: type and voice (monospaced labels, terse copy). Counter-reference: any glassmorphism SaaS landing page.",
+      "expected_output": "A reference-led build: the references shape a content-connected contract, no starter or structure file is opened, and the builder sees only its assigned sources.",
+      "files": [],
+      "expectations": [
+        "Names the direction source as reference-led before opening any catalogue or structure file, while opening the supplied references directly.",
+        "Invokes /direction-study single-contract mode: the references are studied directly before the visual thesis forms.",
+        "The build context receives the frozen contract, real assets and the assigned original references themselves — never only source IDs or summaries.",
+        "Treatments the contract evidences are kept rather than flattened by generic anti-pattern guidance; contrast and reduced-motion still hold.",
+        "Every major device traces to the brief, a finding ID, content behaviour or a functional need (no orphan motif).",
+        "/design-review runs the reference delivery and similarity lens in a fresh context against the original references."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Make me a portfolio site. I don't have a brand or any references — you decide what it should look like.",
+      "expected_output": "A starter-led build: with no usable brief, references or system and the direction explicitly delegated, /starter-directions offers two or three starters, or a custom direction is built from the brief.",
+      "files": [],
+      "expectations": [
+        "Names the direction source as starter-led, citing the absence of a brief, references and a system and the explicit delegation.",
+        "Invokes /starter-directions, which recommends two or three and waits, rather than picking silently.",
+        "Commits to exactly one direction — a selected starter or a custom direction — stated out loud with its structure and parts; going custom says what it gives up.",
+        "Opens the structure library only after the direction leaves page structure open, and then only the picked files.",
+        "Does not invent brand facts; anything the design needs that was not given is asked or recorded as provisional."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Build the landing page for Plumb, a model-evaluation API. Direction we have approved: one precision instrument drawn in SVG — a calibrated gauge with leader-line callouts in small uppercase mono — sitting alone in dead space on a near-black violet ground; lowercase classical-serif headlines with one accent-coloured verb; uppercase mono labels everywhere else; hairline cards; a hero with that single object, then a meter strip and a three-stat row. Only the instrument may carry light. Everything is static — no pulsing or ambient animation. This feels close to your Orrery starter — use it if it genuinely fits.",
+      "expected_output": "A named-starter match: the direction matches Orrery on four of five dimensions, and the starter is applied only within an explicitly stated boundary, with motion excluded.",
+      "files": [],
+      "expectations": [
+        "Runs the match gate because the user named Orrery, loading only that starter — not surveying the other starters.",
+        "Records evidence for each of the five dimensions rather than asserting a vibe-level resemblance.",
+        "Finds a match on composition, typography roles, surface and colour behaviour, and apparatus family, and names motion as non-matching (the brief forbids ambient animation).",
+        "States the boundary before building: what the starter may inform, that its motion is excluded, and that the approved direction overrides the starter wherever they differ.",
+        "Records route named-starter-match with distance suspended in the stamp and the log."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Build a landing page for Ironside, a boutique strength gym. We like a dark background with an orange accent. Our references: a sports-magazine feature with a long editorial scroll of member stories and full-bleed photography, heavy condensed uppercase grotesk headlines, and scroll-driven horizontal photo galleries.",
+      "expected_output": "No starter is assigned: a dark ground and a warm accent are resemblance, not a match, so the work proceeds reference-led.",
+      "files": [],
+      "expectations": [
+        "Names the direction source as reference-led.",
+        "Does not search the starters for a match (none was named).",
+        "Freezes a contract through /direction-study single-contract mode; the builder receives only the references assigned to that contract.",
+        "Builds from the contract's structure, type and motion grammar rather than from any starter or library structure."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Earlier in this conversation you produced and I accepted a reference synthesis for our field-recording archive: direction — a quiet index whose hierarchy comes from tabular alignment and one oversized waveform per entry; exclusion — no cards, no hero imagery; ambition ceiling — the waveform at full bleed on the entry page only; signature moves — waveform as navigation scrubber, mono timestamps as the only accent. Now build it.",
+      "expected_output": "Implementation follows the accepted synthesis as the locked direction and never opens a starter or the structure library.",
+      "files": [],
+      "expectations": [
+        "Treats the accepted synthesis as human-approved direction — the highest precedence source.",
+        "Does not open /starter-directions or the structure library at any point, including during implementation and the stamp.",
+        "Implements the stated signature moves and honours the exclusion sentence (no cards, no hero imagery).",
+        "Spends the ambition ceiling exactly where the synthesis placed it and nowhere else.",
+        "Records the structure as own:<label> and distance as suspended in the stamp."
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Add a new 'Stories' marketing page to our site. DESIGN.md and tokens.json are approved and the home, pricing and about pages have shipped. Make it feel fresh.",
+      "expected_output": "A system-led build: the approved system and shipped surfaces own the direction, and no starter is introduced; the distance test is inverted.",
+      "files": [],
+      "expectations": [
+        "Names the direction source as system-led, citing DESIGN.md, tokens.json and the shipped surfaces.",
+        "Does not select or overlay a starter; 'make it feel fresh' is not a request for a new direction.",
+        "Finds freshness inside the range the system licenses and reuses the shipped pages' component vocabulary, nav and footer.",
+        "Logs system: locked and distance: inverted; check-distance.mjs confirms the axes, nav and footer match the system."
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Create three different concepts for our homepage from these references, then we'll pick one.",
+      "expected_output": "An exploration request is routed to /direction-study instead of being built: the build does not start, and no concept is picked silently.",
+      "files": [],
+      "expectations": [
+        "Recognises an exploration request at step 2a and invokes /direction-study.",
+        "Does not create or reconcile the production design system, build a production page or start the delegated review.",
+        "Reports STUDY — DECISION REQUIRED as the study's state rather than any build state.",
+        "Resumes /design-build only after the person selects, using the selected contract plus accepted amendments as the human-approved direction."
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Earlier you ran a direction study; I selected direction B and accepted amendment 01 (less saturation, keep the scroll behaviour). Build it.",
+      "expected_output": "The selected contract and its accepted amendment become the human-approved direction for the production build.",
+      "files": [],
+      "expectations": [
+        "Reads B's base contract and amendment 01 together, and treats them as the highest-precedence direction.",
+        "Does not reopen Reserved or Killed directions or salvage fragments from them.",
+        "Encodes the direction into the system and proceeds through build, render and delegated review as normal.",
+        "Does not open /starter-directions or the structure library at any point."
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "We have a detailed brief for a co-working space's site but no visual direction at all. Build the homepage.",
+      "expected_output": "The brief-originated route: the agent develops original directions from the audience, content and desired experience; it does not open starters by default.",
+      "files": [],
+      "expectations": [
+        "Names the route as brief-originated.",
+        "Runs /direction-study from the brief without requiring a catalogue choice.",
+        "Loads no starter, structure file or kit example unless the person explicitly asks for ready-made directions or hands off the choice."
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "No brand, no references — just make me a nice site for my bakery. You choose everything.",
+      "expected_output": "The delegated starter-led route: the agent may choose, and reports which kind of direction resulted.",
+      "files": [],
+      "expectations": [
+        "Routes as starter-led (sparse brief, delegated).",
+        "States the origin of the chosen direction: brief-originated custom or starter-derived.",
+        "Treats a starter it chose as a proposed starting point, not silent influence."
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Recreate this landing page (attached) as closely as possible for our product — we want it to look like that.",
+      "expected_output": "reference-directed only because the person explicitly asked; the contract records what may be followed and what may not transfer.",
+      "files": [],
+      "expectations": [
+        "Routes as reference-directed and quotes the explicit request.",
+        "Records the followed qualities and the non-transferable elements (assets, copy, logos, identity marks).",
+        "The similarity lens checks the recorded limits."
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "Add a settings screen for notification preferences to our app. DESIGN.md, tokens.json and the account and billing screens exist.",
+      "expected_output": "The product-interface route, built to the production bar by design-build itself with no other build skill invoked.",
+      "files": [],
+      "expectations": [
+        "Names the route as product-interface (and the system as locked).",
+        "Opens no page structure, part or starter: a settings screen has no hero.",
+        "Builds every state, keyboard path and the empty, loading and error cases; reuses the existing screens' components.",
+        "Renders at desktop, 768 and 375px and delegates the review."
+      ]
+    },
+    {
+      "id": 18,
+      "prompt": "Build me a date-range picker component for our booking flow.",
+      "expected_output": "Component scope: the eight states and a state sheet, no page structure, distance n/a.",
+      "files": [],
+      "expectations": [
+        "Recognises component scope and opens component-scope.md.",
+        "Ships default, hover, focus-visible, active, disabled, loading, error and success, or says why one cannot occur.",
+        "Ships a state sheet pairing each pseudo-class with a forced .is-* class.",
+        "Logs scope component, structure none, distance n/a."
+      ]
+    },
+    {
+      "id": 19,
+      "prompt": "Redesign our marketing site — home, pricing and about. Keep the copy; it just looks dated.",
+      "expected_output": "A non-destructive multi-page redesign: the system is written first, then each page is redesigned against it with diversification inverted.",
+      "files": [],
+      "expectations": [
+        "Lists the files first and deletes nothing without a confirmed file-level plan.",
+        "Reads all three pages and says what they share before changing any.",
+        "Writes the system first through /ui-design-system (Extract or Reconcile).",
+        "Redesigns page by page with distance inverted: shared nav, footer, ground, display and accent; copy intent, IA and primary actions kept."
+      ]
+    },
+    {
+      "id": 20,
+      "prompt": "Same brief as yesterday's landing page for Kettle & Co — build another version so we can compare.",
+      "expected_output": "A second build from one brief that differs from the first on at least one axis and uses another structure, stated before code and checked.",
+      "files": [],
+      "expectations": [
+        "Reads the build log and names the previous build's structure and axes.",
+        "States the distance in the preview: which axis differs, which structure is new, which part settings changed.",
+        "check-distance.mjs is clean on the new entry.",
+        "Does not change direction source or invent a new brief to get the difference."
+      ]
+    },
+    {
+      "id": 21,
+      "prompt": "The page is built. Your strict token validator exited 0 before the last CSS edit. Its output said PASS WITH WARNINGS, including three orphan tokens and one SKIP. scan.sh and the browser detector have not run since that edit. Write the final build report.",
+      "expected_output": "The final report refuses to reuse or clean up stale verification language: it reruns the validator and whole floor after the final edit and preserves every final warning, skip and unverified result.",
+      "files": [],
+      "expectations": [
+        "Reruns the strict validator, scanner, detector, records and distance checks against the final artifact rather than citing the earlier run.",
+        "Reports PASS WITH WARNINGS exactly when warnings remain; exit 0 is not paraphrased as clean or PASS without qualification.",
+        "Names every WARN, SKIP and UNVERIFIED result and does not claim the corresponding property holds.",
+        "Keeps the state DRAFT — REVIEW REQUIRED until an independent design-review run completes."
+      ]
+    },
+    {
+      "id": 22,
+      "prompt": "Build a small offline field app with Add to route, Retry sync, Download pack and loading states. Use Inter if it is available.",
+      "expected_output": "The build ships honest fonts, executable named actions and a loading state that preserves the final workspace geometry, with each interaction exercised in a browser.",
+      "files": [],
+      "expectations": [
+        "Loads every named font from an available source or uses an honest system stack in both tokens and CSS.",
+        "Exercises every primary, secondary, recovery and state-transition action and records its observable result.",
+        "Does not treat focus movement, label-only changes or announcements without a corresponding object/state change as action completion.",
+        "For an initial load, mirrors the real list/detail hierarchy instead of replacing it with generic blank rectangles.",
+        "For a refresh over available offline content, keeps known values, notes and controls mounted and adds an in-flow busy status instead of substituting placeholders.",
+        "Marks out-of-scope destinations unavailable rather than shipping live-looking dead controls."
+      ]
+    },
+    {
+      "id": 23,
+      "prompt": "Build a master-detail review queue. The first record has full evidence; the other records have summary data only. Include loading and allow selection of every row.",
+      "expected_output": "Loading preserves the final major regions, and changing selection updates or replaces the complete dependent detail so records can never be mixed.",
+      "files": [],
+      "expectations": [
+        "Renders loading and loaded at the same viewport and records the placeholder-to-final correspondence for every major region.",
+        "Inventories all fields dependent on the selected record, including title, status, measurements, evidence, notes and actions.",
+        "Exercises at least one alternate selection in the browser.",
+        "When full detail is unavailable, replaces the entire dependent region with a limitation of the provided content that cannot be mistaken for a record fact.",
+        "Captures every required preview state at desktop, 768px and 375px rather than using default-only width coverage.",
+        "Seeds persisted state before exercising preview-mode actions and proves their visible labels match the actual transition.",
+        "Measures every visible control against the project minimum and reconciles local system values with the frozen direction.",
+        "Never leaves one record's heading above another record's evidence or actions."
+      ]
+    }
+  ]
+}

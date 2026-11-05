@@ -1,0 +1,42 @@
+{
+  "skill_name": "brand-to-system",
+  "note": "Behaviour definitions for the brand-input boundary, successful derivation, and explicit refusal cases. Model-graded execution is harness scope; the deterministic derivation is covered by tests/run.sh.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have a machine-readable visual brand with a terracotta action hue, warm-tinted neutrals, white on-anchor text, a 1.25 type ratio, and a specific aesthetic commitment. Turn it into tokens.json and a four-layer DESIGN.md, then validate it.",
+      "expected_output": "Routes to brand-to-system, derives rather than improvises the token graph, records measured Layer-4 relationships, and requires a strict validator pass.",
+      "files": [],
+      "expectations": [
+        "Uses brand-to-system because a machine-readable visual brand is the input, rather than authoring a system from intent alone.",
+        "Derives the primary against its on-anchor label before dependent tokens commit.",
+        "Produces tokens.json and a four-layer DESIGN.md whose Layer 4 contains computed relationships.",
+        "Runs the sibling validate-tokens.py with --strict and reports PASS as a floor rather than visual sign-off.",
+        "Hands visual quality to rendered review instead of claiming that mathematical coherence proves the brand is good."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a design system for a new product. We have no brand, palette, typography, or visual guidelines yet—only a product brief.",
+      "expected_output": "Does not force brand-to-system without a brand artifact and routes to ui-design-system Create mode.",
+      "files": [],
+      "expectations": [
+        "Recognises that there is no machine-readable visual brand to derive from.",
+        "Routes to ui-design-system Create mode rather than inventing a brand artifact silently.",
+        "Does not claim that a product brief alone is sufficient input for deterministic brand derivation."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Derive our system from this brand JSON. It requires a dark ground and neutral chroma 0.12. Please make reasonable guesses if the tool does not support it.",
+      "expected_output": "Refuses unsupported dark-ground and out-of-band neutral derivation rather than guessing, and names the required next capability.",
+      "files": [],
+      "expectations": [
+        "Refuses dark-ground derivation because the current deriver only supports light grounds.",
+        "Flags neutral chroma 0.12 as outside the accepted 0.002–0.08 band.",
+        "Does not silently clamp, invert or substitute the supplied brand values.",
+        "Explains that the missing dark-ground derivation must be implemented or the brand input amended before generation."
+      ]
+    }
+  ]
+}

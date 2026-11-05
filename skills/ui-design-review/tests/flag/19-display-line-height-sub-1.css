@@ -1,0 +1,6 @@
+/* Display leading below 1.0 — cap-tops of line N+1 collide with line N on wrap.
+   Looks tight in a single-line mock, breaks the moment the headline wraps. */
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.95;
+}

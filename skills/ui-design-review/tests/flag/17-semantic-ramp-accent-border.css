@@ -1,0 +1,12 @@
+/* Semantic-palette leak: the meaning-carrying index ramp used as a decorative
+   accent border on a card. Encodes only position (which phase), not real status. */
+.roadmap-phase-card {
+  background: #ffffff;
+  border-top: 3px solid var(--index-a);
+}
+.roadmap-phase-card--two {
+  border-top: 3px solid var(--index-b);
+}
+.roadmap-phase-card--three {
+  border-top: 3px solid var(--index-c);
+}

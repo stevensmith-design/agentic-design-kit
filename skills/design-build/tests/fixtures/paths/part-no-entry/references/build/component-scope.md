@@ -1,0 +1,3 @@
+# Component scope
+
+Eight states.

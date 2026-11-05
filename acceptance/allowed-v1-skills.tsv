@@ -1,0 +1,12 @@
+# name	role
+brand-to-system	design-producer
+design-build	design-orchestrator
+design-review	design-orchestrator
+direction-study	design-orchestrator
+hallmark	design-producer
+ia-review	design-review
+impeccable	design-producer
+impeccable-review	design-review
+ui-design-principles	design-guardrail
+ui-design-review	design-review
+ui-design-system	design-producer

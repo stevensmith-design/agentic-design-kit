@@ -1,0 +1,17 @@
+/* design-build stamp
+   date: 2026-10-14
+   route: starter-led
+   direction: starter: fixture
+   scope: page
+   structure: long-read
+   fingerprint: headings=above body=single-column dividers=space buttons=filled images=none reveal=none
+   part.hero: hero-of-heroes a=b
+   part.nav: minimal-pair position=top
+   part.footer: single-line rule=hairline
+   axes: ground=light display=serif accent=orange
+   system: open
+   enrichment: type
+   distance: applied
+*/
+
+:root { --ink: #222; }

@@ -1,0 +1,78 @@
+{
+  "skill_name": "ui-design-system",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Perform a read-only design-system coherence audit. The product brand is dark teal. tokens.json declares a saturated purple support accent but DESIGN.md gives it no palette job. A decorative pale-teal tile is 1.01:1 against the tinted canvas. All WCAG text pairs pass. Describe required checks, verdict structure, and likely findings; do not edit anything.",
+      "expected_output": "A validator-plus-judgment audit that catches role permission and relational separation without treating text contrast as sufficient.",
+      "files": [],
+      "expectations": [
+        "Runs or requires the token validator before the judgment layer.",
+        "Flags the support accent's missing declared palette job without categorically banning purple.",
+        "Flags the 1.01:1 tint-on-tint relationship even though text contrast passes.",
+        "Includes the eleven-axis and five-question coherence outputs and remains read-only."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit system drift in an app whose DESIGN.md says 12px cards, an 8px spacing scale, and neutral elevation. Shipped code contains 20px cards, 14px gaps, tinted shadows, and three button heights. Explain the workflow and report format only; do not modify files.",
+      "expected_output": "A validator-first drift workflow with precise expected-vs-found reporting and promotion/override governance.",
+      "files": [],
+      "expectations": [
+        "Validates the token system itself before comparing shipped code.",
+        "Reports file/value evidence as token expected versus value found.",
+        "Uses code-side scanning for per-file drift while keeping system-level ownership.",
+        "Distinguishes intentional logged overrides from drift and does not edit during the audit."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Define the durable design-system specification for our reusable ApprovalButton component. It has primary and secondary variants, can represent a consequential send action, loads asynchronously, appears in English and Japanese, and is used in a narrow review panel and a full-page approval flow. Do not write React code.",
+      "expected_output": "A component specification that settles use, variants, states, content, adaptive behavior, accessibility, tokens, composition and validation without duplicating framework props.",
+      "files": [],
+      "expectations": [
+        "Uses the component specification template because the component is reusable, consequential, stateful and cross-context.",
+        "Defines use and do-not-use boundaries and distinguishes primary/secondary hierarchy from the consequential send behavior.",
+        "Covers applicable interaction states, async duplicate prevention, failure recovery and consequential confirmation or approval behavior.",
+        "Includes Japanese/English label stress and narrow/full-page adaptive structure without prescribing truncation of the decision label.",
+        "Names semantic, focus, target-size, contrast, announcement and reduced-motion accessibility contracts.",
+        "Maps token relationships to the existing system, names a canonical implementation and asks for representative validation evidence rather than rewriting code props as documentation."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Create a greenfield design system. The final strict validator exits 0 but reports PASS WITH WARNINGS: --radius-md and --duration-normal are orphan tokens, and selection-vs-action is SKIP. Can the system be handed to the screen builder?",
+      "expected_output": "The Create run remains incomplete until final warnings are resolved or explicitly justified and the exact validator coverage is reported.",
+      "files": [],
+      "expectations": [
+        "Does not equate exit 0 with a clean greenfield system or report an unqualified PASS.",
+        "Consumes or retires both orphan tokens, or reserves each with a named future consumer and reason in Layer 4.",
+        "Resolves the skipped selection relationship when selection is part of the system; otherwise records why it is not applicable.",
+        "Reruns --strict after the final token or CSS edit and reports the exact verdict, counts, warnings and skips before handoff."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Create visual brand guidelines and a reusable design system from the selected direction and references. Use your professional judgement for open choices. The brand is dark with several purposeful accents.",
+      "expected_output": "A project-specific visual guide and linked implementation system, preserving the selected direction and documenting delegated choices.",
+      "files": [],
+      "expectations": [
+        "Uses references/brand-guidelines.md and keeps actual approved design sources visible.",
+        "Authors visual guidance with proposed/approved status, colour/type/image roles and application examples.",
+        "Uses Create for this dark multi-accent direction; does not force it into the light-ground deriver.",
+        "Produces linked BRAND.md, four-layer DESIGN.md and tokens.json within the requested scope; validates final token relationships and inspects rendered applications."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Use our existing approved brand guidelines, DESIGN.md and component library for a new account page. Review consistency, but do not change the system.",
+      "expected_output": "A build/review governed by the existing brand and components with read-only drift findings.",
+      "files": [],
+      "expectations": [
+        "Consumes approved guidance and components rather than authoring a new brand.",
+        "Names deviations with evidence and preserves approved source files.",
+        "Keeps token checks and rendered judgement distinct; does not equate validator success with visual quality."
+      ]
+    }
+  ]
+}

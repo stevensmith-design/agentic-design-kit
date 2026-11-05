@@ -1,0 +1,4 @@
+/* False-positive guard: an inline :root block declaring spacing tokens is a
+   declaration, not a bypass, even though it contains px literals. */
+:root { --space-4: 24px; --space-5: 30px; --padding-card: 16px; }
+.card { padding: var(--padding-card); }

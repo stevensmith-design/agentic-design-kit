@@ -1,0 +1,2 @@
+/* RISK-only: advisory. Must exit 1 in default mode and exit 0 under --tiered. */
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--color-focus); }

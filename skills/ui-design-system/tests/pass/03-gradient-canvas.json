@@ -1,0 +1,10 @@
+{
+  "color": {
+    "primary": "#0F766E", "onPrimary": "#FFFFFF",
+    "canvas": "linear-gradient(180deg,#EAF7F5 0%,#DFF5F0 100%)",
+    "surface": "#FFFFFF", "border": "#E2E9E7",
+    "textPrimary": "#1B2B2A", "textMuted": "#4C5C58"
+  },
+  "type": { "h1": "30px", "h2": "22px", "body": "16px" },
+  "radius": { "sm": "8px", "md": "16px" }
+}

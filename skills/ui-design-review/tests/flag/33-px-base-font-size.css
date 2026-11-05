@@ -1,0 +1,5 @@
+/* rules.md → Typography: rem/em, never a px base. A px root/body size defeats the
+   browser and OS font-size setting for every relative size derived from it. */
+html { font-size: 16px; }
+body { font-size: 15px; line-height: 1.55; color: var(--color-ink); }
+.card__title { font-size: 1.25rem; }

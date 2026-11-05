@@ -1,0 +1,6 @@
+/* FIXTURE (fail): implementation CSS diverges from tokens.json — body 14 vs 16 */
+:root{
+  --color-primary:#1E9385;
+  --bg-app:#EEF3F1;
+  --text-body:14px;
+}

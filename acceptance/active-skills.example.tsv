@@ -1,0 +1,6 @@
+# name	status	role	resolved_absolute_origin	ownership
+design-build	loaded	design-orchestrator	/absolute/path/to/fixture/.claude/skills/design-build/SKILL.md	packaged
+ui-design-principles	loaded	design-guardrail	/absolute/path/to/fixture/.claude/skills/ui-design-principles/SKILL.md	packaged
+direction-study	loaded	design-orchestrator	/absolute/path/to/fixture/.claude/skills/direction-study/SKILL.md	packaged
+starter-directions	available	design-producer	/absolute/path/to/fixture/.claude/skills/starter-directions/SKILL.md	packaged
+frontend-design	available	design-producer	/absolute/user/.claude/skills/frontend-design/SKILL.md	external

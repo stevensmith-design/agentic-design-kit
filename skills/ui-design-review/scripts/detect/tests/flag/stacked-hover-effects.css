@@ -1,0 +1,2 @@
+.card { background: #f7f6f2; transition: transform 160ms ease-out, box-shadow 160ms ease-out, background-color 160ms ease-out; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(31, 31, 28, 0.12); background-color: #efe9df; }

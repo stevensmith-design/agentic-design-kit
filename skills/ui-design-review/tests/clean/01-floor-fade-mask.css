@@ -1,0 +1,6 @@
+.scroll-mask {
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
+}
+.card-cta-floor {
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+}

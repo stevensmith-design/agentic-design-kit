@@ -1,0 +1,48 @@
+diff --git a/src/components/UpgradeCard.jsx b/src/components/UpgradeCard.jsx
+index 3a1f2b0..9c4e7d1 100644
+--- a/src/components/UpgradeCard.jsx
++++ b/src/components/UpgradeCard.jsx
+@@ -12,7 +12,7 @@ export function UpgradeCard({ plan }) {
+       <p className="upgrade__copy">Unlock unlimited projects and priority support.</p>
+-      <button className="upgrade__cta">Upgrade to Pro</button>
++      <button className="upgrade__cta upgrade__cta--gradient">Upgrade to Pro</button>
+     </div>
+   );
+ }
+diff --git a/src/components/upgrade.css b/src/components/upgrade.css
+index 7b2c1a4..e5d9f60 100644
+--- a/src/components/upgrade.css
++++ b/src/components/upgrade.css
+@@ -20,6 +20,12 @@
+   font-weight: 600;
+   background: var(--primary);
+   color: #fff;
+ }
++
++/* scan-exceptions id: GRAD-UPGRADE-001 */
++.upgrade__cta--gradient {
++  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
++  color: #fff;
++}
+diff --git a/DESIGN.md b/DESIGN.md
+index 1c2d3e4..2f3a4b5 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -40,3 +40,9 @@ Routine actions use the solid `--primary` fill.
+
+ ## Override log
+
+ _(none)_
++
++### GRAD-UPGRADE-001 — gradient on the Upgrade CTA
++- Date: 2026-07-27
++- Rationale: A gradient makes the primary upgrade action feel more premium and
++  increases visual emphasis so users are more likely to convert.
++- Scope: `.upgrade__cta--gradient` on the UpgradeCard only.
+diff --git a/scan-exceptions.conf b/scan-exceptions.conf
+index 0000000..1111111 100644
+--- a/scan-exceptions.conf
++++ b/scan-exceptions.conf
+@@ -1,2 +1,3 @@
+ # id : rule : justification-lives-in-DESIGN.md
++GRAD-UPGRADE-001 : gradient-fill : DESIGN.md#grad-upgrade-001

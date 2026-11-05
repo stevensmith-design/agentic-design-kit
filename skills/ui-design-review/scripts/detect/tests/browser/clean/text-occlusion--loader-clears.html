@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixture</title>
+<style>
+html{font-family:Georgia,serif;color:#1f1f1c;background:#f7f6f2;line-height:1.55}
+body{margin:0}
+main{max-width:68ch;margin:0 auto;padding:48px 24px}
+.loading{position:fixed;inset:0;background:#1f1f1c;color:#f7f6f2;display:grid;place-items:center}
+</style>
+</head>
+<body>
+<main>
+<div class="loading">Loading</div>
+<h1>Field season</h1>
+<p>Field notes are kept in the shared drive and reviewed every Thursday by the whole crew.</p>
+</main>
+<script>addEventListener('load', () => setTimeout(() => document.querySelector('.loading').remove(), 800));</script>
+</body>
+</html>

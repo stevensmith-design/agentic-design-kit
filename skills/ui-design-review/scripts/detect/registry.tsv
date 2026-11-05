@@ -1,0 +1,127 @@
+# v2 rule registry — one owner per rule. Phase 1a, 2026-10-13.
+# owner: scan = ui-design-review/scripts/scan.sh (already implemented, not re-implemented) · detect = Node static engine · browser = opt-in rendered pass · tokens = ui-design-system/scripts/validate-tokens.py · judgement = adjudicated by distinctiveness-review against its references/gates.md (no machine check)
+# origin: H<n> = upstream slop gate n · I3 = upstream detector rule (v3.9.1) · I4 = upstream detector rule new in v4.5.2 · kit = this kit's own · S = upstream /slop review item · upstream sources are credited in NOTICE
+# status: live = exists today in scan.sh / validate-tokens · todo = to implement in v2 · n/a = judgement only
+id	family	type	owner	severity	origin	status	heuristic
+font-outside-system	design-system	quality	tokens	advisory	I3	live	font family not declared in DESIGN.md / tokens (verify validate-tokens covers literal families in 1b; else move to detect)
+color-outside-system	design-system	quality	tokens	advisory	I3	live	literal colour not in the token set
+radius-outside-system	design-system	quality	tokens	advisory	I3	live	literal radius not on the radius scale
+font-size-outside-ramp	design-system	quality	detect	advisory	I4	live	literal font-size or clamp() endpoint (px/rem/pt) > 0.5px off the ramp in tokens.json / DESIGN.md (--design, else nearest up to the scan target); no ramp → silent
+inline-colour-or-font	design-system	slop	detect	warning	H48	live	style="" colour/font literal when the page has colour/font tokens; component-level literal equal to a token's value
+grid-line-background	visual-details	slop	detect	warning	I3	live	≥2 hairline `Npx, transparent Npx` stops + background-size
+border-accent-on-rounded	visual-details	slop	detect	warning	I3	live	top/bottom border ≥2px coloured, ≥2× other sides, on radius > 0
+side-stripe	visual-details	slop	scan	warning	I3,H5	live	"Colored side-stripe border"
+thin-border-wide-shadow	visual-details	slop	scan	warning	I3	live	"Ghost-card pattern (border + wide shadow)"
+repeating-stripes	visual-details	slop	detect	warning	I3	live	repeating-linear-gradient stripes as fill
+glassmorphism	visual-details	slop	scan	warning	S	live	"Glassmorphism on content surface" / "Translucent content-surface fill"
+extreme-card-radius	visual-details	slop	scan	warning	S	live	"Border radius > 16px on card/container"
+rough-svg-illustration	visual-details	slop	judgement	advisory	S	n/a	crude illustration makes the page feel unfinished
+kicker-above-heading	typography	slop	detect	warning	I4,H54	live	h2–h4 ≥20px preceded by 2–34-char uppercase/small-caps label ≤16px, tracking ≥0.06em; excl. Step N, short numbers, dates. Hero h1 case stays with scan "Eyebrow above the hero H1"
+eyebrow-above-hero	typography	slop	scan	warning	I3	live	"Eyebrow above the hero H1"
+undersized-text	typography	quality	detect	error	I3,I4	live	interactive/content text < 11px (10px legal smallprint); body text > 20 chars < 12px → warning
+flat-type-hierarchy	typography	slop	detect	warning	I3	live	≥3 distinct sizes and largest ÷ smallest < 2.0
+icon-tile-stack	typography	slop	detect	warning	I3	live	32–128px ~square tile with bg/border holding an icon directly above a heading
+italic-display	typography	slop	detect	warning	I3,H38a	live	italic on h1–h3 or display text (≥32px); serif ≥48px states it as the AI tell
+hero-badge	typography	slop	scan	warning	I3	live	pill badge before h1 — covered by "Eyebrow above the hero H1" (verify chip form in 1b)
+oversized-hero-headline	typography	slop	scan	advisory	I3	live	"Oversized display clamp (advisory)"
+crushed-tracking	typography	slop	detect	warning	I3	live	letter-spacing ≤ −0.05em on text > 20 chars
+overused-font	typography	slop	scan	warning	I3,H1	live	"Generic font as primary design choice" / "Saturated AI-default font"
+too-many-families	typography	quality	detect	warning	H37	live	> 3 font families in use (mono counts)
+outlier-font-overuse	typography	slop	detect	advisory	H38	live	a family that is neither body (root rules) nor display (h1–h3 / display rules) declared in > 2 rules
+single-font	typography	slop	judgement	advisory	S	n/a	one family everywhere with no size/weight contrast (one family is often right on Operate surfaces)
+all-caps-body	typography	quality	scan	warning	I3	live	"All-caps on body text"
+display-leading-sub-1	typography	quality	scan	warning	H55	live	"Display line-height below 1.0"
+tight-leading	typography	quality	detect	warning	I3	live	line-height < 1.3 on body text (not headings)
+wide-tracking	typography	quality	detect	warning	I3	live	letter-spacing > 0.05em on non-uppercase body text
+justified-text	typography	quality	detect	warning	I3	live	text-align: justify without hyphens: auto
+display-no-overflow-wrap	typography	quality	detect	advisory	H51	live	display heading (≥48px) without overflow-wrap: anywhere / break-word
+radial-halo	colour	slop	detect	warning	I4	live	dark page; radial gradient first stop alpha ≥0.7 fading to ≤0.05, no tight px stop, no url()
+radial-spotlight	colour	slop	browser	warning	I4	live	faint coloured radial on ≥240×160 box that text overlaps
+ai-colour-palette	colour	slop	detect	warning	I3,H2	live	saturated hue 260–310 on headings/large text; purple→blue/cyan/pink gradients
+dark-glow	colour	slop	scan	warning	I3	live	"Glow used as elevation" / "Offsetless glow shadow"
+gradient-text	colour	slop	scan	error	I3,H2	live	"Gradient text (absolute ban)"
+gray-on-colour	colour	quality	detect	warning	I3	live	low-chroma grey text on a background whose stops all have chroma ≥40
+cream-palette	colour	slop	scan	warning	I3	live	"Warm/cream background token"
+pure-black-white-base	colour	slop	detect	advisory	H7	live	page base background/ink exactly #000 or #fff (genre-dependent: advisory)
+zero-chroma-neutrals	colour	slop	detect	advisory	H22	live	every neutral token has chroma 0 (untinted greys)
+low-contrast	colour	quality	detect	error	I3,H40,H41	live	static (detect batch 1); rendered composited check = measure-contrast.mjs (exists): resolved fg/bg pair below 4.5 / 3.0 large; browser pass re-checks against computed backgrounds
+accent-footprint	colour	slop	browser	advisory	H23	live	fills matching --accent / --brand / --primary cover > 5% of any viewport band (no accent token → silent)
+numbered-section-labels	layout	slop	scan	advisory	I3,I4	live	"Numbered section markers (AI tell)"
+edge-flush-cards	layout	quality	browser	warning	I4	live	card in a horizontal scroller < 8px from the scroller edge where that edge also meets the screen edge (in-column rails aligned to the text are deliberate); sweep widths
+text-occlusion	layout	quality	browser	error	I4	live	text under an opaque layer (bg α ≥ 0.5, image, media, backdrop blur ≥ 4px) or blurred ≥ 4px; full-screen layers waited out for 3s, then reported once; pinned chrome only counts at rest; consent UI excluded
+first-viewport-column-overflow	layout	quality	browser	warning	I4	live	one column > 1.4× viewport tall while its sibling ≤ 1×
+heading-rhythm	layout	quality	browser	warning	I4	live	space above heading < 0.75× space below (deficit ≥12px) on ≥2 headings
+hero-metric-layout	layout	slop	judgement	advisory	S,H46	n/a	huge number + small stats as the hero template; bare number as whole headline
+identical-card-grid	layout	slop	judgement	warning	S,H3	n/a	three equal cards, icon above heading; every point given equal weight
+generic-page-shape	layout	slop	judgement	warning	H8,H21	n/a	hero → 3 features → CTA → footer, or the last build's structure repeated (log-checked)
+monotonous-spacing	layout	slop	detect	advisory	I3,H9	live	≥10 spacing values (rounded to 4), one > 60%, ≤3 unique
+nested-cards	layout	slop	detect	warning	I3,H4	live	card-like element with ≥10 chars inside another card-like element; innermost only; skip dialogs/menus/positioned
+line-length	layout	quality	detect	warning	I3,H25	live	static: p/li/dd/blockquote ≥160 chars whose estimated measure at a 1280px viewport (container width ÷ 0.5em) exceeds 85 chars; browser pass measures real chars/line
+content-overflow	layout	quality	browser	error	I3,H34	live	heading text clipped horizontally by overflow hidden/clip (excluding explicit ellipsis/clamp), or page scrollWidth − clientWidth ≥ 16px at any sweep width (320 / 768 / 1280 / 1920, plus 1px either side of DESIGN.md breakpoints); names the outermost overflowing elements
+clipped-popover	layout	quality	browser	warning	I3	live	overflow hidden/clip cutting an absolutely positioned interactive child
+image-grid-bare-1fr	layout	quality	detect	advisory	H50	live	grid-template-columns with bare 1fr in a grid that holds images (use minmax(0,1fr))
+double-sticky-top	layout	quality	detect	warning	H56	live	two sticky elements at top: 0 where one is the nav
+hero-bottom-heavy	layout	slop	scan	advisory	H44	live	static half of gate 44 already in scan.sh
+cramped-padding	layout	quality	browser	warning	I3	live	extend measure-padding.mjs (exists) — padding < max(4, 0.3×font) vertical or max(8, 0.5×font) horizontal in a bordered/filled box
+body-text-edge	layout	quality	browser	warning	I3	live	p/li > 40 chars spanning > 50% of the viewport, text lines within 16px of the screen edge; text running off screen is content-overflow's
+default-nav-footer	layout	slop	judgement	advisory	H42,H43	n/a	default AI nav (wordmark + links + CTA) / four-column link footer
+pulsing-dot	motion	slop	detect	warning	I4	live	infinite opacity/shadow/scale animation on a 2–16px round element; error inside header/nav; skip reduced-motion blocks
+blinking-cursor	motion	slop	browser	advisory	I4	live	infinite blink on a caret-sized non-editable element
+marquee	motion	slop	detect	warning	I4,H18	live	<marquee> or infinite keyframes translating X ≥20% with no pause control
+bounce-easing	motion	slop	scan	error	I3,H12	live	"Bounce/elastic easing" / "Bounce easing via cubic-bezier overshoot"
+layout-animation	motion	quality	scan	warning	I3,H14	live	"Layout property animation" (v4 retired it as rarely harmful — keep, kit rule)
+image-hover-transform	motion	slop	scan	advisory	I3	live	"Image scale/rotate on hover" (v4 retired it — review severity in 1b)
+transition-all	motion	quality	detect	warning	H10	live	transition: all / transition-property: all
+focus-ring-fades	motion	quality	detect	warning	H15	live	transition on outline/box-shadow that applies to :focus / :focus-visible
+stacked-hover-effects	motion	slop	detect	advisory	H13	live	one :hover rule changes ≥3 of transform, shadow, background, colour, border
+reduced-motion-missing	motion	quality	scan	warning	H27	live	"Motion with no reduced-motion fallback"
+repeated-container-text	copy	quality	detect	warning	I4	live	same string ≥3× in ≥3 different slots of one card
+em-dash-overuse	copy	slop	scan	warning	I3	live	"Em-dash overuse (AI copy tell)"
+marketing-buzzword	copy	slop	scan	warning	I3	live	"Marketing buzzword in UI copy"
+forced-contrast-cadence	copy	slop	detect	warning	I3	live	≥3 "Not X. Y." / "X. Just Y." constructions in page text
+theater-phrase	copy	slop	detect	advisory	I3	live	dismissive "X theater" phrasing
+placeholder-people	copy	slop	detect	warning	H19	live	Jane/John Doe, Acme, Lorem ipsum in shipped copy
+banned-opener	copy	slop	detect	advisory	H-copy	live	cliché opening lines ("Built for the modern…", "Where X meets Y") — list kept in a data file, not an always-loaded reference
+invented-evidence	copy	slop	judgement	error	H46,I4	n/a	invented metrics, customers, testimonials, prices; synthetic demo data unlabelled
+shape-assembled-illustration	imagery	slop	detect	advisory	I4	live	inline SVG ≥200×200, ≥8 primitives, ≥3 fills, ≤2 text, no pattern
+organic-clip-path	imagery	quality	detect	warning	I4	live	clip-path path() with ≥3 curves or polygon() with ≥10 off-grid vertices
+buried-raster	imagery	quality	detect	warning	I4	live	url() background under a preceding gradient whose stops are all ≥0.9 alpha, no blend mode
+broken-image	imagery	quality	scan	error	I3	live	"Broken/placeholder image src"
+decorative-graphic-unlabelled	imagery	quality	detect	warning	H33	live	inline svg/canvas with no aria-label, aria-labelledby, role=img+title, or aria-hidden
+heavy-video	imagery	quality	detect	warning	H28	live	video autoplay without muted, or without poster
+lottie-for-simple	imagery	slop	judgement	advisory	H31	n/a	Lottie where CSS/SVG would do
+emoji-as-icon	imagery	slop	scan	warning	H30	live	"Emoji as chrome icon"
+redrawn-chrome	imagery	slop	judgement	warning	H47	n/a	fake browser bars, phone frames, IDE windows
+script-error	general	quality	browser	error	I4	live	uncaught exception on load
+content-hidden-at-rest	general	quality	browser	error	I4	live	after a scroll-through: ≥ 200 chars, ≥ 150 never visible while on screen, > 30% of the page's text (scroll-linked fades and working reveals pass; closed dialogs / menus / consent UI excluded)
+skipped-heading	general	quality	detect	warning	I3	live	heading level jumps by more than one
+input-state-shift	general	quality	detect	warning	H39	live	:focus changes border-width; disabled styled by opacity only
+button-text-wraps	general	quality	browser	warning	H49	live	button / role=button / submit / button-like or nav-header link label renders on > 1 line at any sweep width; links in prose may wrap; separate block title/description rows are composite controls
+radio-tab-jump	general	quality	judgement	advisory	H53	n/a	radio-hack tabs make the page jump
+spacing-off-scale	design-system	quality	scan	warning	H24	live	"Hardcoded spacing bypasses the scale" (a file that declares a --space-* scale uses a literal)
+centred-hero	layout	slop	judgement	warning	H6	n/a	every hero element on one centred axis, or a full-height centred hero carrying one line
+uniform-hover	motion	slop	judgement	advisory	H11	n/a	one hover treatment (scale, lift, glow) applied to unrelated kinds of element
+success-theatre	motion	slop	judgement	advisory	H16	n/a	celebration (toast, confetti, burst) for a change the screen already shows
+tooltip-timing	general	quality	judgement	advisory	H17	n/a	tooltip waits as long on keyboard focus as on hover
+auto-advance	motion	quality	judgement	warning	H18	n/a	content advanced by script with no pause or stop control (CSS loops are marquee's)
+missing-states	general	quality	judgement	warning	H26	n/a	focus not visible (a browser default ring counts), or a pressable / disableable control with no state for it
+decorative-background	visual-details	slop	judgement	advisory	H29	n/a	abstract backdrop with > 1 colour, > 5% of the view, or animated mesh, and no job (page glow tokens are scan's; radial halo / spotlight are detect / browser)
+mixed-icon-sets	imagery	slop	judgement	advisory	H30	n/a	icons from more than one library or drawing style on one page (emoji as chrome is scan's)
+highlight-misplaced	typography	slop	judgement	advisory	H35	n/a	highlighter band or decorative underline on words that carry no emphasis, or set off the text it marks
+row-alignment	layout	quality	judgement	advisory	H36	n/a	mixed-height items in one row not aligned on a deliberate axis
+input-geometry	general	quality	judgement	advisory	H39	n/a	input and button heights differ in one row; focus shown by changing the border; helper slot collapses (border-width shift and opacity-only disabled are input-state-shift's)
+hero-fit	layout	quality	judgement	advisory	H44	n/a	hero does not fit the first 1280×800 view (bottom-heavy padding is scan's)
+unearned-decoration	visual-details	slop	judgement	warning	H45	n/a	ornament with no job the page or its contract can name
+section-head-collapse	layout	quality	judgement	advisory	H52	n/a	two-column section head that does not stack on a phone
+direction-drift	general	slop	judgement	warning	H57	n/a	a supplied direction diluted toward a generic default look
+build-repeat	layout	slop	judgement	warning	H20,H32	n/a	same structure or same component variation settings as a recent build (build log), or a build record disagreeing with the page; no log → not assessable
+category-reflex	general	slop	judgement	warning	I3	n/a	the first idea for the product category, or a performed avoidance of it that is its own cliché
+costume	general	slop	judgement	advisory	I4	n/a	on an Operate or Read surface, a borrowed world reaches past type, palette, density and one signature move
+ai-generated-marker	imagery	slop	judgement	warning	kit	n/a	AI product: the category's stock icon (sparkle, star, wand, orb) marking generated content or as the brand mark; generated content not distinguished at all
+ai-chat-default	layout	slop	judgement	warning	kit	n/a	AI product: a conversation column chosen because the product is AI, not because the task is dialogue
+ai-prompt-hero	layout	slop	judgement	warning	kit	n/a	AI product: a centred prompt box with a suggestion-chip row (or a glow behind the input) is the page's whole identity
+ai-badge-decoration	copy	slop	judgement	advisory	kit	n/a	AI product: model-name or powered-by badges the user cannot act on
+ai-undesigned-run	general	quality	judgement	warning	kit	n/a	AI product: agent steps or streamed output left undesigned (console dump, typing dots, a spinner where real steps could be named)
+ai-persona-voice	copy	slop	judgement	advisory	kit	n/a	AI product: anthropomorphic filler ("Let me take a look…") standing in for character
+dead-relative-link	general	quality	detect	warning	kit	live	a relative href (not #, a scheme, // or root-relative /) that resolves to no file beside the page; a folder resolves to its index.html, and an existing folder without one is not reported
+font-not-loaded	typography	quality	browser	warning	kit	live	the first family of rendered text is neither generic nor a common system face, and after document.fonts.ready it does not render (canvas width equals each generic fallback): declared but never loaded

@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "name": "Groundwork",
+    "register": "brand_ui",
+    "aestheticCommitment": "Warm bone paper and a vermilion signal, set in cool-black ink — a printed manifesto, not a SaaS page.",
+    "platform": "web, marketing site",
+    "audience": "designers and design leads evaluating an AI design practice"
+  },
+  "colour": {
+    "anchor":  { "hue": 30, "chroma": 0.205 },
+    "neutral": { "hue": 80, "chroma": 0.008 },
+    "ground": "light",
+    "onAnchor": "#FFFFFF",
+    "gradients": "none"
+  },
+  "type": {
+    "display": "Bricolage Grotesque",
+    "body": "Newsreader",
+    "mono": "Spline Sans Mono",
+    "discipline": "2+1",
+    "baseSize": 16,
+    "scaleRatio": 1.28
+  },
+  "shape": { "radiusBase": 4 }
+}

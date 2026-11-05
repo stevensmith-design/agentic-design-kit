@@ -1,0 +1,16 @@
+/* design-build stamp
+   date: 2026-10-14
+   route: system-led
+   direction: system: DESIGN.md
+   scope: page
+   structure: long-read
+   part.hero: headline-only scale=full align=left
+   part.nav: minimal-pair position=top
+   part.footer: single-line rule=hairline
+   axes: ground=light display=serif accent=orange
+   system: locked
+   enrichment: type
+   distance: inverted
+*/
+
+:root { --ink: #222; }

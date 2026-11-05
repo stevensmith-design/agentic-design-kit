@@ -1,0 +1,9 @@
+<!-- No <meta name="viewport"> at all. Mobile renders at a virtual ~980px desktop viewport
+     and every media query below goes dead. Observed in a real build. -->
+<meta charset="utf-8">
+<title>Pricing</title>
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+</style>
+<main class="grid"><section>Starter</section><section>Team</section><section>Scale</section></main>

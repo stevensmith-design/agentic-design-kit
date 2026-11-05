@@ -1,0 +1,14 @@
+/* design-build stamp
+   date: 2026-10-14
+   route: system-led
+   direction: system: DESIGN.md
+   scope: page
+   structure: own:method page
+   part.nav: own:shared masthead
+   axes: ground=light display=serif accent=orange
+   system: locked
+   enrichment: type
+   distance: inverted
+*/
+
+:root { --ink: #222; }

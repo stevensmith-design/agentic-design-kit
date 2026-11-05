@@ -1,0 +1,6 @@
+/* FIXTURE (pass): implementation CSS matches tokens.json */
+:root{
+  --color-primary:#0F766E;
+  --bg-app:#EEF3F1;
+  --text-body:16px;
+}

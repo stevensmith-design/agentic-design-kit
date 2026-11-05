@@ -1,0 +1,19 @@
+# Cliché opening lines for banned-opener. Read only by rules/copy.mjs — never by a model at build
+# time, so the phrases do not prime the very copy they ban.
+# pattern = case-insensitive JavaScript regex, matched against the start of the page's opening line
+# (its h1, else its first h2, and the lede paragraph straight after it). Keep each row one idea.
+pattern	idea
+^(built|designed|made|crafted|engineered) for (the )?(modern|next[- ]gen\w*|future|teams of tomorrow|today'?s)\b	"made for the modern X" — a claim about era, not about the reader
+^where [\w'’-]+( [\w'’-]+){0,2} meets [\w'’-]+	"where X meets Y" — the two-noun collision headline
+^(the )?future of [\w'’-]+	"the future of X" — stakes asserted, not shown
+^(say goodbye to|say hello to|meet the new)\b	goodbye / hello framing
+^(unlock|unleash|elevate|transform|revolutioni[sz]e|reimagine|redefine) (your|the|how)\b	a generic transformation verb aimed at the reader
+^[\w'’-]+( [\w'’-]+)?,? (reimagined|redefined|reinvented|done right)[.!]?$	"X, reimagined"
+^(the |your )?all[- ]in[- ]one\b	"the all-in-one X"
+^everything you need to\b	"everything you need to…"
+^(take|level up) your [\w'’-]+( [\w'’-]+)? to the next level	"to the next level"
+^in (today'?s|a world where)\b	scene-setting preamble
+^[\w'’-]+( [\w'’-]+){0,3} (you'?ve|you have) been waiting for	"the X you've been waiting for"
+^(work|build|ship|create) smarter,? not harder	"smarter, not harder"
+^(simple|simply)\.? (powerful|beautiful)\b	"simple. powerful."
+^welcome to the (future|new era|next generation)\b	"welcome to the future"

@@ -1,0 +1,6 @@
+/* Root left at the browser default; everything derived in rem. Component-level px
+   for borders and a control's fixed height are not type sizes and must not fire. */
+html { font-size: 100%; }
+body { font-size: 1rem; line-height: 1.55; }
+.card { border: 1px solid var(--color-border); min-height: 44px; }
+.card__meta { font-size: 0.875rem; }

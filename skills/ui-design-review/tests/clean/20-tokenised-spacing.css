@@ -1,0 +1,9 @@
+/* False-positive guard: scale consumed via tokens; hairlines and the sanctioned
+   2px segmented-control gap stay literal and must not flag. */
+:root {
+  --space-4: 24px;
+  --space-5: 30px;
+}
+.step-connector { margin-block: var(--space-5); }
+.divider { border-bottom-width: 1px; }
+.segmented { gap: 2px; padding: 0; }

@@ -1,0 +1,6 @@
+/* Desktop-only nav: links are hidden below the breakpoint and nothing in the
+   DOM reaches them. Half of the collapse pattern shipped without its other half. */
+.nav-links { display: none; }
+@media (min-width: 768px) {
+  .nav-links { display: flex; gap: var(--space-4); }
+}

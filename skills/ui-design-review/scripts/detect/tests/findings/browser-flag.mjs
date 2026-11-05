@@ -1,0 +1,1 @@
+console.log(JSON.stringify({ files: 1, browser: '/stub/chrome', findings: [{ rule: 'content-overflow', severity: 'error', family: 'layout', file: 'a.html', line: 1, snippet: '', message: 'overflows at 320px', fix: 'f', selector: 'body', pass: 'browser' }] })); process.exit(1);

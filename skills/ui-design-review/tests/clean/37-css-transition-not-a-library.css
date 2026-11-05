@@ -1,0 +1,9 @@
+/* A hover a transition expresses, expressed as a transition. No library, nothing to flag,
+   and the reduced-motion branch is present so 20p stays silent too. */
+.btn { transition: background-color 150ms var(--ease-out), transform 100ms var(--ease-out); }
+.btn:active { transform: translateY(1px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: background-color 150ms linear; }
+  .btn:active { transform: none; }
+}

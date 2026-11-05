@@ -1,0 +1,3 @@
+{ "color": { "primary": "#1E9385", "onPrimary": "#FFFFFF",
+  "canvas": "#EEF3F1", "surface": "#FFFFFF", "textPrimary": "#1B2B2A" },
+  "type": { "h1": "20px", "h2": "19px", "h3": "18px" } }

@@ -1,0 +1,72 @@
+{
+  "skill_name": "ia-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review the information architecture of this mobile settings area. Current global tabs: Home, Projects, More. More contains Notifications, Billing, Team members, Export data, and Log out. The Settings page groups rows in backend API order and every row has a right chevron. Provide an IA review only; do not redesign visual styling.",
+      "expected_output": "Evidence-based IA findings separating navigation placement, grouping/order, and labels, with visual issues handed off.",
+      "files": [],
+      "expectations": [
+        "Separates frequent/global, contextual, and rare/account-level actions when recommending placement.",
+        "Flags Log out in the catch-all More menu and places it in account/profile settings.",
+        "Flags backend/API ordering and recommends a user-priority or mental-model grouping.",
+        "Keeps the review within IA scope and hands visual styling or contrast concerns to a visual design review."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit these labels across an app: top nav has 'Updates'; the page title is 'Notifications'; a CTA says 'View activity'; empty state says 'No messages yet'; settings uses 'Alert preferences'. The destination contains system alerts and project change history. Review labels and information scent only.",
+      "expected_output": "A label inventory that identifies inconsistent concepts, proposes a coherent vocabulary, and explains destination predictability.",
+      "files": [],
+      "expectations": [
+        "Inventories or explicitly compares all five labels rather than reviewing one in isolation.",
+        "Identifies that alerts/notifications and activity/history are distinct concepts that should not be collapsed without evidence.",
+        "Recommends labels based on destination content and user expectation, not merely brevity.",
+        "Does not drift into color, spacing, or implementation advice."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Nothing is built yet. We're designing Relayd: an agent that watches a shared support inbox, drafts replies, and asks a human to approve each one before sending. Ops leads configure which mailboxes it watches and what it may send without approval. Support agents review drafts. How should this be structured?",
+      "expected_output": "A Mode 3 structure proposal whose conditional agentic step is run — actors, responsibility, persistent objects, handoffs, re-entry and provenance settled before the navigation model — with intent-based grouping preserved.",
+      "files": [],
+      "expectations": [
+        "Routes to Mode 3 (structure design) because nothing is built, rather than auditing a sketch.",
+        "Runs the conditional agentic step and names the actors separately from the people — asking user, agent, human reviewer, operator, and the customers who receive the sent replies.",
+        "Assigns recovery ownership explicitly, not only initiation and approval.",
+        "Gives each persistent object it needs (task, plan, run, result, source, permission, approval, history) a home, or states deliberately that it needs none.",
+        "Designs re-entry for running, completed, failed and paused work as distinct retrieval needs rather than one 'Activity' list.",
+        "Groups destinations by user intent and does not turn the object checklist into the navigation — a top-level 'Runs' tab appears only with a stated reason.",
+        "Says where the record of what the agent did and what it rested on survives after the session.",
+        "Stays in IA scope and hands visual and implementation concerns to the sibling skills."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Create an IA blueprint for a dense B2B returns operations app. Agents work a queue all day, open a return, inspect evidence, approve or reject it, and then move to the next item. Leads use saved views and bulk reassignment. Filters and selected tabs currently disappear on refresh. Give us a build-time structure, not visual styling.",
+      "expected_output": "A dense-SaaS blueprint grounded in repeated operational work, durable retrieval state, and queue-to-detail re-entry rather than a generic dashboard template.",
+      "files": [],
+      "expectations": [
+        "Uses Mode 3 and the dense operational blueprint as a form, while tracing every destination back to the supplied tasks.",
+        "Distinguishes durable destinations from temporary filters and saved views.",
+        "Assigns URL or persistent ownership to filters, sort, selected tabs and saved views so refresh and deep links behave predictably.",
+        "Designs queue to detail to next-item flow without forcing agents back through a dashboard.",
+        "Keeps lead-only bulk administration distinct from the agent's primary work surface.",
+        "Names responsive structural behaviour as still owed to ui-design-principles rather than pretending the IA blueprint settled it."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Create the navigation and labeling blueprint for a bilingual Japanese/English documentation site. It has getting-started guides, task guides, API reference, troubleshooting, versioned pages, search, and long local tables of contents. Some translated navigation labels are roughly twice the English length.",
+      "expected_output": "A content-site blueprint with complementary retrieval routes, canonical homes, version context, and localization-aware label validation.",
+      "files": [],
+      "expectations": [
+        "Organises content by durable audience questions or topics rather than publishing-team ownership.",
+        "Separates hierarchy (breadcrumbs), association (related links), local navigation, browse and search as different retrieval mechanisms.",
+        "Assigns every page a canonical home and makes version/applicability visible where it changes interpretation.",
+        "Tests labels against both Japanese and English content rather than shortening one language to fit an assumed layout.",
+        "Keeps visual truncation and responsive implementation as handoffs while resolving the information structure and canonical vocabulary here."
+      ]
+    }
+  ]
+}

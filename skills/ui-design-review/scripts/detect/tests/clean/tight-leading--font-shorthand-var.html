@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixture</title>
+<!-- clean: the font shorthand sets size and line-height through var(). The line-height is 1.55,
+     resolved from the custom property; a phase-4 build page was flagged tight-leading because
+     the shorthand's var() parts were not expanded (2026-10-14). -->
+<style>
+:root{--text-body:1rem;--leading-body:1.55;--font-body:"Literata",Georgia,serif}
+html{color:#1f1f1c;background:#f7f6f2}
+body{margin:0}
+main{max-width:68ch;margin:0 auto;padding:48px 24px}
+p{font:var(--text-body) / var(--leading-body) var(--font-body)}
+</style>
+</head>
+<body>
+<main>
+<h1>Notes</h1>
+<p>Field notes are kept in the shared drive and reviewed every Thursday by the whole crew.</p>
+</main>
+</body>
+</html>

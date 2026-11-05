@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>fixture</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; }
+  .card {
+    position: relative;
+    width: 300px;           /* height comes from content — padding survives */
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #eee;
+  }
+  .card p { margin: 0; }
+  .actions { display: flex; gap: 12px; }
+  .actions button { width: 44px; height: 44px; }
+</style></head><body>
+  <div class="card" data-measure>
+    <p>Title of the card</p>
+    <p>Some body copy that takes a couple of lines so the column is nearly full already.</p>
+    <p class="meta">Author · Team</p>
+    <div class="actions"><button>x</button><button>y</button></div>
+  </div>
+</body></html>

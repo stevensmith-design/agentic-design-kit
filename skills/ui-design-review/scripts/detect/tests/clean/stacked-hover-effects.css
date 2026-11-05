@@ -1,0 +1,3 @@
+.card { background: #f7f6f2; transition: background-color 160ms ease-out; }
+.card:hover { background-color: #efe9df; }
+.btn:hover { background-color: #8c3216; color: #fbfaf7; }

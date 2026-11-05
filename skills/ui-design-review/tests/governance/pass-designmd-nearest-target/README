@@ -1,0 +1,4 @@
+Two DESIGN.md files: one at the scan's working directory (no navigation archetype) and one beside
+the target page (with it). The target's own project system is the nearest DESIGN.md walking up
+from the target; the one in the working directory belongs to another page. A phase-4 review ran
+scan.sh from a parent folder and was judged against the wrong system (2026-10-14).

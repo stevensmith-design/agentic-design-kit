@@ -1,0 +1,2 @@
+/* a sealed reference — must never be read by the validator */
+.card{ border-radius: var(--radius-card); }

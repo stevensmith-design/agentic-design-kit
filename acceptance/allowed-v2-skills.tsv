@@ -1,0 +1,12 @@
+# name	role
+design-build	design-orchestrator
+direction-study	design-orchestrator
+starter-directions	design-producer
+brand-to-system	design-producer
+ui-design-system	design-producer
+ui-design-principles	design-guardrail
+design-review	design-orchestrator
+distinctiveness-review	design-review
+ui-design-review	design-review
+design-refine	design-review
+ia-review	design-review

@@ -1,0 +1,15 @@
+.pricing {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.pricing__cta {
+  width: 100%;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: #fff;
+  /* Featured card CTA — gradient. */
+  background: linear-gradient(120deg, #7C3AED 0%, #DB2777 100%);
+}

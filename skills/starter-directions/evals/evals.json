@@ -1,0 +1,51 @@
+{
+  "skill_name": "starter-directions",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make me a site for my pottery studio. I don't have a brand or any references — show me some starting points.",
+      "expected_output": "Two or three starters recommended with a reason each, then a wait for the person's choice; nothing built.",
+      "files": [],
+      "expectations": [
+        "Asks the one bundled question only if the brief cannot answer who, what and how it should feel.",
+        "Reads the catalogue and recommends two or three starters, each tied to the brief in one sentence.",
+        "Opens only the recommended starters' files.",
+        "Waits for a choice and builds nothing."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here are three reference sites I like for our new product page. Which of your starters is closest?",
+      "expected_output": "Declines to find a nearest starter for supplied references; routes to reference-informed work instead.",
+      "files": [],
+      "expectations": [
+        "Does not open the catalogue or any starter file to search for a match.",
+        "Explains in one line that supplied references lead and a nearest-starter search would anchor the work.",
+        "Hands back to /design-build (reference-informed) or offers /direction-study."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our approved direction: a dark ground, one SVG measuring instrument alone in the first screen with mono callouts, a lowercase serif headline, static. Would Orrery fit?",
+      "expected_output": "The match gate on Orrery alone: five dimensions with evidence, four of five, a stated boundary, the supplied direction overriding.",
+      "files": [],
+      "expectations": [
+        "Opens only the Orrery file and the match gate.",
+        "Fills the five-dimension table with evidence from both sides.",
+        "States the boundary and what governs the non-matching dimension.",
+        "Records the route as named-starter match with distance suspended."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Compare Quire and Tabulae for our research archive homepage.",
+      "expected_output": "A side-by-side comparison on the five dimensions plus the axes line; no build.",
+      "files": [],
+      "expectations": [
+        "Opens only the two named starters.",
+        "Compares on composition, type roles, surface and colour, object family, motion, and the axes line.",
+        "Ends by asking which to take forward."
+      ]
+    }
+  ]
+}

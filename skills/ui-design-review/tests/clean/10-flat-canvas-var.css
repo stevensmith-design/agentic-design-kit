@@ -1,0 +1,2 @@
+:root { --canvas: #f1f5f4; }
+.screen { background: var(--canvas); }

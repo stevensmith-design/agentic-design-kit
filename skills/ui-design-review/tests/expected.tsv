@@ -1,0 +1,41 @@
+# scan.sh fixture expectations — F6 (assert the intended rule, not just exit code)
+# flag fixtures: <basename> <TAB> <expected Rule: substring>   clean fixtures: omit (exit-only)
+01-gradient-button.css	No gradient on interactive elements
+02-card-radius-24.css	Border radius > 16px on card/container
+03-gradient-text.css	Gradient text
+04-cream-token.css	Warm/cream background token
+05-inter-sole-font.css	Generic font as primary design choice
+06-translucent-card.css	Translucent content-surface fill
+07-glow-canvas-token.css	Glow/ambient/body-gradient background token
+07-gradient-canvas.css	Glow/ambient/body-gradient background token
+08-gradient-var-canvas.css	Gradient canvas via custom property
+09-tinted-shadow.css	Brand-tinted elevation shadow
+10-offsetless-glow.css	Offsetless glow shadow
+11-clickable-div.jsx	Clickable div/span
+12-icon-only-button.jsx	Icon-only button without aria-label
+13-zindex-9999.css	Literal high z-index
+14-emoji-chrome-button.jsx	Emoji as chrome icon
+15-broken-img-src.html	Broken/placeholder image src
+16-gradient-button-among-valid.css	No gradient on interactive elements
+17-semantic-ramp-accent-border.css	Semantic-palette leak
+18-oversized-display-clamp.css	Oversized display clamp
+19-display-line-height-sub-1.css	Display line-height below 1.0
+20-leading-token-sub-1.css	Display line-height below 1.0
+21-dead-href.html	Dead placeholder link
+22-hardcoded-spacing.css	Hardcoded spacing bypasses the scale
+23-breakpoint-sprawl.css	Breakpoint sprawl
+24-hardcoded-spacing-inline-root.css	Hardcoded spacing bypasses the scale
+25-nav-hidden-no-toggle.css	Nav links hidden with no menu affordance
+26-hero-eyebrow-above-h1.html	Eyebrow above the hero H1
+27-eyebrow-selector.css	Eyebrow pattern present
+28-forced-height-space-between.css	Forced height with space-between
+29-generic-failure-copy.jsx	Generic catch-all failure copy
+30-select-two-options.jsx	Dropdown for a set that fits inline
+31-user-scalable-no.html	Zoom disabled in the viewport meta
+32-missing-viewport-meta.html	Missing viewport meta
+33-px-base-font-size.css	Base font-size in px
+34-motion-no-reduced-motion.css	Motion with no reduced-motion fallback
+35-inline-semantic-ramp.jsx	Semantic-palette leak
+37-shadow-boundary-no-forced-colors.css	forced-colors not evaluated
+38-gsap-no-cleanup.jsx	Animation library with no lifecycle cleanup
+39-scrolltrigger-no-reduced-motion.jsx	Scroll-linked motion with no reduced-motion branch

@@ -1,0 +1,6 @@
+/* False-positive guard: two committed breakpoints, reused. Also a non-width
+   media query, which must not count toward the breakpoint budget. */
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 0.01ms; } }
+@media (min-width: 768px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px)  { .nav { display: flex; } }
+@media (min-width: 1280px) { .grid { grid-template-columns: repeat(3, 1fr); } }

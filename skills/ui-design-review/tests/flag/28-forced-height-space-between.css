@@ -1,0 +1,9 @@
+/* The void generator: a height the content did not ask for, plus a distribution
+   rule that pushes the content to the extremes and pools the surplus in the middle. */
+.stack-card--front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 3 / 4;
+  padding: var(--space-5);
+}

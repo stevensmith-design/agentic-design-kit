@@ -1,0 +1,9 @@
+:root {
+  --gray-50: #faf9f6;
+  --gray-200: #e7e3dc;
+  --gray-500: #78726a;
+  --gray-900: #1b1915;
+  --white: #ffffff;
+  --accent: #a63d1c;
+}
+html { background: var(--gray-50); color: var(--gray-900); }

@@ -1,0 +1,2 @@
+.toast { animation: arrive 0.3s ease-out; }
+@keyframes arrive { from { transform: translateX(100%); } to { transform: none; } }

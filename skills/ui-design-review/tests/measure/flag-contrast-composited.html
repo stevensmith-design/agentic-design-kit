@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>fixture</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fff; }
+  /* Dark ink on violet: 3.76:1. A token-pair validator that only knows
+     "ink" and "white" never composes this pair, so it reports clean. */
+  .card {
+    width: 420px; padding: 24px;
+    background: #8F4BDD;
+    color: #1A1008;
+  }
+  .card p { margin: 0; font-size: 14px; line-height: 1.6; }
+  /* Translucent ink over a gradient — the ratio changes across the box. */
+  .grad {
+    width: 420px; padding: 24px; margin-top: 16px;
+    background: linear-gradient(135deg, #FA7014, #F6AF09);
+    color: rgba(26,16,8,0.55);
+  }
+  .grad p { margin: 0; font-size: 14px; }
+</style></head><body>
+  <div class="card"><p data-contrast>Body copy on violet that does not clear the 4.5:1 floor.</p></div>
+  <div class="grad"><p data-contrast>Translucent ink over a gradient stop.</p></div>
+</body></html>

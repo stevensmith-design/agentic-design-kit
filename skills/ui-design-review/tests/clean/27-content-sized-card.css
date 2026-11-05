@@ -1,0 +1,15 @@
+/* False-positive guard: a min-height FLOOR with natural flow is the correct
+   shape — the card sizes to its content and the floor only stops it collapsing. */
+.stack-card--front {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 280px;
+  padding: var(--space-5);
+}
+/* And space-between on a content-sized bar is fine — no forced height here. */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

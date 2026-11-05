@@ -1,0 +1,5 @@
+{"route":"starter-led","phase":"synthesis","path":".claude/skills/starter-directions/SKILL.md","read":"full","purpose":"offer"}
+{"route":"starter-led","phase":"synthesis","path":".claude/skills/starter-directions/references/catalogue.md","read":"full","purpose":"recommend three"}
+{"route":"starter-led","phase":"synthesis","path":".claude/skills/starter-directions/references/starters/quire.md","read":"full","purpose":"selected"}
+{"route":"starter-led","phase":"build","path":".claude/skills/design-build/references/structures/index.md","read":"full","purpose":"structure left open"}
+{"route":"starter-led","phase":"build","path":".claude/skills/design-build/references/structures/pages/long-read.md","read":"full","purpose":"picked structure"}

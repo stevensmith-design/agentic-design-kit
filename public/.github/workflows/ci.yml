@@ -1,0 +1,26 @@
+name: Verify kit
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve Chromium browser
+        run: |
+          browser=$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)
+          test -n "$browser" || { echo 'Browser missing; rendered checks cannot be certified'; exit 1; }
+          echo "CHROME_PATH=$browser" >> "$GITHUB_ENV"
+      - name: Verify source and release tooling
+        run: |
+          bash scripts/publish.sh --check
+          python3 scripts/tests/release-audit/run.py
+          bash skills/ui-design-review/tests/run.sh | tee /tmp/agentic-ui-checks.log
+          ! grep -E 'SKIPPED|UNVERIFIED' /tmp/agentic-ui-checks.log

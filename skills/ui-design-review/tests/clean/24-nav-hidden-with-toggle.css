@@ -1,0 +1,8 @@
+/* False-positive guard: the same desktop-hide, correctly paired with a toggle
+   that appears at the same breakpoint. */
+.nav-links { display: none; }
+.nav-toggle { display: grid; }
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+  .nav-toggle { display: none; }
+}

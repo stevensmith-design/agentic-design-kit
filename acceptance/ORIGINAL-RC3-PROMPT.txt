@@ -1,0 +1,3 @@
+I want to create a professional looking landing page for an AI workshop and education portal. I dont have a current brand guideline so instead i have attached some examples of designs i think will work so study those and then first based on them come up with 3 design directions for me to decide from.
+Do not use the frontend-design skill, instead utalize the design skills in the attached folder "design-skills-kit-v2-acceptance-rc3".
+The page should look professional and "Designed" with no AI tells or generic AI layouts or design elements.
