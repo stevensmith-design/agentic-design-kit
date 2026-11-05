@@ -1102,7 +1102,7 @@ def main(argv):
             # `sealed/` holds a direction study's original references: build-side tools never
             # read it (direction-study → reference-study.md). Reading it would print reference
             # material into a build context and let a reference's CSS mask a real orphan.
-            dns[:] = [d for d in dns if d not in ('node_modules', '.git', '.agentic-design-kit', 'dist', 'build', '.next', 'sealed')]
+            dns[:] = [d for d in dns if d not in ('node_modules', '.git', '.agentic-design-kit', '.claude', '.agents', 'dist', 'build', '.next', 'sealed')]
             for fn in sorted(fns):
                 if fn.endswith(('.css', '.scss', '.less', '.tsx', '.jsx', '.ts', '.js',
                                 '.vue', '.svelte', '.html', '.htm')):

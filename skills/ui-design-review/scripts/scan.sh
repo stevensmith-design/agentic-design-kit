@@ -45,7 +45,7 @@ collect_files() {
     while IFS= read -r f; do
       FILES+=("$f")
     done < <(find "$target" -mindepth 1 \( -type d \( -name node_modules -o -name .git \
-      -o -name .agentic-design-kit \) -prune \) -o \( -type f \( -name "*.tsx" -o -name "*.ts" \
+      -o -name .agentic-design-kit -o -name .claude -o -name .agents \) -prune \) -o \( -type f \( -name "*.tsx" -o -name "*.ts" \
       -o -name "*.vue" -o -name "*.css" -o -name "*.scss" -o -name "*.html" \
       -o -name "*.jsx" -o -name "*.js" \) -print \))
   fi
@@ -73,7 +73,7 @@ case "$1" in
   --staged)
     require_git_repo --staged
     while IFS= read -r f; do
-      case "$f" in .agentic-design-kit/*|*/.agentic-design-kit/*) continue;; esac
+      case "$f" in .agentic-design-kit/*|*/.agentic-design-kit/*|.claude/*|*/.claude/*|.agents/*|*/.agents/*) continue;; esac
       [[ "$f" =~ \.(tsx|ts|vue|css|scss|html|jsx|js)$ ]] && FILES+=("$f")
     done < <(git diff --cached --name-only --diff-filter=ACM)
     ;;
@@ -86,7 +86,7 @@ case "$1" in
       exit 2
     fi
     while IFS= read -r f; do
-      case "$f" in .agentic-design-kit/*|*/.agentic-design-kit/*) continue;; esac
+      case "$f" in .agentic-design-kit/*|*/.agentic-design-kit/*|.claude/*|*/.claude/*|.agents/*|*/.agents/*) continue;; esac
       [[ "$f" =~ \.(tsx|ts|vue|css|scss|html|jsx|js)$ ]] && [ -f "$f" ] && FILES+=("$f")
     done < <(git diff --name-only "$BRANCH"...HEAD --diff-filter=ACM)
     ;;
