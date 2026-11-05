@@ -136,6 +136,14 @@ else
   printf '%s\n' "$out"
 fi
 
+echo "Public content privacy fixtures:"
+if out="$(python3 "$KIT/scripts/tests/content-audit/run.py" 2>&1)"; then
+  note_ok "$(printf '%s' "$out" | tail -1)"
+else
+  note_fail "public content privacy fixtures failed"
+  printf '%s\n' "$out"
+fi
+
 echo "Public release fixtures:"
 if out="$(python3 "$KIT/scripts/tests/release-audit/run.py" 2>&1)"; then
   note_ok "$(printf '%s' "$out" | tail -1)"

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generated": "2026-11-05T05:08:08Z",
-  "provenance": "ported from ~/Desktop/design_skills on 2026-09-08; upstream tree left untouched as archive",
+  "generated": "2026-11-05T05:56:44Z",
+  "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
       "fileCount": 14,
@@ -613,13 +613,13 @@
     },
     "ui-design-principles": {
       "fileCount": 12,
-      "rollup": "76952c493a7f35f33c1bad2821dab808ae16f50cc26aab371704b922bdf906ac",
+      "rollup": "dfd06d795feb006e44719f364669fb7e0be0d36e425718a2b4f951d2334c2d93",
       "files": {
         "SKILL.md": "4caae5c7119a8109affab8ed4c73f6cdf00adb6c27ef5385bfe541f01cfa2c56",
         "evals/evals.json": "4796a2f4a4c4a1dd5249c20161262e2bef95afc8734fa03551a5a7ad83a53a03",
         "references/ai-agentic-build.md": "1089cc425517882f60f5621c594aa8844c4cf5a9ee93d5fc56a8d44a400b225e",
         "references/design-directions.md": "74782bf8ec5df1399176c14150ec062448a66e3e366ce17645ef9c78cc7e1a69",
-        "references/design-system-template.md": "61663e4bba9ec49799d549111dac624f52b5b345d8618cd86c2c985a2dabe985",
+        "references/design-system-template.md": "3b76ae07f48732b1051e4cde0885861f74b5300c1254f208cf6d25a5db47d78a",
         "references/material-3.md": "4240d168fd6506c2ecd542df1aa04af6b6662aded4ff8180b70ac1eaa7af623b",
         "references/motion-recipes.md": "7301d82933282485e9fa6dff204241c52e35a77d1e3513523b27ee28c1cbf874",
         "references/quick-rules.md": "47841cb7e88f5af4899167bad3264e08c44d3ece9b5831e2f00dbdc3edd14ffa",
@@ -987,7 +987,7 @@
     },
     "ui-design-system": {
       "fileCount": 59,
-      "rollup": "6fd7fab7b496117531aa10ec8cd8feeae26a1759c2cfa4f799b63aa949ca2728",
+      "rollup": "f193ec80c871230e3b89ad2e0779498c6cf6232de84137466b148f12c51c5566",
       "files": {
         "SKILL.md": "a9736be8bb7347d02734f2480d57bf6adafb2931accedafa178658a19d798c0e",
         "evals/evals.json": "16dc7559135db2200834e18eb85a04eca5b90e3d339a8334e4d022ee4b6ab73b",
@@ -1000,8 +1000,8 @@
         "references/mode-drift.md": "7b36a5bac578680c2d20b7e597d43e7d6dfcc58a7a2e2fa444b5c0fe7af461f7",
         "references/mode-extract.md": "593cbed9ea7e86a15e1bb780b5787e70676d6384cf4f94052522279a4009283b",
         "references/validator-checks.md": "587548f7b262b10f2bddd65fcf0c413a82dd1cd14c2c7ca25cd6d1a11990019c",
-        "references/validator-rationale.md": "7e82306d46ec98b1e996d2a02977b6871c9d6e8bbd68f13df6422b44b3bc2704",
-        "scripts/validate-tokens.py": "d8ebbf3a6f294bd4755c8afc6ae227e2f458d556a1ff96576e2e4d60c476990a",
+        "references/validator-rationale.md": "7165083604b47b3e9e523ee47594f55992c6ae02c6e7319f54a6d169b1d4e827",
+        "scripts/validate-tokens.py": "2bd791ed625e07c8bddd5ec66007718347bc22c66ef576f306e775fe73602ddf",
         "tests/_assert.py": "e13728f4ae77a5c0fb42872dd6ad1fa0e6bf6e53462a3b83dd4a6e7134d959d2",
         "tests/_manifest.py": "730d1ae722f17efccd4c5f81f10690e805066127a07acc63db9fdc43c010b50e",
         "tests/expected.tsv": "faa39ae8bf395f82b859cddd00dc56c7da9360457d483c8ab1ca4f62d9f5c5da",

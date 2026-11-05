@@ -29,3 +29,10 @@ Build publication artifacts from a clean source checkout:
 The builder exports an allowlisted public source tree, validates that exported source, authenticates
 portable/plugin/Code payloads, audits the trees for local data, and writes archives plus SHA256SUMS.
 It never installs a plugin, publishes remotely or overwrites an existing output directory.
+
+Before publication, review all prose, inline comments, fixtures, filenames and links for private
+client/project context. Use neutral calibration examples and generic paths. Run
+`python3 scripts/check-public-content.py <publication-tree-or-archive>` on the actual public tree
+and rebuilt downloads. The checker traverses hidden folders and nested archives; it detects known
+private labels/lineage and personal checkout paths, not every possible client name or secret.
+Regression fixtures construct rejected labels in memory so the tests do not redistribute them.

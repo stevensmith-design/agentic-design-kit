@@ -2,6 +2,9 @@
 
 ## 2.0.1 — separate project workspaces
 
+- Neutralized private calibration labels in validator comments/documentation without changing
+  checks or thresholds; added publication text/archive privacy regressions and gates.
+
 - Public package guides explain the standalone kit versus its companion project harness; the
   harness includes a pinned kit, so users choose one installation.
 

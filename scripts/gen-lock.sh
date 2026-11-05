@@ -8,7 +8,7 @@ cd "$KIT/skills"
   echo '{'
   echo '  "version": 2,'
   echo "  \"generated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\","
-  echo '  "provenance": "ported from ~/Desktop/design_skills on 2026-09-08; upstream tree left untouched as archive",'
+  echo '  "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",'
   echo '  "skills": {'
   first_skill=1
   for s in $(ls -1d */ | sed 's#/##' | sort); do

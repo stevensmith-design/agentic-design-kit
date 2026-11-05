@@ -382,7 +382,7 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
     # A count badge label is SMALL text — needs the full 4.5:1, not the 3:1 CTA-label
     # allowance. White-on-accent (~2.5:1) fails and can't be darkened into range within
     # a brand; the on-system fix is a tint fill + ink numeral. Silent when no badge fill
-    # role is declared (the JT case — badges are inline, caught by the render/inline sweep).
+    # role is declared (inline badges are caught by the render/inline sweep).
     if badge_fill:
         bg = badge_fill['colors'][0] if not badge_fill['gradient'] else avg_rgb(badge_fill['colors'])
         if badge_label:
@@ -405,9 +405,9 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
     elif primary:
         # No explicit disabled token — derive it. Most builds fade the enabled
         # colour (opacity ~0.4), which is invisible to token-only comparison and
-        # is exactly how the 2026-07 "CTA reads as disabled" bug shipped: the
+        # explains an early calibration case where the CTA read as disabled: the
         # ghost derives from the enabled colour, so darkening the CTA cannot fix
-        # confusability (JT: enabled vs ghost 1.92:1 at #27A390; still only
+        # confusability (enabled vs ghost 1.92:1 at #27A390; still only
         # 2.18:1 at the much darker #1E9385).
         flat_all = resolve_refs(flatten(tokens))
         alpha = None
@@ -523,13 +523,13 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
     # scale-lift / real border) carries the state — "colour is never the only signal".
     # Report the fill against BOTH plausible grounds — the page canvas AND a white
     # content card — because a tile on a card only needs to separate from the card
-    # (JT: 1.033 on the canvas but 1.126 on the card it actually sits on; canvas-only
+    # (an early calibration case: 1.033 on the canvas but 1.126 on its card; canvas-only
     # over-warns and names the wrong surface). Thresholds track the surface value-step
     # band (1.05-1.12, see surface/value-step): >=1.10 clears the top of the band so
     # the fill stands on its own; <1.03 is below the "invisible" floor; between, it
     # depends on a second signal. The validator can't see the render, so it asserts
-    # the dependency and reminds the reviewer to verify it. (Promoted 2026-07-13 from a
-    # JT review: a mockup dropped the scale-lift and the selected tile read as blending.)
+    # the dependency and reminds the reviewer to verify it. (An early calibration
+    # case dropped the scale-lift and the selected tile read as blending.)
     sel_entries = [e for e in entries if 'select' in e['lpath']]
     sel_fills = [e for e in sel_entries if re.search(r'fill|background|\bbg\b|tint', e['lpath'])]
     _sel_pool = sel_fills or [e for e in sel_entries if not re.search(r'check|border', e['lpath'])] or sel_entries
@@ -548,7 +548,7 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
         # Only VALUE fields count as signals — never metadata. A `.note`/`.description`
         # leaf like "Retired: the old warm border (#EFB94A)…" is a real non-empty string
         # but describes a signal that no longer exists; counting it re-introduces exactly
-        # the fragile config this check guards. (JT-2026-07: a retired-border NOTE made
+        # the fragile config this check guards. (an early calibration case: a retired-border NOTE made
         # has_border read True and the faint selection passed instead of warning.)
         _META = ('note', 'description', 'comment', 'desc', 'doc', 'rationale', '_note', '$description')
         def _is_signal(k):
@@ -556,7 +556,7 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
         has_check  = any(_is_signal(k) and 'select' in k.lower() and 'check' in k.lower() and _real(v) for k, v in _fa.items())
         # A lift only counts as a real second signal if it is PERCEPTIBLE. A scale(1.04)
         # is below the just-noticeable floor and cannot carry state on its own — this was
-        # the JT-2026-07 config (12% tint + 1.04 lift + ink check, border retired) that
+        # a calibration config (12% tint + 1.04 lift + ink check, border retired) that
         # shipped as a near-invisible selected state. Require |scale-1| >= 0.06.
         def _lift_ok(v):
             n = _num(v)
@@ -774,7 +774,7 @@ def run_checks(tokens, design_text, theme_text='', theme_label='', strict=False,
         R.add('SKIP', 'dark/relationships', 'no dark-mode tokens or spec — single scheme')
 
     # ── 12. Implementation CSS vs tokens.json drift ─────────────────────────
-    # The 2026-07-11 external reviews both hit the same failure class: the
+    # Early calibration checks found the same failure class: the
     # validator passed on tokens.json while the shipped theme CSS carried the
     # opposite values ("green as false comfort"). This check diffs the theme's
     # custom properties against the mappable token roles.

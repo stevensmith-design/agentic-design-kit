@@ -117,6 +117,7 @@ def main():
      arc=rel if kind=='plugin' else Path(root.name)/rel
      z.write(p,str(arc))
    manifest['artifacts'][archive.name]={'sha256':digest(archive),'bytes':archive.stat().st_size}
+  run('python3',source/'scripts/check-public-content.py',stage)
   (stage/'release.json').write_text(json.dumps(manifest,indent=2)+'\n')
   (stage/'SHA256SUMS').write_text(''.join(v['sha256']+'  '+name+'\n' for name,v in manifest['artifacts'].items()))
   stage.rename(out)

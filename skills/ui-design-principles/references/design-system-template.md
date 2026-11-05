@@ -454,8 +454,8 @@ override without a log entry is a violation, not a design decision.
 | | | | |
 
 <!-- Example:
-| 2026-07-06 | Warm/cream background | Brand palette is explicitly warm — #FAF7F2 is the primary brand background per brand guidelines | Client |
-| 2026-07-06 | Gradient button | Hero CTA uses a brand-defined gradient matching the logo treatment | Design lead |
+| YYYY-MM-DD | Warm/cream background | Brand palette is explicitly warm — #FAF7F2 is the primary brand background per brand guidelines | Client |
+| YYYY-MM-DD | Gradient button | Hero CTA uses a brand-defined gradient matching the logo treatment | Design lead |
 -->
 
 ## Drift check

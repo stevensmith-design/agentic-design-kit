@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Audit an exported publication tree, not the private development repository."""
-import argparse,json,re
+import argparse,json,re,subprocess,sys
 from pathlib import Path
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('root',type=Path);p.add_argument('--kind',required=True,choices=['source','portable','plugin','code']);a=p.parse_args();root=a.root.resolve();errors=[]
 common=['AGENTS.md','README.md','LICENSE','NOTICE','VERSION','skills-lock.json']
@@ -23,6 +23,10 @@ if a.kind in {'source','plugin'}:
   if m.get('name')!='agentic-design-kit':errors.append('wrong public plugin identity')
   if m.get('version')!=(root/'VERSION').read_text().strip():errors.append('plugin/version mismatch')
  except (OSError,ValueError):errors.append('missing/unreadable plugin manifest')
+content_check=subprocess.run([sys.executable,str(Path(__file__).with_name('check-public-content.py')),str(root)],capture_output=True,text=True)
+if content_check.returncode:
+ errors.append('public content privacy check failed')
+ print(content_check.stdout or content_check.stderr)
 for error in sorted(set(errors)):print('INVALID —',error)
 if not errors:print('PASS — publication tree identity, required files and local-data exclusions ('+a.kind+')')
 raise SystemExit(bool(errors))

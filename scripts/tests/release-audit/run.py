@@ -10,7 +10,7 @@ required={'portable':['START-HERE.md','CLAUDE.md'],'code':['CLAUDE.md'],
  'source':['START-HERE.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','INSTALL.md','SOURCE-COMMIT']}
 cases=[('portable',None),('code',None),('plugin',None),('source',None),
  ('portable','license'),('portable','agent-entry'),('portable','private-file'),('portable','private-path'),
- ('plugin','old-name'),('portable','symlink'),('source','evidence')]
+ ('plugin','old-name'),('portable','symlink'),('source','evidence'),('source','client-label')]
 fail=0
 with tempfile.TemporaryDirectory() as td:
  for i,(kind,mutation) in enumerate(cases):
@@ -26,6 +26,7 @@ with tempfile.TemporaryDirectory() as td:
   if mutation=='private-path':(root/'README.md').write_text('/'+'Users'+'/example/private-project')
   if mutation=='old-name':(root/'.claude-plugin/plugin.json').write_text(json.dumps({'name':'design-skills-kit-v2','version':'2.0.0'}))
   if mutation=='symlink':(root/'outside').symlink_to(Path(td)/'other')
+  if mutation=='client-label':(root/'README.md').write_text('J'+'T'+' review')
   if mutation=='evidence':(root/'evidence').mkdir()
   result=subprocess.run([sys.executable,str(checker),str(root),'--kind',kind],capture_output=True,text=True)
   expected=0 if mutation is None else 1
