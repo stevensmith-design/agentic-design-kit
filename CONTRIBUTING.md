@@ -33,6 +33,6 @@ It never installs a plugin, publishes remotely or overwrites an existing output 
 Before publication, review all prose, inline comments, fixtures, filenames and links for private
 client/project context. Use neutral calibration examples and generic paths. Run
 `python3 scripts/check-public-content.py <publication-tree-or-archive>` on the actual public tree
-and rebuilt downloads. The checker traverses hidden folders and nested archives; it detects known
+and rebuilt downloads. The checker traverses hidden folders, nested archives and archive comments/metadata; it detects known
 private labels/lineage and personal checkout paths, not every possible client name or secret.
 Regression fixtures construct rejected labels in memory so the tests do not redistribute them.

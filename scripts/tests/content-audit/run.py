@@ -12,20 +12,26 @@ cases=[('neutral','An early calibration case: 1.033 on canvas, 1.126 on card.',F
  ('lineage',lineage,True),('wrapped-lineage',lineage.replace(' design','\ndesign'),True),('private-checkout','~/'+'Desktop/'+'design_skills',True),
  ('private-path','/'+'Users'+'/sample/private-project/file.md',True),
  ('hidden','the '+tag+' case',True),('zip',tag+' review',True),
- ('tar',lineage,True),('nested',tag+' case',True),('broken-zip','not an archive',True)]
+ ('tar',lineage,True),('neutral-tar','Neutral calibration example.',False),('owner-tar','Neutral calibration example.',True),('zip-comment',tag+' review',True),('zip-member-comment',tag+' review',True),('nested',tag+' case',True),('broken-zip','not an archive',True)]
 failures=[]
 with tempfile.TemporaryDirectory(prefix='public-content-fixtures-') as td:
  for name,body,invalid in cases:
   tree=Path(td)/name;tree.mkdir()
-  if name in {'zip','nested'}:
+  if name in {'zip','nested','zip-comment','zip-member-comment'}:
    data=io.BytesIO()
-   with zipfile.ZipFile(data,'w') as z:z.writestr('notes.md',body)
+   with zipfile.ZipFile(data,'w') as z:
+    if name=='zip-comment':z.writestr('notes.md','Neutral example.');z.comment=body.encode()
+    elif name=='zip-member-comment':
+     member=zipfile.ZipInfo('notes.md');member.comment=body.encode();z.writestr(member,'Neutral example.')
+    else:z.writestr('notes.md',body)
    if name=='nested':
     with zipfile.ZipFile(tree/'download.zip','w') as z:z.writestr('inner.zip',data.getvalue())
    else:(tree/'download.zip').write_bytes(data.getvalue())
-  elif name=='tar':
+  elif name in {'tar','neutral-tar','owner-tar'}:
    with tarfile.open(tree/'download.tar.gz','w:gz') as t:
-    data=body.encode();info=tarfile.TarInfo('notes.md');info.size=len(data);t.addfile(info,io.BytesIO(data))
+    data=body.encode();info=tarfile.TarInfo('notes.md');info.size=len(data)
+    if name=='owner-tar':info.uname='fixture-build-user';info.uid=501
+    t.addfile(info,io.BytesIO(data))
   elif name=='broken-zip':(tree/'download.zip').write_text(body)
   else:
    path=tree/('.claude/skills/sample/SKILL.md' if name=='hidden' else 'notes.md')

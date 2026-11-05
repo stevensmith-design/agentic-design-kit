@@ -43,13 +43,17 @@ class Audit:
   try:
    if lower.endswith('.zip'):
     with zipfile.ZipFile(io.BytesIO(data)) as z:
+     self.text(name+' [archive comment]',z.comment)
      for member in z.infolist():
       if member.is_dir():continue
+      self.text(name+'!'+member.filename+' [member comment]',member.comment)
       if member.file_size>MAX_MEMBER:self.error(name+'!'+member.filename,'member-size-unverified');continue
       self.content(name+'!'+member.filename,z.read(member),depth+1)
    else:
     with tarfile.open(fileobj=io.BytesIO(data),mode='r:*') as t:
      for member in t:
+      self.text(name+'!'+member.name+' [metadata]',json.dumps({'owner':member.uname,'group':member.gname,'link':member.linkname,'headers':member.pax_headers}).encode())
+      if member.uid or member.gid or member.uname or member.gname:self.error(name+'!'+member.name,'non-anonymous-archive-ownership')
       if member.isdir():continue
       if not member.isfile():self.error(name+'!'+member.name,'linked-or-special-archive-member');continue
       if member.size>MAX_MEMBER:self.error(name+'!'+member.name,'member-size-unverified');continue
