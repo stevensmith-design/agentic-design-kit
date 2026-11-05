@@ -25,7 +25,7 @@ def export_source(dst,revision):
  for name in ['skills','plugin']:tree(KIT/name,dst/name)
  # Internal acceptance tooling, legacy package builders and session helpers stay in development.
  tree(KIT/'scripts',dst/'scripts')
- for name in INTERNAL_SCRIPTS:(dst/'scripts'/name).unlink()
+ for name in INTERNAL_SCRIPTS:(dst/'scripts'/name).unlink(missing_ok=True)
  (dst/'docs').mkdir()
  for name in PUBLIC_DOCS:copy(KIT/'docs'/name,dst/'docs'/name)
  for name in ['LICENSE','NOTICE','VERSION','skills-lock.json']:copy(KIT/name,dst/name)
