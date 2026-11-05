@@ -1,5 +1,7 @@
 # agentic-design-kit
 
+![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](.github/assets/hero.jpg)
+
 Eleven first-party skills for AI-assisted interface design, review and refinement. Explore from
 real references, build a selected direction, review the rendered result, and create reusable visual
 guidelines and design systems.
