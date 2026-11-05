@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-05T09:35:21Z",
+  "generated": "2026-11-05T13:39:05Z",
   "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
@@ -631,7 +631,7 @@
     },
     "ui-design-review": {
       "fileCount": 350,
-      "rollup": "fd2048da0e5e0ce3e287a2dafd517d7650f8d1be5e0d34dd028dd88cd7d2b873",
+      "rollup": "8324eca3fbb4664ab684e6506b258ff237323b0fb8266026e11921e8d109230b",
       "files": {
         "SKILL.md": "aac5dcb0347c0716c53e0453955dee666a537b2f7f004471cc7ead750a2f940d",
         "evals/evals.json": "3c10774e5c67bd862bce8d74475ed967f07e2ca34c7860c4853a2b3b7c67e43a",
@@ -855,7 +855,7 @@
         "scripts/detect/tests/run.mjs": "8c457b277d54bfa54418a06b4637b9b0f0fe5afdc452c0e5eada392b29eba349",
         "scripts/measure-contrast.mjs": "60224b841b1598fd8c3f009904866a38b956bd8f9772a2fc9a55ed7577a0651a",
         "scripts/measure-padding.mjs": "d6514b2078ed62b912f525255b0205e98875363d2e3d7ca77efae409e615f7c0",
-        "scripts/scan.sh": "4b5e27f205f5c2e7460785a3531f564df3c227d7caa3f5fc2b2e8c0b3ca137f0",
+        "scripts/scan.sh": "96780c6d5dabd72b4120e2d5ed0ea38acc0e6fe1de6fc1fe96fad7040af43109",
         "tests/check-mirror.sh": "d80691e721c902b11220cc3ab744dac8fa6353ac0f9bf608047b47d18cdee2a3",
         "tests/clean/01-floor-fade-mask.css": "a4e2a2f6c3ef07679a8d0eccf93990287c241fc1dabbb70678a13b1988c59f5f",
         "tests/clean/02-padding-not-radius.css": "f94d4358a1510ff9bccaff6dda6470802cf5ceb5ab2d136385c020311e1d7295",
@@ -987,7 +987,7 @@
     },
     "ui-design-system": {
       "fileCount": 59,
-      "rollup": "f193ec80c871230e3b89ad2e0779498c6cf6232de84137466b148f12c51c5566",
+      "rollup": "6dbd5a4de8f8c9a6a6f51d79cacf72e186dc408f75c27e0c312f9bd8c87094ab",
       "files": {
         "SKILL.md": "a9736be8bb7347d02734f2480d57bf6adafb2931accedafa178658a19d798c0e",
         "evals/evals.json": "16dc7559135db2200834e18eb85a04eca5b90e3d339a8334e4d022ee4b6ab73b",
@@ -1001,7 +1001,7 @@
         "references/mode-extract.md": "593cbed9ea7e86a15e1bb780b5787e70676d6384cf4f94052522279a4009283b",
         "references/validator-checks.md": "587548f7b262b10f2bddd65fcf0c413a82dd1cd14c2c7ca25cd6d1a11990019c",
         "references/validator-rationale.md": "7165083604b47b3e9e523ee47594f55992c6ae02c6e7319f54a6d169b1d4e827",
-        "scripts/validate-tokens.py": "2bd791ed625e07c8bddd5ec66007718347bc22c66ef576f306e775fe73602ddf",
+        "scripts/validate-tokens.py": "0fde518854c68c20108e5e5b071f0071b84d572a0976f248511d898f0fb63a7c",
         "tests/_assert.py": "e13728f4ae77a5c0fb42872dd6ad1fa0e6bf6e53462a3b83dd4a6e7134d959d2",
         "tests/_manifest.py": "730d1ae722f17efccd4c5f81f10690e805066127a07acc63db9fdc43c010b50e",
         "tests/expected.tsv": "faa39ae8bf395f82b859cddd00dc56c7da9360457d483c8ab1ca4f62d9f5c5da",

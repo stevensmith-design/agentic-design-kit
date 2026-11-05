@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Public packaging regressions. Test fixtures precede the audit implementation."""
 from pathlib import Path
-import json,subprocess,sys,tempfile,shutil
+import json,subprocess,sys,tempfile,shutil,importlib.util
 kit=Path(__file__).resolve().parents[3]
 checker=kit/'scripts/check-public-release.py'
 common=['AGENTS.md','README.md','LICENSE','NOTICE','VERSION','skills-lock.json']
@@ -35,5 +35,20 @@ with tempfile.TemporaryDirectory() as td:
   # Missing checker/parse errors are not a successful negative fixture.
   good=result.returncode==expected and ('PASS' if expected==0 else 'INVALID') in result.stdout
   if not good:fail+=1;print('FAIL',kind,mutation,result.returncode,(result.stdout+result.stderr)[:180])
-print(f'{len(cases)-fail}/{len(cases)} public release fixtures behaved')
+# Public source must export itself without private development-only helper files.
+exports=0
+with tempfile.TemporaryDirectory(prefix='public-source-export-') as td:
+ spec=importlib.util.spec_from_file_location('public_release',kit/'scripts/prepare-public-release.py')
+ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+ try:
+  first=Path(td)/'source';module.export_source(first,'fixture-revision');exports+=1
+  assert not (first/'acceptance').exists()
+  assert not any((first/'scripts'/name).exists() for name in module.INTERNAL_SCRIPTS)
+  assert module.inventory(first/'skills')==module.inventory(kit/'skills')
+  module.KIT=first
+  second=Path(td)/'source-again';module.export_source(second,'fixture-revision');exports+=1
+  assert module.inventory(second/'skills')==module.inventory(first/'skills')
+ except (OSError,AssertionError) as error:
+  fail+=1;print('FAIL public-source re-export:',type(error).__name__,error)
+print(f'{len(cases)+1-fail}/{len(cases)+1} publication regressions; {exports}/2 public-source exports completed')
 raise SystemExit(bool(fail))
