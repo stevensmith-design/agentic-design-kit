@@ -1,0 +1,3 @@
+/* False-positive guard: a file with no spacing scale declared is not drifting
+   from one. This rule only fires where a scale exists to bypass. */
+.promo { margin-block: 27px; padding: 18px; }

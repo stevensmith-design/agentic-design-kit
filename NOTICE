@@ -1,0 +1,29 @@
+# NOTICE
+
+Every skill, script, test and document in this kit is this project's own work. No third-party
+code, prose, tables or examples are included. Earlier versions vendored two upstream skills
+(Hallmark, MIT; Impeccable, Apache-2.0); version 2 removed both on 2026-10-14 and re-expressed the ideas
+it kept in its own words under clean-room rules.
+
+## Informed by
+
+Re-expressed ideas carry no licence obligation. These credits are given because they are true.
+
+- **Hallmark** (Nutlope and contributors, MIT) — https://github.com/Nutlope/hallmark. The idea of
+  structural variety between builds and a distance test between them; named page structures and
+  component parts with variation settings; a build stamp and log; an enrichment ladder; a list of
+  AI-slop gates (the registry's `origin` column cites them as `H<n>`); a theme catalogue, which
+  this kit rewrote as `starter-directions`; studying a reference for type roles rather than faces.
+- **Impeccable** (Paul Bakaus, Apache-2.0) — https://github.com/pbakaus/impeccable ·
+  https://impeccable.style. The refinement verbs and a read-only review lane; scored critique and
+  audit; a static and a browser anti-pattern detector (the registry cites its rules as `I3` / `I4`
+  and its slop review as `S`); the four design registers adopted in `rules.md`; production-bar,
+  hardening, motion and typography guidance distilled into `rules.md`; the evidence-on-hand rule;
+  a fresh-context finish reviewer.
+
+Neither project is bundled with or required by this kit at install, build or run time, and neither
+endorses it.
+
+## Licence of this kit
+
+Agentic Design Kit is released under the MIT License. See `LICENSE` for the full terms.

@@ -1,0 +1,4 @@
+/* False-positive guard: "overline" as a text-decoration value is not an eyebrow
+   selector, and an intro label is not a kicker. */
+.footnote { text-decoration: overline; }
+.section-intro { font-size: 14px; }

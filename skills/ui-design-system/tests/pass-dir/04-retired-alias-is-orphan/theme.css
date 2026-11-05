@@ -1,0 +1,15 @@
+/* FIXTURE (pass, with a warning): the mirror case of 03, and the one mode-drift names
+   explicitly — "a token consumed only through an alias is NOT an orphan, and one whose
+   alias was RETIRED is". --color-legacy-cta was the alias; no rule resolves it any more.
+   So both it and --color-accent, whose only consumer is that dead alias, are orphans.
+   A naive grep sees var(--color-accent) and calls it consumed. It is not: its consumer
+   is itself unreachable. This is the case that decides whether the check is worth having. */
+:root{
+  --color-primary:#0F766E;
+  --color-accent:#B45309;
+  --color-legacy-cta:var(--color-accent);
+  --bg-app:#EEF3F1;
+  --text-body:16px;
+}
+.app{ background:var(--bg-app); font-size:var(--text-body); }
+.btn{ background:var(--color-primary); }

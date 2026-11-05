@@ -1,0 +1,6 @@
+/* The focus ring is drawn with box-shadow after outline is removed, and the card's
+   only boundary is a shadow. In Windows High Contrast / forced-colors both vanish:
+   shadows are not painted. rules.md -> Color contrast: forced-colors is evaluated,
+   and real borders are used where a boundary must survive. Advisory tier. */
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--color-focus); }
+.card { background: var(--color-surface); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }

@@ -1,0 +1,2 @@
+:root { --bgGlow: linear-gradient(180deg, #101820, #000); }
+.screen { background: var(--bgGlow); }

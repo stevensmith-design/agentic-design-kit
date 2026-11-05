@@ -1,0 +1,9 @@
+/* False-positive guard: leading tokens at or above the 1.0 floor, plus an
+   unrelated token that merely contains a number. */
+:root {
+  --lh-tight: 1.02;
+  --leading-display: 1.1;
+  --lh-body: 1.6;
+  --radius-card: 0.75rem;
+}
+.hero__title { line-height: var(--lh-tight); }

@@ -1,0 +1,2 @@
+:root { --ink: #000; --paper: #f7f6f2; }
+html { color: var(--ink); background: var(--paper); }

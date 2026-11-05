@@ -1,0 +1,53 @@
+{
+  "skill_name": "design-review",
+  "note": "Replacement-parity evals. They test review responsibilities and ordering without prescribing an aesthetic.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this completed page and repair material defects.",
+      "expected_output": "The artifact is rendered, independent creative and UI lenses run, objective claims are verified afterward, one bounded repair is made, and the final artifact is rerendered and rechecked.",
+      "files": [],
+      "expectations": [
+        "Looks at applicable rendered widths and states before critique.",
+        "Invokes distinctiveness-review, ui-design-review and locked read-only design-refine independently.",
+        "Runs objective detector and provenance checks after the independent aesthetic judgements.",
+        "Keeps disagreements visible and verifies load-bearing claims.",
+        "Repairs once through design-refine, then rerenders and reruns the floor."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this reference-led implementation against the references and chosen direction.",
+      "expected_output": "The review protects intentional reference-led qualities, gives the similarity reviewer the originals, and checks copying and provenance after exploration.",
+      "files": [],
+      "expectations": [
+        "Gives the distinctiveness lens the accepted direction and original references.",
+        "Runs the reference resonance and similarity review after independent lenses.",
+        "Does not substitute summaries, contracts or source IDs for original references.",
+        "Does not impose a starter, stock archetype or house style."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The browser checker cannot run and the loading state was not rendered. Is this ready?",
+      "expected_output": "The result is REVIEWED, with both unavailable checks named; it is not upgraded based on confidence or static inspection.",
+      "files": [],
+      "expectations": [
+        "Names the missing render and browser verification.",
+        "Preserves UNVERIFIED status.",
+        "Reports REVIEWED rather than READY or READY WITH PROPOSALS."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "The distinctiveness and refinement lenses disagree about an intentional treatment.",
+      "expected_output": "Both readings survive into the report and the subjective decision is left to the person.",
+      "files": [],
+      "expectations": [
+        "Does not collapse the two reports into a single verdict.",
+        "Checks the treatment against the accepted direction and system.",
+        "Repairs only a confirmed material defect, not the disagreement itself."
+      ]
+    }
+  ]
+}

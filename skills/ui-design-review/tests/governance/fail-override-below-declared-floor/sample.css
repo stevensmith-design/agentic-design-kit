@@ -1,0 +1,5 @@
+/* DESIGN.md for this project declares a 44px minimum control height. This override
+   takes the header's buttons below the floor the project itself declared.
+   Governance, not a universal threshold: rules.md sanctions 36px as a compact web
+   button, so only a project's OWN declared floor can be contradicted. */
+.header-actions .btn { min-height: 40px; padding-inline: 12px; }

@@ -1,0 +1,1 @@
+{"date": "2026-10-14", "route": "system-led", "direction": "system: DESIGN.md", "scope": "page", "structure": "own:method page", "parts": {"nav": {"part": "own:shared masthead", "settings": {}}}, "axes": {"ground": "light", "display": "serif", "accent": "orange"}, "system": "locked", "enrichment": "type", "distance": "inverted", "brief": "fixture brief"}

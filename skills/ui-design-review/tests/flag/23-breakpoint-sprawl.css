@@ -1,0 +1,5 @@
+/* Four ad-hoc widths where the system commits to two. Eye-tuned, not designed. */
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1280px) { .grid { grid-template-columns: repeat(5, 1fr); } }

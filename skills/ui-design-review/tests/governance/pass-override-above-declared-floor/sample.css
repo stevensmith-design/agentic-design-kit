@@ -1,0 +1,4 @@
+/* 40px clears the project's own 36px compact floor. A universal height threshold was
+   rejected precisely so this case stays silent — only a project's OWN declared floor
+   can be contradicted. */
+.header-actions .btn { min-height: 40px; padding-inline: 12px; }

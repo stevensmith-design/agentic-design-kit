@@ -1,0 +1,6 @@
+:root { --font-body: "Literata", serif; --font-display: "Fraunces", serif; --font-mono: "IBM Plex Mono", monospace; }
+body { font-family: var(--font-body); }
+h1, h2, h3 { font-family: var(--font-display); }
+.price { font-family: var(--font-mono); }
+.sku { font-family: var(--font-mono); }
+.table td { font-family: var(--font-mono); }

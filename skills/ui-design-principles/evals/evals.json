@@ -1,0 +1,109 @@
+{
+  "skill_name": "ui-design-principles",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In an established app, move one existing Save button 8px lower and keep it consistent with the current component library. Explain the implementation approach only. The project already has DESIGN.md and tokens.",
+      "expected_output": "A proportionate small-change workflow using the existing contract without unnecessary system bootstrap.",
+      "files": [],
+      "expectations": [
+        "Treats this as a small change and does not create or rewrite the full design system.",
+        "Uses the existing button component and spacing tokens rather than adding an ad-hoc value.",
+        "Checks representative sibling instances before changing a shared rule.",
+        "Requires rendered verification of the changed control in context."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design a new settings page for an existing dark-teal product. It has profile fields, notification toggles, integrations, Save, Disconnect, and Delete account. Describe the design contract and hierarchy before code.",
+      "expected_output": "A coherent pre-build contract covering task hierarchy, palette roles, surfaces, danger separation, tokens, and review handoff.",
+      "files": [],
+      "expectations": [
+        "Makes Save the dominant decision action while toggles, chevrons, and row actions remain subordinate.",
+        "Separates destructive actions into a clearly bounded danger area.",
+        "Defines non-neutral color roles and surface separation against actual grounds.",
+        "Uses existing tokens/validator and includes grayscale or squint hierarchy verification before build completion."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Choose a visual direction for a Japanese mobile journaling app. The brief asks for dark mode, glassmorphism, cards, asymmetry, retro details, and responsive design. Explain the direction before code.",
+      "expected_output": "A coherent direction that separates visual language, layout, primitives, modes, effects, and requirements instead of mixing every requested term.",
+      "files": [],
+      "expectations": [
+        "Classifies dark mode as a mode, cards as a content primitive, asymmetry as layout, glass as an effect, and responsive behavior as a requirement.",
+        "Commits one dominant visual language and explicitly excludes incompatible or unsupported treatments.",
+        "Justifies the direction from task, platform, content, audience, and brand evidence rather than an industry stereotype.",
+        "Checks the direction against dense, narrow, localized, error, empty, and reduced-motion conditions."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design an Android tablet and phone inventory app using Material 3 Expressive. Describe the system and adaptive behavior before implementation.",
+      "expected_output": "A Material-native plan grounded in tokens, component behavior, states, adaptive structure, and controlled expressiveness.",
+      "files": [],
+      "expectations": [
+        "Declares the Material adoption boundary and verifies the current library/component guidance.",
+        "Maps reference, system-role, and component tokens without creating a competing token source.",
+        "Defines compact and expanded structural/navigation behavior from the inventory task rather than only resizing.",
+        "Uses expressive shape, type, color, and motion selectively and rechecks hierarchy, accessibility, states, and reduced motion."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Add an AI feature to our expense tool: automatically categorise each uploaded receipt into one of our twelve expense categories and submit it. Design it.",
+      "expected_output": "Step 1 answered with the decision contract, the AI value gate run before the interaction is designed, and autonomy placed on the spectrum rather than set to automatic.",
+      "files": [],
+      "expectations": [
+        "Answers the three decision-contract questions concretely — a user outcome, a named trade-off stated as 'we accept X to get Y', and what stays under direct human control.",
+        "Runs the does-AI-add-value gate before designing the flow, and notes that categorisation against twelve fixed categories has a largely deterministic version — rules on merchant and amount — that would be right more often.",
+        "Flags that submission is the consequential half and treats it separately from categorisation rather than designing one automatic feature.",
+        "Places the feature on the autonomy spectrum with a reason, and does not put automatic submission past 'Acts with approval'; treats spend and irreversibility as the ceiling.",
+        "Says the autonomy level is earned and moves one step at a time, rather than offering a single on/off automation switch.",
+        "Does not skip Step 1 and go straight to layout, and does not treat 'it is an AI feature' as the justification for using a model."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Design the main screen for a bilingual English/Japanese incident console with a dense alert table, a persistent filter bar, loading/empty/error/stale states, long service names, and a destructive bulk Resolve action. Describe the visual and interaction contract before code.",
+      "expected_output": "A visual contract stress-tested against density, localization, all non-default states, persistent retrieval controls and consequential bulk action.",
+      "files": [],
+      "expectations": [
+        "Defines hierarchy for filters, alert data, row actions and the consequential bulk action rather than giving every control equal prominence.",
+        "Designs loading, empty, error and stale states as different information and recovery needs.",
+        "Tests Japanese/English labels and long service names without relying on truncation for the primary decision information.",
+        "Keeps filters and selected state structurally usable at narrow widths and hands URL ownership to the IA contract where appropriate.",
+        "Separates the destructive bulk action, scopes its target set clearly, and specifies confirmation or undo based on consequence and reversibility.",
+        "Requires representative rendered evidence for dense, narrow, localized and failure conditions rather than validating only the happy state."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Design a mobile 'who is free now' roster. Some people have available, busy, away, offline, or expiring statuses; most records have no presence data. The visual direction proposes green/red/grey avatar treatments. Describe the status model, component behaviour, accessibility, and what the roster should announce.",
+      "expected_output": "A presence design that separates missing data from real states, uses a second non-colour and programmatic channel, treats contrast scope carefully, and avoids narrating ambient roster churn.",
+      "files": [],
+      "expectations": [
+        "Does not coerce missing presence data into available, offline, unknown, or another asserted state; absence renders no indicator unless the product defines a meaningful unknown state.",
+        "Requires meaningful presence to survive hue, greying, desaturation, or opacity through a persistent non-colour channel and an accessible name or adjacent programmatic label.",
+        "Does not claim that every decorative status dot automatically fails WCAG at 3:1; it verifies the current 1.4.11 scope before citing it.",
+        "Defines the state vocabulary and precedence as a product decision rather than importing a universal set.",
+        "Keeps ambient updates quiet by default and announces only changes timely and relevant to the active task.",
+        "Treats expiry by disappearance as a cautious default, and makes a boundary label or countdown an explicit project decision when remaining time changes the user's decision."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Design a mobile home screen with a horizontally scrolling set of six personally relevant cards above bottom navigation and a persistent mini-player. The proposal asks for a 48dp next-card peek, edge-to-edge swiping, mandatory snap, and custom pointer dragging. Explain the layout and interaction contract before code.",
+      "expected_output": "A rail and bottom-stack decision that distinguishes guidance from standards, avoids invented thresholds, preserves native input and focus behaviour, and respects platform gesture zones.",
+      "files": [],
+      "expectations": [
+        "Tests whether users have a reason to seek later items and treats the rail as a decision rather than a universal carousel ban or default.",
+        "Rejects 48dp as a universal best-practice peek threshold and states that no authoritative peek amount or item-count ceiling exists.",
+        "Prefers native overflow when suitable; if custom dragging replaces it, requires a single-pointer previous/next alternative under WCAG 2.5.7.",
+        "Keeps the rail keyboard reachable, does not aria-hide merely off-screen native items, and verifies mandatory snap with logical scroll padding and visible focus.",
+        "Uses a gutter rather than broad Android gesture exclusions and states that the bottom home/quick-switch area cannot be excluded; scopes 200dp to side back-gesture exclusions.",
+        "Makes bottom navigation primary and the mini-player subordinate, with collapse/minimise behaviour considered, without inventing a fixed-chrome height budget or claiming stacking is categorically forbidden."
+      ]
+    }
+  ]
+}

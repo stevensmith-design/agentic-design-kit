@@ -1,0 +1,116 @@
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+.skip {
+  position: absolute; left: -9999px;
+}
+.skip:focus { left: 16px; top: 16px; background: var(--color-surface); padding: 8px 12px; }
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.masthead { border-bottom: 1px solid var(--color-border); }
+.masthead > .bar {
+  max-width: 68ch; margin: 0 auto; padding: 24px 32px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
+}
+.wordmark {
+  font-family: var(--font-display); font-size: var(--type-h3);
+  color: var(--color-text-primary); text-decoration: none; letter-spacing: -0.01em;
+}
+.masthead nav a {
+  color: var(--color-text-muted); text-decoration: none; margin-left: 24px;
+  font-size: var(--type-body);
+}
+.masthead nav a:hover { color: var(--color-text-primary); text-decoration: underline; }
+
+main { max-width: 68ch; margin: 0 auto; padding: 0 32px; }
+
+.lede { padding: 96px 0 64px; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: var(--type-caption);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-accent-text); margin: 0 0 16px;
+}
+h1 {
+  font-family: var(--font-display); font-size: var(--type-display);
+  line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 16px;
+}
+.standfirst { font-size: var(--type-h3); color: var(--color-text-primary); margin: 0 0 32px; }
+
+h2 {
+  font-family: var(--font-display); font-size: var(--type-h2);
+  margin: 0 0 8px; letter-spacing: -0.01em;
+}
+h3 {
+  font-family: var(--font-display); font-size: var(--type-h3);
+  margin: 0 0 8px;
+}
+
+.actions { display: flex; gap: 16px; align-items: center; margin: 0; }
+.cta {
+  display: inline-block;
+  background: var(--color-primary); color: var(--color-on-primary);
+  padding: 12px 20px; border-radius: var(--radius-sm);
+  text-decoration: none; font-family: var(--font-display);
+}
+.cta:hover { background: var(--color-accent-text); }
+.cta-quiet {
+  color: var(--color-text-primary); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+section { padding: 48px 0; border-top: 1px solid var(--color-border); }
+.lede { border-top: 0; }
+/* Pacing by role, per DESIGN.md Layer 2: the close gets air, the proof runs tight. */
+.evidence { padding-top: 40px; }
+.engage { padding-top: 56px; padding-bottom: 72px; }
+
+.cards { display: grid; gap: 16px; margin-top: 24px; }
+.card {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+.card p { margin: 0; color: var(--color-text-muted); }
+
+.findings { list-style: none; padding: 0; margin: 24px 0 0; }
+.findings li {
+  display: flex; gap: 12px; align-items: baseline;
+  padding: 12px 0; border-bottom: 1px solid var(--color-border);
+}
+.findings li:last-child { border-bottom: 0; }
+.tag {
+  font-family: var(--font-mono); font-size: var(--type-caption);
+  border-radius: var(--radius-pill); padding: 2px 10px; white-space: nowrap;
+  color: var(--color-on-primary);
+}
+.tag-error { background: var(--color-error); }
+.tag-warn  { background: var(--color-warning); color: var(--color-text-primary); }
+.tag-ok    { background: var(--color-success); }
+
+.footer { border-top: 1px solid var(--color-border); }
+.footer > p {
+  /* Measure in the body's ch, not the caption's — ch scales with the element's own
+     font-size, so a smaller box centres further right and breaks the shared grid. */
+  max-width: 68ch; margin: 0 auto; padding: 32px;
+  color: var(--color-text-muted);
+}
+.footer > p > span { font-size: var(--type-caption); }
+
+@media (max-width: 600px) {
+  h1 { font-size: var(--type-h1); }
+  .masthead > .bar { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 24px; }
+  .masthead nav { display: flex; gap: 20px; }
+  .masthead nav a { margin-left: 0; }
+  main { padding: 0 24px; }
+  .footer > p { padding: 32px 24px; }
+  .lede { padding: 56px 0 48px; }
+}

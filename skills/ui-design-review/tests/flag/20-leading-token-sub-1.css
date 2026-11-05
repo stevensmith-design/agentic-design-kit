@@ -1,0 +1,9 @@
+/* The token form of the same defect: sub-1.0 leading declared as a custom
+   property, consumed by the display face. Same collision, one indirection away. */
+:root {
+  --lh-tight: 0.95;
+}
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: var(--lh-tight);
+}

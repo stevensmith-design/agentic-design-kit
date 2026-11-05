@@ -1,0 +1,1 @@
+default path loads a structures file: references/structures/index.md (via references/build/passes.md)

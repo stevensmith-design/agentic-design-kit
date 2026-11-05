@@ -1,0 +1,2 @@
+/* gradient CTA — override: gradient-cta (see DESIGN.md override log) */
+.btn-primary { background: var(--color-primary); }

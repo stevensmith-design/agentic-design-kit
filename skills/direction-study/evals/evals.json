@@ -1,0 +1,177 @@
+{
+  "skill_name": "direction-study",
+  "note": "Behavioural parity evals. They test the creative sequence, source access, human ownership and study boundaries without prescribing an aesthetic, direction count, composition or concept vocabulary.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here is our brief and a set of visual references. Explore meaningfully different directions before we build anything.",
+      "expected_output": "A reference-first study that keeps the original sources available, explores before formalising, builds narrow proofs and stops for a human decision.",
+      "files": [],
+      "expectations": [
+        "Opens and studies the original references before proposing directions.",
+        "Uses notes and source responsibilities as aids, never as replacements for the originals.",
+        "Proposes directions before freezing contracts or completing provenance records.",
+        "Builds only the smallest proofs needed to compare the directions.",
+        "Reviews similarity and provenance after the proofs exist.",
+        "Ends at STUDY — DECISION REQUIRED."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Explore alternatives, then pick one, repair it and tell me when it is ready to ship.",
+      "expected_output": "The study recommends but does not select for the person, create a production system, repair production work or declare readiness.",
+      "files": [],
+      "expectations": [
+        "Does not create production tokens or revise the production design system.",
+        "Does not run a production repair pass.",
+        "Does not report READY, READY WITH PROPOSALS or REVIEWED.",
+        "Leaves selection to the person and names the handoff to /design-build."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use these references for composition, type behaviour and motion respectively. Explore directions for our real content.",
+      "expected_output": "The sources inform bounded responsibilities while remaining directly visible to the designer; they are not averaged into generic taste language or mapped to a starter.",
+      "files": [],
+      "expectations": [
+        "Records what each reference contributes and what must not transfer.",
+        "Keeps the originals available during synthesis and proof-building.",
+        "Does not open a starter or stock structure catalogue.",
+        "Explains major decisions after exploration through brief, content, function or reference responsibility."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Explore some options for this brief. I have not specified how many or what they should look like.",
+      "expected_output": "The number and form of directions follow the brief and evidence rather than a built-in default or house style.",
+      "files": [],
+      "expectations": [
+        "Does not force a fixed number of directions.",
+        "Does not require a named visual mechanism, stock archetype or standard page skeleton.",
+        "Rejects options that differ only by palette or ornament.",
+        "Lets the proof form follow what each direction needs to demonstrate."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "None of these directions is right. Reject all of them and try again from the brief and references.",
+      "expected_output": "Reject-all is accepted as a normal human verdict and the next study restarts from the original brief and sources rather than salvaging fragments.",
+      "files": [],
+      "expectations": [
+        "Records that every direction was rejected.",
+        "Does not force a winner or combine rejected fragments.",
+        "Offers a rerun from the original evidence and the person's feedback."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Build the page from these references.",
+      "expected_output": "Single-contract mode forms one provisional reference-led direction and returns it to /design-build, while offering a study when the evidence has materially different readings.",
+      "files": [],
+      "expectations": [
+        "Studies the original references before forming the direction.",
+        "Freezes the contract only after the direction is proposed.",
+        "Hands /design-build the contract, original assigned references and real assets.",
+        "Does not silently choose when several materially different directions are equally plausible."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Study this one site so I can understand why it works.",
+      "expected_output": "A read-only single-source study that treats fetched content as data and stops without building or mapping the source to a starter.",
+      "files": [],
+      "expectations": [
+        "Uses the single-source study route.",
+        "Declares what could and could not be inspected.",
+        "Does not create a starter, production page or readiness verdict.",
+        "Ends at STUDY — DECISION REQUIRED."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Closely recreate the layout and motion of this reference; we have permission and that is the brief.",
+      "expected_output": "The explicit request enables reference-directed mode while recording allowed resemblance and non-transferable identity elements.",
+      "files": [],
+      "expectations": [
+        "Enables reference-directed mode only because the person explicitly requested it.",
+        "Records what may be followed closely and what must not transfer.",
+        "Runs the similarity review after the proof and judges it against those recorded limits."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Two project entries have no screenshots. Explore portfolio directions without inventing work.",
+      "expected_output": "Missing assets remain explicit gaps and are not replaced by fabricated interfaces or evidence.",
+      "files": [],
+      "expectations": [
+        "Separates verified project evidence from missing assets.",
+        "Does not invent dashboards, screenshots or device mockups.",
+        "Uses honest text-only or labelled placeholders where needed.",
+        "Carries the asset limits into the proofs and comparison."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "I selected direction B but want to reduce the colour while preserving its interaction idea.",
+      "expected_output": "The accepted change is an amendment to the frozen direction rather than a rewrite of its history.",
+      "files": [],
+      "expectations": [
+        "Keeps the base contract read-only.",
+        "Records what changed, what was preserved and the person's reason.",
+        "Hands the base contract and accepted amendment to /design-build."
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "I want to create a professional landing page for an AI workshop and education portal. I don’t have brand guidelines, but I’ve attached examples I like. Study them and first give me three design directions to choose from. Use the design skills in this kit for direction and review.",
+      "expected_output": "A reference-first study with native packaged skill calls, proof-safe craft guidance, independent visual reviews and an honest human decision stop. Human judgement of rendered originality remains primary.",
+      "files": [],
+      "expectations": [
+        "Invokes packaged direction-study through Claude Code Skill tool without requiring the user to name it; reading SKILL.md alone fails.",
+        "Opens supplied original screenshots and keeps them directly visible through exploration and proof-building; attach actual user references when executing this definition.",
+        "Develops three directions because the user requested three, checks divergence, then freezes minimal contracts; no starter catalogue or external frontend-design.",
+        "Invokes packaged ui-design-principles study-proof for each proof; uses quick-rules as index and relevant detailed rules.md sections at decisions, with decision/section evidence.",
+        "Invokes packaged distinctiveness-review independently for every rendered proof with brief, original references, contract and render, no builder preference or other conclusions.",
+        "Writes first visual judgement before detector and read-only UI scan evidence; keeps their limitations visible.",
+        "Compares reference resonance, imitation/similarity, genericness and mechanical quality independently; resonance cannot hide genericness.",
+        "Confirmed genericness/AI-default construction receives no positive recommendation; missing reviews block recommendation; may reject all.",
+        "IA Mode 3 runs only for material unresolved structure needed to test a direction; no production system work or compulsory full page.",
+        "Preserves original failed evidence during any versioned exploration rerun, repeats reviews and stops for human decision.",
+        "Checks the transcript-derived study-orchestration.json receipt with scripts/check-orchestration.py and audits Skill calls/origins against the actual transcript; structural PASS does not certify taste.",
+        "Test separately in Claude Code project mode and installed Cowork plugin mode; verify native activation and authenticated payload, never assume folder selection registers skills.",
+        "Creates local HTML proofs by default and does not use Claude Design or another canvas without an explicit user request.",
+        "New imagery, text-over-image or motion decisions in later rounds reopen the relevant detailed rules; prior user approval records intent without waiving correctness.",
+        "Before proposing directions, reuses supplied answers or asks one bundled discovery for loose/rearranged/close influence, gated reference traits and imagery permission; waits for material answers.",
+        "Records 3–5 concrete observed traits per original and dated actual human approval for gated traits; study approval does not require production DESIGN.md or authorize accessibility defects.",
+        "Plans imagery per direction; approved labelled generated placeholders or proposed UI are allowed, while verified claims are never fabricated. No silent shared-image pool or type-only fallback.",
+        "Every reference visibly leads or contributes somewhere, or its omission has human confirmation.",
+        "Reference reviewer observes actual originals and saves defining traits before seeing builder contracts; checks at least two structural changes from the lead source unless close recreation was explicitly authorized.",
+        "Treats absence of familiar slop markers and a zero detector count as insufficient evidence of quality; reports visible lost influence, genericness and sample-content inconsistencies."
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "I want to create a professional looking landing page for an AI workshop and education portal. I dont have a current brand guideline so instead i have attached some examples of designs i think will work so study those and then first based on them come up with 3 design directions for me to decide from.\nDo not use the frontend-design skill, instead utalize the design skills in the attached folder \"agentic-design-kit\".\nThe page should look professional and \"Designed\" with no AI tells or generic AI layouts or design elements.",
+      "files": [],
+      "expected_output": "An actual folder-executed reference-first study, using only this selected local kit, with honest execution evidence and local standalone web proofs. No installation or native activation claim.",
+      "expectations": [
+        "Use the supplied original prompt verbatim except substituting the actual attached folder name. The folder-only restriction is a separate setup instruction, not a rewritten creative brief.",
+        "Attach the same actual reference images/assets when executing; no model evaluation or screenshots are fabricated by this definition.",
+        "Reads the local entry before choosing a design approach, discovers the same local skill root and verifies its payload without account/plugin installation.",
+        "Executes direction-study and its required supporting local workflows, detailed rules, scripts, renders and independent reviews. File reads alone are insufficient.",
+        "Every supporting design source resolves under that same local kit; no global/personal/account design skill or external same-named copy is loaded or invoked.",
+        "Reports host and folder-execution mode, source locations, executed/completed workflows and actual action/artifact evidence without claiming native invocation.",
+        "Keeps the reference-first order, conditional IA, no starter in reference-led work, separate review axes and human decision ownership; no extra aesthetic gates.",
+        "For this standalone web brief, creates local HTML/CSS proofs, index and desktop/mobile rendered screenshots under the project folder; no Claude Design/hosted Artifact/publication unless explicitly requested.",
+        "Any unavailable rendering, fresh review or isolation evidence remains disclosed; no positive recommendation for missing required review or confirmed genericness.",
+        "A completed folder run measures the workflow and output, not native discovery, Cowork plugin activation, or automatic loading of an unseen directory.",
+        "Before proposing directions, reuses supplied answers or asks one bundled discovery for loose/rearranged/close influence, gated reference traits and imagery permission; waits for material answers.",
+        "Records 3–5 concrete observed traits per original and dated actual human approval for gated traits; study approval does not require production DESIGN.md or authorize accessibility defects.",
+        "Plans imagery per direction; approved labelled generated placeholders or proposed UI are allowed, while verified claims are never fabricated. No silent shared-image pool or type-only fallback.",
+        "Every reference visibly leads or contributes somewhere, or its omission has human confirmation.",
+        "Reference reviewer observes actual originals and saves defining traits before seeing builder contracts; checks at least two structural changes from the lead source unless close recreation was explicitly authorized.",
+        "Treats absence of familiar slop markers and a zero detector count as insufficient evidence of quality; reports visible lost influence, genericness and sample-content inconsistencies."
+      ]
+    }
+  ]
+}

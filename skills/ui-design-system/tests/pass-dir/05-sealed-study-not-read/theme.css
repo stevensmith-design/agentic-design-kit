@@ -1,0 +1,18 @@
+/* FIXTURE (pass, with a warning): as 02, plus a reference study inside the project root.
+   study/p/sealed/ holds a supplied reference that happens to consume --radius-card. Sealed
+   material is never read by a build-side tool (direction-study → reference-study.md): reading
+   it would both leak the reference into the build context and hide this orphan. So the walk
+   skips sealed/ and --radius-card is still reported. Copied from 02:
+   --color-primary, --bg-app and --text-body are each
+   consumed via var(). --radius-card is declared and nothing resolves it — an orphan.
+   It inflates the apparent system and the next author reads it as sanctioned
+   vocabulary, so a retired treatment quietly returns. WARN, never FAIL: no
+   relationship is broken, so it must not change the exit code. */
+:root{
+  --color-primary:#0F766E;
+  --bg-app:#EEF3F1;
+  --text-body:16px;
+  --radius-card:12px;
+}
+.app{ background:var(--bg-app); font-size:var(--text-body); }
+.btn{ background:var(--color-primary); }

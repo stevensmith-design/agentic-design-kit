@@ -1,0 +1,13 @@
+/* design-build stamp
+   date: 2026-10-14
+   route: starter-led
+   direction: starter: fixture
+   scope: component
+   structure: none
+   axes: ground=light display=serif accent=orange
+   system: open
+   enrichment: type
+   distance: n/a
+*/
+
+:root { --ink: #222; }

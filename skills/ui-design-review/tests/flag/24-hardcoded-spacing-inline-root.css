@@ -1,0 +1,4 @@
+/* Same defect, compressed source: the scale is declared inline on :root rather
+   than one-per-line. Regression guard for a detector that anchored too tightly. */
+:root { --space-4: 24px; --space-5: 30px; }
+.step-connector { margin-block: 27px; }

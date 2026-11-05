@@ -1,0 +1,10 @@
+/* Root cause of origin slop gate 44 (hero fit), caught statically.
+   Observed in the wild: a 6rem display max pushes headline to 7 lines and the
+   primary CTA 429px below the fold at 1280x800. */
+:root {
+  --display-lg: clamp(2.75rem, 9vw, 6rem);
+}
+.hero__title {
+  font-size: var(--display-lg);
+  line-height: 1.05;
+}

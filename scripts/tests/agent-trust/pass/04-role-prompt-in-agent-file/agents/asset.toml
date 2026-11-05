@@ -1,0 +1,4 @@
+name = "asset_producer"
+instructions = """
+You are the asset production agent for this skill.
+"""

@@ -1,0 +1,4 @@
+{
+  "_note": "F4: only an elevation ramp — no canvas/surface/ink/primary. In default mode this exits 0 (nearly everything SKIPs); under --strict the unresolved required relationships FAIL.",
+  "elevation": { "1": "0 1px 2px rgba(17,24,22,0.06)", "2": "0 4px 12px rgba(17,24,22,0.08)" }
+}

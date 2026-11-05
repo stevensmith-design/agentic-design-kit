@@ -1,0 +1,34 @@
+/* Generated from ../derived/tokens.json — do not hand-edit values. */
+:root {
+  --color-primary: #DD3727;
+  --color-on-primary: #FFFFFF;
+  --color-accent-text: #D73120;
+  --color-canvas: #FAF7F2;
+  --color-surface: #FEFDFB;
+  --color-border: #E3E0DB;
+  --color-text-primary: #1E1A14;
+  --color-text-muted: #76716B;
+  --color-error: #A35100;
+  --color-success: #1C8742;
+  --color-warning: #DA950B;
+
+  --type-caption: 12px;
+  --type-body: 16px;
+  --type-h3: 20px;
+  --type-h2: 26px;
+  --type-h1: 34px;
+  --type-display: 55px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  --elevation-1: 0 1px 2px rgba(17,24,22,0.06);
+  --elevation-2: 0 4px 12px rgba(17,24,22,0.08);
+  --elevation-3: 0 12px 32px rgba(17,24,22,0.12);
+
+  --font-display: "Bricolage Grotesque", Georgia, serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-mono: "Spline Sans Mono", ui-monospace, monospace;
+}

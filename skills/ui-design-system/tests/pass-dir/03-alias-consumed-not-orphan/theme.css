@@ -1,0 +1,12 @@
+/* FIXTURE (pass): --color-primary is never referenced directly by a rule. It is
+   consumed through the alias --color-cta, which a rule does resolve. mode-drift is
+   explicit that a token consumed only through an alias is NOT an orphan, so the
+   check must stay silent here — this is the case that makes a naive grep wrong. */
+:root{
+  --color-primary:#0F766E;
+  --color-cta:var(--color-primary);
+  --bg-app:#EEF3F1;
+  --text-body:16px;
+}
+.app{ background:var(--bg-app); font-size:var(--text-body); }
+.btn{ background:var(--color-cta); }

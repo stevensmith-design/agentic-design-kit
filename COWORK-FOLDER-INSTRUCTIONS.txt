@@ -1,0 +1,17 @@
+Use the installed agentic-design-kit plugin for this folder's design work. Before generating
+concepts or changing UI, verify its registered skill identities and packaged origins. A folder
+selection or arbitrary SKILL.md read is not proof of native activation. If the kit is unavailable,
+report the setup gap and stop that phase; do not substitute another design skill or canvas. For
+concepts, directions, alternatives or help choosing, activate the plugin's direction-study. Let
+that orchestrator activate supporting kit skills as their phases arrive; do not preload them all.
+Use original references directly. For standalone web studies here with no existing application,
+save one local HTML/CSS proof per direction, a linking index and desktop/mobile screenshots in this
+folder. Existing-codebase, native-app and requested Figma work retain their appropriate output. Do
+not switch to Claude Design, a hosted Artifact, publication or another design-producing canvas
+unless I explicitly request it. An external design producer, orchestrator, guardrail or reviewer
+active in this kit-only test makes the run INVALID — EXTERNAL DESIGN SKILL ACTIVE. Ordinary coding,
+image and rendering tools are allowed, provided they do not supply an external design workflow or
+aesthetic direction. Before creative work, state which kit installation/registered skill was
+activated and where the verified payload resolves. A pointer alone is not a completed study.
+Preserve warnings and missing capabilities; render and inspect proofs and complete independent
+reviews before comparison.

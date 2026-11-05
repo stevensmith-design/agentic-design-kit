@@ -1,0 +1,9 @@
+/* The project HAS a spacing scale; this declaration bypasses it.
+   Scale-agnostic: the defect is the raw literal, not the number. */
+:root {
+  --space-4: 24px;
+  --space-5: 30px;
+}
+.step-connector {
+  margin-block: 27px;
+}

@@ -1,0 +1,30 @@
+# validate-tokens.py fixture expectations — F6 (assert the intended check + level)
+# <fixture basename (no .json / dir name)> <TAB> <check id> <TAB> <expected level>
+01-cta-label-contrast	contrast/cta-label	FAIL
+02-invisible-value-step	surface/value-step	FAIL
+03-muted-too-faint	contrast/muted-on-canvas	FAIL
+04-type-collapsed	type/scale-ratios	FAIL
+05-elevation-nonmonotonic	elevation/ramp	FAIL
+06-body-on-canvas	contrast/body-on-canvas	FAIL
+01-theme-body-drift	drift/theme-vs-tokens	FAIL
+07-cta-in-otherwise-valid	contrast/cta-label	FAIL
+04-body-only-scale-skips	type/scale-ratios	SKIP
+01-blank-under-strict	coverage/required	FAIL
+09-selection-invisible-no-signal	selection/fill-vs-canvas-second-signal	FAIL
+06-selection-faint-with-signal	selection/fill-vs-canvas-second-signal	WARN
+07-selection-strong-fill	selection/fill-vs-canvas-second-signal	PASS
+10-selection-faint-committed-signal	selection/fill-vs-canvas-second-signal	PASS
+11-selection-retired-border-note	selection/fill-vs-canvas-second-signal	WARN
+10-badge-label-contrast	contrast/badge-label	FAIL
+11-ordinary-bold-cta-3-12	contrast/cta-label	FAIL
+12-badge-tint-ink-numeral	contrast/badge-label	PASS
+14-ordinary-cta-4-5	contrast/cta-label	PASS
+15-unpermissioned-support-accent-warns	palette/support-permission	WARN
+16-permissioned-support-accent	palette/support-permission	PASS
+17-invisible-tint-on-ground-warns	surface/tint-vs-grounds	WARN
+18-visible-tint-on-grounds	surface/tint-vs-grounds	PASS
+02-orphan-token-warns	tokens/orphans	WARN
+03-alias-consumed-not-orphan	tokens/orphans	PASS
+04-retired-alias-is-orphan	tokens/orphans	WARN
+05-sealed-study-not-read	tokens/orphans	WARN
+02-template-keys-filled	surface/value-step	PASS

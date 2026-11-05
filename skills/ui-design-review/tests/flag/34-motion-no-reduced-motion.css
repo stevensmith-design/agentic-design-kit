@@ -1,0 +1,7 @@
+/* Spatial motion — a transform transition and a keyframe animation — with no reduced
+   motion fallback declared anywhere in this file. rules.md → Motion requires one.
+   The literal token appears nowhere outside this comment, and the detector strips
+   comments before deciding, so this comment cannot mask the finding either way. */
+.panel { transition: transform 220ms var(--ease-out), opacity 220ms var(--ease-out); }
+.toast { animation: slide-in 260ms var(--ease-out) both; }
+@keyframes slide-in { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }

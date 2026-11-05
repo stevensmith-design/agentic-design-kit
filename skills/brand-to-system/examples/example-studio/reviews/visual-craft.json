@@ -1,0 +1,20 @@
+{
+  "check": "visual-craft",
+  "verdict": "pass",
+  "targetDigest": "032ef80ca5da3a27e9ad918f5cffd8b410f54fdc9543fe54c131db701f870769",
+  "reviewer": "agent:ui-design-review",
+  "at": "2026-08-26T14:18:00Z",
+  "round": 3,
+  "evidenceBasis": "re-rendered at 1280px and 390px; alignment, gap and nav-wrap measured in the DOM rather than judged by eye",
+  "summary": "All seven findings closed. Measured: h1, wordmark and footer share x=400 at 1280px and x=24 at 390px; the evidence-to-Engage gap is 105px; the nav holds one line at 390px.",
+  "closed": [
+    "V1 one grid",
+    "V2 single rule",
+    "V3 nav holds one line at 390px",
+    "V4 hero on the display tier",
+    "V5 sections paced by role",
+    "V6 footer measure no longer depends on its own font-size (and the mobile gutter matches)",
+    "V7 gap 165px -> 105px"
+  ],
+  "findings": []
+}

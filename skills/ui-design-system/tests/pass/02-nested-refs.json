@@ -1,0 +1,18 @@
+{
+  "primitives": {
+    "color": {
+      "brand": { "primary": { "value": "#0F766E", "note": "white label #FFFFFF passes 4.5:1" } },
+      "text": { "primary": { "value": "#1B2B2A" }, "secondary": { "value": "#4C5C58" }, "onBrand": { "value": "#FFFFFF" } },
+      "background": { "canvas": { "value": "#F1F5F4" }, "surface": { "value": "#FFFFFF" } },
+      "border": { "hairline": { "value": "#E2E9E7" } },
+      "selected": { "fill": { "value": "#FBEFCF" } }
+    },
+    "type": { "hero": { "size": "26px" }, "title": { "size": "20px" }, "body": { "size": "16px" } },
+    "radius": { "card": { "value": "16px" }, "input": { "value": "12px" } },
+    "elevation": {
+      "1": { "value": "0 1px 2px rgba(17,24,22,0.06)" },
+      "2": { "value": "0 4px 12px rgba(17,24,22,0.08)" }
+    }
+  },
+  "semantic": { "card": { "shadow": { "value": "{primitives.elevation.1.value}" } } }
+}

@@ -1,0 +1,4 @@
+# Allowlist for scripts/check-agent-trust.sh — path (relative to skills/) <TAB> exact substring of the
+# flagged line <TAB> why it is not the risk. One row suppresses one line; a row that matches nothing
+# fails the gate as STALE. Add a row only for a line that is not an instruction to the agent.
+ui-design-system/references/validator-checks.md	`pip install`, no external packages.	Negation: states the validator needs no install

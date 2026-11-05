@@ -1,0 +1,12 @@
+/* False-positive guard: a WIDTH clamp with a large max is not a display clamp,
+   and ordinary leading values must never flag. */
+.card {
+  width: clamp(280px, 40vw, 640px);
+}
+.prose {
+  line-height: 1.6;
+}
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+}

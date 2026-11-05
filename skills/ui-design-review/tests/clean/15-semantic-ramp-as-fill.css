@@ -1,0 +1,12 @@
+/* Legit semantic use: the index ramp carries real meaning as a status fill on a
+   badge/chip — NOT a decorative border. Must stay clean (no leak). */
+.status-badge {
+  background: var(--index-a);
+  color: #ffffff;
+  border-radius: 999px;
+}
+/* Neutral-ramp hairline border on a card is normal separation, not a leak. */
+.data-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+}

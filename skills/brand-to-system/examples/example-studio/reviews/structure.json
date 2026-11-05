@@ -1,0 +1,28 @@
+{
+  "check": "structure",
+  "verdict": "pass",
+  "targetDigest": "032ef80ca5da3a27e9ad918f5cffd8b410f54fdc9543fe54c131db701f870769",
+  "reviewer": "agent:ia-review",
+  "at": "2026-08-26T14:18:00Z",
+  "evidenceBasis": "source read; rendered at 1280px and 390px",
+  "summary": "S1 closed \u2014 nav labels now appear verbatim in the heading they land on (Commitments / Evidence). No structural defects remain at this page size.",
+  "findings": [
+    {
+      "id": "S1",
+      "severity": "material",
+      "evidence": "Verified",
+      "basis": "established principle",
+      "finding": "Information scent breaks at the nav. 'Method' lands on a section headed 'Three commitments'; 'Evidence' lands on 'What a review produces'. Only 'Engage' matches. A reader who clicks a label and arrives at a different word has to re-orient before reading.",
+      "repair": "Make the label and the heading the same words, in the heading's favour: nav reads Commitments / What a review produces (or shorten the heading to Evidence). Acceptance: every nav label appears verbatim in the h2 of its target."
+    },
+    {
+      "id": "S2",
+      "severity": "pass-note",
+      "evidence": "Verified",
+      "basis": "standard/correctness",
+      "finding": "Heading order is sound (single h1, h2 per section, h3 within cards), the skip link is first in tab order, and landmarks are present. No progressive-disclosure or grouping defects at this page size.",
+      "repair": "None."
+    }
+  ],
+  "round": 3
+}

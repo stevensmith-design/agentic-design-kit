@@ -1,0 +1,7 @@
+/* F6 combined fixture: intended finding = gradient on interactive element.
+   Surrounded by legitimate patterns that must NOT be what trips the suite:
+   an outline-based focus ring, a flat canvas var, a system radius, a neutral shadow. */
+.app { background: var(--bg-app); }
+.card { background: #FFFFFF; border-radius: 12px; box-shadow: 0 1px 2px rgba(17, 24, 22, 0.06); }
+.input:focus { outline: 2px solid #1E9385; outline-offset: 2px; }
+.btn-primary { background: linear-gradient(180deg, #2EB7A3, #1E9385); color: #FFFFFF; }

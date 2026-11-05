@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual brand",
+  "description": "The minimum a visual brand must state for a validated design system to be derived from it. Every field here is read by derive-system.py; nothing is declared that is not consumed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["brand", "colour"],
+  "properties": {
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "aestheticCommitment"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "aestheticCommitment": {
+          "description": "One sentence, specific. Becomes Layer 1 of DESIGN.md. A vague commitment is a finding, not a system.",
+          "type": "string", "minLength": 12
+        },
+        "register": { "enum": ["product_ui", "brand_ui"], "default": "product_ui" },
+        "platform": { "type": "string" },
+        "audience": { "type": "string" }
+      }
+    },
+    "colour": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anchor", "ground"],
+      "properties": {
+        "anchor": {
+          "description": "The one action hue. Everything else is derived from it or separated against it.",
+          "type": "object", "additionalProperties": false, "required": ["hue", "chroma"],
+          "properties": {
+            "hue": { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+            "chroma": { "type": "number", "minimum": 0, "maximum": 0.4 }
+          }
+        },
+        "neutral": {
+          "description": "The brand tint the greys carry. Chroma outside 0.002-0.08 is either dead grey or actually colour, and the deriver refuses it.",
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "hue": { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+            "chroma": { "type": "number", "minimum": 0.002, "maximum": 0.08 }
+          }
+        },
+        "ground": { "enum": ["light", "dark"] },
+        "onAnchor": {
+          "description": "The label colour that sits on the action colour. The primary's lightness is solved against this before any other token commits.",
+          "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "default": "#FFFFFF"
+        },
+        "inkLightness": {
+          "description": "Where body ink sits on the brand ramp, 0-1. Placed then verified >=7:1, not solved to the minimum passing tone.",
+          "type": "number", "minimum": 0, "maximum": 1, "default": 0.22
+        },
+        "gradients": { "enum": ["none", "brand_surfaces_only"], "default": "none" },
+        "semantic": {
+          "description": "Explicit state colours. Omit to have them derived and rotated clear of the anchor hue.",
+          "type": "object", "additionalProperties": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+        }
+      }
+    },
+    "type": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "display": { "type": "string" }, "body": { "type": "string" }, "mono": { "type": "string" },
+        "discipline": { "type": "string" },
+        "baseSize": { "type": "number", "minimum": 10, "maximum": 24, "default": 16 },
+        "scaleRatio": { "type": "number", "minimum": 1.1, "maximum": 1.7, "default": 1.25 }
+      }
+    },
+    "shape": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "radiusBase": { "type": "number", "minimum": 0, "maximum": 32, "default": 8 } }
+    }
+  }
+}

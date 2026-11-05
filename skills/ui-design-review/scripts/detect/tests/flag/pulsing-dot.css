@@ -1,0 +1,2 @@
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #1e8a5a; animation: beat 2s ease-in-out infinite; }
+@keyframes beat { 50% { opacity: 0.4; } }

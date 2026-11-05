@@ -1,0 +1,5 @@
+/* Motion present, and the fallback is present in the same file. Must stay silent. */
+.panel { transition: transform 220ms var(--ease-out), opacity 220ms var(--ease-out); }
+@media (prefers-reduced-motion: reduce) {
+  .panel { transition: opacity 150ms linear; }
+}

@@ -1,0 +1,53 @@
+{
+  "skill_name": "distinctiveness-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Does index.html look AI-generated? It is a landing page for a ferry booking service built from a one-paragraph brief.",
+      "expected_output": "Machine findings are gathered first and listed as evidence; every judgement gate gets a verdict row; the sameness read names what belongs only to this brief or says nothing does.",
+      "files": [],
+      "expectations": [
+        "Runs findings.mjs (and scan.sh) or uses findings passed in, before judging, and does not re-judge machine-owned rules.",
+        "Renders or views the page before giving visual verdicts, and marks gates it could not see as NOT ASSESSABLE rather than CLEAR.",
+        "Gives every judgement gate in references/gates.md a row; AI-product gates are omitted because the product is not an AI product.",
+        "Never names a theme, starter or catalogue look, and never proposes one as the fix."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this page for slop. The browser pass could not run on this machine (findings.mjs exited 2), but the static pass found two issues.",
+      "expected_output": "The UNVERIFIED banner leads the report; static findings are still reported; gates needing rendered evidence are NOT ASSESSABLE.",
+      "files": [],
+      "expectations": [
+        "Copies the UNVERIFIED banner to the top of the report.",
+        "Still reports the two static findings as evidence instead of treating the run as failed.",
+        "Does not record the browser-owned checks as clean.",
+        "Produces a report that check-report.mjs accepts."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review this page. It follows a frozen direction contract that calls for oversized outlined numerals as section markers; the page also has a three-equal-card feature row the contract never mentions.",
+      "expected_output": "The direction-evidenced numerals are JUSTIFIED with the contract line as the reason; the card row is CONFIRMED SLOP because the direction does not trace to it.",
+      "files": [],
+      "expectations": [
+        "Reads the direction source before adjudicating.",
+        "Marks the evidenced trait JUSTIFIED and cites the contract line, not consistency or polish.",
+        "Marks the untraced card grid CONFIRMED SLOP.",
+        "Does not suggest a different visual direction or a catalogue look."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Review the assistant page of our agent product: a centred prompt box with suggestion chips over a soft glow, sparkle icons on generated answers, and a three-dot typing indicator.",
+      "expected_output": "AI product: yes; the AI-product gates are adjudicated, and the sameness read names the category template.",
+      "files": [],
+      "expectations": [
+        "Sets AI product: yes and gives each AI-product gate a row.",
+        "Marks the stock sparkle marker, the prompt-box hero and the typing indicator as CONFIRMED SLOP unless something names their job.",
+        "Names the category convergence in the sameness read rather than listing seven small findings only.",
+        "Keeps its findings separate from ui-design-review and design-refine rather than merging them."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+/* ambient glow blob behind content — light-mode twin of dark aurora */
+.ambient-glow { background: radial-gradient(circle, rgba(120,90,255,0.4), transparent); }
+:root { --bg-glow-layer: radial-gradient(circle at top, #223, transparent); }
