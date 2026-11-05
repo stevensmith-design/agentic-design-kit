@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.2 — bundled tooling excluded from app checks
+
+- Project scans (directory, `--staged` and `--diff`) and token-consumer discovery now skip
+  `.claude/` and `.agents/` as well as `.agentic-design-kit/`, so the skills' own deliberately
+  failing fixtures can no longer fail a clean project or mask a real orphan token. Explicitly
+  targeting those folders still inspects them.
+- The public source can now rebuild its own distributions: exporting no longer fails on
+  development-only helpers that are absent from the public repository.
+- README hero image.
+
 ## 2.0.1 — separate project workspaces
 
 - Neutralized private calibration labels in validator comments/documentation without changing
