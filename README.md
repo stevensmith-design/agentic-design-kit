@@ -1,6 +1,6 @@
 # agentic-design-kit
 
-![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](.github/assets/hero.jpg)
+![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](https://raw.githubusercontent.com/stevensmith-design/agentic-design-kit/main/.github/assets/hero.jpg)
 
 Eleven first-party skills for AI-assisted interface design, review and refinement. Explore from
 real references, build a selected direction, review the rendered result, and create reusable visual
@@ -22,10 +22,10 @@ references, exploration, reusable guidelines and review. Some examples use earli
 
 | Package | Use | Installation scope |
 |---|---|---|
-| `agentic-design-kit-2.0.1-portable.zip` | A connected folder in Cowork or another file-capable agent | No account installation; explicitly direct the agent to START-HERE.md |
-| `agentic-design-kit-2.0.1-plugin.zip` | A native Claude plugin | Installed/enabled through Claude; account availability is broader than one folder |
-| `agentic-design-kit-2.0.1-code.zip` | Project-local Claude Code skills | Copy the supplied project files into a chosen project after checking conflicts |
-| `agentic-design-kit-2.0.1-source.zip` | Contributing, auditing or building the packages | Source, tests and build tools; no prior project outputs |
+| `agentic-design-kit-2.0.2-portable.zip` | A connected folder in Cowork or another file-capable agent | No account installation; explicitly direct the agent to START-HERE.md |
+| `agentic-design-kit-2.0.2-plugin.zip` | A native Claude plugin | Installed/enabled through Claude; account availability is broader than one folder |
+| `agentic-design-kit-2.0.2-code.zip` | Project-local Claude Code skills | Copy the supplied project files into a chosen project after checking conflicts |
+| `agentic-design-kit-2.0.2-source.zip` | Contributing, auditing or building the packages | Source, tests and build tools; no prior project outputs |
 
 See [INSTALL.md](INSTALL.md) for the layout and checks for each mode. A folder being readable does
 not register native skills. Plugin commands use the namespace `/agentic-design-kit:<skill>`.
