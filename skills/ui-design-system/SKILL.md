@@ -17,6 +17,11 @@ The system-level skill. `ui-design-principles` guards the making of a screen; `u
 audits a finished screen; **this skill owns the design system the other two depend on** — the
 tokens, their *relationships*, and the four-layer `DESIGN.md` that records the reasoning.
 
+For visual-reference extraction during direction exploration, use `direction-study` and its
+provisional per-source visual guides. This skill's Extract mode inventories an existing application's
+code; it does not extract a style from screenshots. Encode the chosen guide through Create/Reconcile
+after direction selection. `brand-to-system` requires an already declared compatible brand.
+
 It exists because a screen can pass every element rule and the product can still feel incoherent.
 Contrast, selection-vs-action distance, semantic-colour distinctness, ramp derivation, scale ratios
 — these live *between* tokens, where regex-over-components can never see them. This skill makes those

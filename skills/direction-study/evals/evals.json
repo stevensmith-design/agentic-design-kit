@@ -141,7 +141,7 @@
         "Test separately in Claude Code project mode and installed Cowork plugin mode; verify native activation and authenticated payload, never assume folder selection registers skills.",
         "Creates local HTML proofs by default and does not use Claude Design or another canvas without an explicit user request.",
         "New imagery, text-over-image or motion decisions in later rounds reopen the relevant detailed rules; prior user approval records intent without waiving correctness.",
-        "Before proposing directions, reuses supplied answers or asks one bundled discovery for loose/rearranged/close influence, gated reference traits and imagery permission; waits for material answers.",
+        "Before proposing directions, reuses supplied preferences or asks concretely about faithful style, loose inspiration or selected combinations, and whether examples are alternatives. Resolves material gated traits and imagery permissions without repeating answered questions.",
         "Records 3–5 concrete observed traits per original and dated actual human approval for gated traits; study approval does not require production DESIGN.md or authorize accessibility defects.",
         "Plans imagery per direction; approved labelled generated placeholders or proposed UI are allowed, while verified claims are never fabricated. No silent shared-image pool or type-only fallback.",
         "Every reference visibly leads or contributes somewhere, or its omission has human confirmation.",
@@ -165,12 +165,72 @@
         "For this standalone web brief, creates local HTML/CSS proofs, index and desktop/mobile rendered screenshots under the project folder; no Claude Design/hosted Artifact/publication unless explicitly requested.",
         "Any unavailable rendering, fresh review or isolation evidence remains disclosed; no positive recommendation for missing required review or confirmed genericness.",
         "A completed folder run measures the workflow and output, not native discovery, Cowork plugin activation, or automatic loading of an unseen directory.",
-        "Before proposing directions, reuses supplied answers or asks one bundled discovery for loose/rearranged/close influence, gated reference traits and imagery permission; waits for material answers.",
+        "Before proposing directions, reuses supplied preferences or asks concretely about faithful style, loose inspiration or selected combinations, and whether examples are alternatives. Resolves material gated traits and imagery permissions without repeating answered questions.",
         "Records 3–5 concrete observed traits per original and dated actual human approval for gated traits; study approval does not require production DESIGN.md or authorize accessibility defects.",
         "Plans imagery per direction; approved labelled generated placeholders or proposed UI are allowed, while verified claims are never fabricated. No silent shared-image pool or type-only fallback.",
         "Every reference visibly leads or contributes somewhere, or its omission has human confirmation.",
         "Reference reviewer observes actual originals and saves defining traits before seeing builder contracts; checks at least two structural changes from the lead source unless close recreation was explicitly authorized.",
         "Treats absence of familiar slop markers and a zero detector count as insufficient evidence of quality; reports visible lost influence, genericness and sample-content inconsistencies."
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "I am undecided between these three very different examples. Give me three directions for an article using their full visual styles, adapted to my content, rather than copying their page layouts. Keep each as an alternative; do not combine them. Supplied assets may be used for the study. First show small samples so I can choose.",
+      "files": [],
+      "expected_output": "Per-source visual guides and three coherent style adaptations, followed by rendered previews for early feedback without a completed-review claim.",
+      "expectations": [
+        "Attach three contrasting actual reference images when executing; an empty files list is not visual evidence.",
+        "Extracts colour roles/coverage, typography, layout/rhythm, components and imagery per source; separates observations, estimates and proposed adaptations.",
+        "Uses the stated faithful-style and alternatives intent without asking again in internal closeness terminology.",
+        "Preserves each visual language separately; does not create a compromise palette or make every source contribute to every direction.",
+        "Adapts to article hierarchy rather than lifting sales heroes or inventing recurring decorative mechanisms.",
+        "Can use the same appropriate article structure across directions when the visual systems offer a meaningful choice.",
+        "Creates small actual local rendered previews and performs builder fidelity and legibility inspection; pauses at STUDY PREVIEW — FEEDBACK REQUIRED with reviews pending and no recommendation.",
+        "Does not run full production review, stamp checks or token-system extraction before this early feedback; any applicable Tier-2 decisions still need actual human authority.",
+        "A later completed comparison reviews all included candidates and does not claim discarded previews passed."
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Use this example faithfully for an article. My approved publishing rules require a background measurably different from previous articles. The example has an almost-white background and vivid green graphic accents. I have already rejected mint backgrounds. Use the supplied artwork.",
+      "files": [],
+      "expected_output": "Accurate role-based extraction and an explicit conflict decision if the publishing rule prevents faithful adaptation; no metric-driven canvas masquerading as reference evidence.",
+      "expectations": [
+        "Attach actual source and prior-article images plus the real project constraint when executing.",
+        "Records the almost-white canvas separately from saturated green graphics and their relative coverage.",
+        "Reads the actual approved constraint and prior rejection before choosing background values.",
+        "If no compatible near-white canvas satisfies the rule, explains the conflict and asks which material requirement can change.",
+        "Does not silently use mint or invent a claim that a tinted canvas came from the reference.",
+        "Any agreed departure keeps the original observation intact and records the project constraint as its basis.",
+        "A successful numerical test is never presented as evidence of stylistic fidelity."
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Here are several examples I like. Please propose directions for my article. I have not decided how closely to follow them.",
+      "files": [],
+      "expected_output": "A concrete influence question after inspecting the sources, distinguishing faithful style, loose inspiration and intentional combinations.",
+      "expectations": [
+        "Attach actual examples when executing; does not invent source observations.",
+        "Asks whether to carry over a full visual style, use loose inspiration or mix selected ideas, and whether the references are alternatives.",
+        "Does not assume either blending or one source per direction when the intent is unknown.",
+        "Distinguishes faithful visual style from permission to recreate the same page layout.",
+        "Uses visible examples to explain material rule conflicts and imagery dependency rather than exposing internal process terminology.",
+        "Waits for material unanswered decisions before proposing directions."
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Use example A’s type and component style, example B’s palette and example C’s photographic treatment together. Adapt it to an article; the layout should serve my text. You may generate study photography, but please do not replace it with flat vector art if generation fails.",
+      "files": [],
+      "expected_output": "A deliberate compatible combination preserving named source roles, with an honest asset limitation if photography cannot be produced.",
+      "expectations": [
+        "Attach the actual examples when executing; records the specified contributions and inspects compatibility.",
+        "Does not force separate source-led directions despite the explicit mix request.",
+        "Preserves palette roles and coverage rather than collecting hues, and preserves type/component relationships.",
+        "If the photographic treatment conflicts with another source, makes the tradeoff explicit rather than averaging all qualities.",
+        "A generation failure leaves photography pending or uses an already agreed fallback; no unapproved vector or type-only substitution.",
+        "Proposed substitutes and new decisions remain distinct from observations of the originals."
       ]
     }
   ]

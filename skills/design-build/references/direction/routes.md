@@ -33,7 +33,9 @@ builder receives the contract, real assets and the assigned original references 
 only source IDs, summaries or finding cards. Keep unrequested starters, rejected concepts and
 unassigned reference material out. The contract records the premise, source responsibilities,
 traits that must not transfer, decisive choices, proof scope, motion intent and post-proposal
-provenance. Expressive treatments the contract evidences are kept; generic
+provenance. Carry linked per-source visual guides too: preserve colour roles, typography, component
+and imagery relationships; adapt the layout to this content. Keep constraint-driven departures
+explicit. A preview preference is not a completed study review. Expressive treatments the contract evidences are kept; generic
 anti-pattern guidance does not flatten them, and accessibility still binds. Reference-directed
 applies only on the person's explicit request and records what may be followed closely.
 

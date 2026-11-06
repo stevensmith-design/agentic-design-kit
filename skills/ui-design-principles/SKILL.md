@@ -27,7 +27,11 @@ This skill's `references/rules.md` is canonical; the review skill carries a byte
 When invoked by `/direction-study`, use this bounded mode instead of production Steps 1 and 1.5.
 Consume the provisional direction contract already formed after exploration; do not restart direction
 selection, create/revise `DESIGN.md` or production tokens, extract a system, or require a full page.
-Proof-local values are provisional implementation choices, not promoted production rules.
+Proof-local values are provisional implementation choices, not promoted production rules. Consume
+linked per-source visual guides alongside originals: preserve colour roles/coverage, type character,
+component treatments and imagery while adapting composition to content. Label project-driven
+departures honestly; do not silently recolour the canvas to satisfy a metric or replace an agreed
+image medium when a tool fails. Resolve material conflicts through the study workflow.
 
 Keep the actual assigned reference images directly visible. Open `references/quick-rules.md` as an
 index, then read the relevant detailed `references/rules.md` sections at each visual decision:

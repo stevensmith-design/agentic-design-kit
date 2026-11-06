@@ -27,9 +27,12 @@ Inspected as: still | sequence of stills | motion | URL render | local file | NO
 What could not be determined from what was inspected.
 ```
 
-Rules: preserve enough visible specificity to communicate the person's taste. Do not transfer a
-source's logo, branded copy, proprietary artwork, exact composition or identity mark. Exact hex
-values and unlicensed font choices remain with the source unless essential to the observation.
+Rules: preserve enough visible specificity to communicate the person's taste. For style adaptation,
+use `reference-visual-guide.md` as well; a palette alone is insufficient. Do not transfer a source's
+logo, branded copy, proprietary artwork or identity mark. Adapt composition to the real content;
+explicitly authorized recreation follows its recorded limits. Colour values may be recorded with
+their roles and evidence. Verify font identity where possible, distinguish proposed substitutes,
+and check usage rights for font files or other assets before reusing them.
 
 **NOT INSPECTED** — the source could not be retrieved or opened. The card then has no findings and
 no prohibited traits and says why in Unknowns. If it is essential to the request, ask for an accessible

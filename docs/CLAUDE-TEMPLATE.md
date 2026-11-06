@@ -36,6 +36,8 @@ wait to be asked for the review.
 For concepts, directions, alternatives or help choosing, invoke `/direction-study` through Claude
 Code's **Skill tool** (`skill: "direction-study"`); do not begin the production build route. It owns
 proof-time guardrails and post-render independent reviews, then stops at `STUDY — DECISION REQUIRED`.
+Initial rendered samples may pause at `STUDY PREVIEW — FEEDBACK REQUIRED` before full reviews;
+previews carry no positive recommendation or completed-review claim. See the study's early checkpoint.
 The build starts only from the direction a person selects.
 
 **Invocation and identity.** `/name` below means a Skill tool call with `skill: "name"`, plus `args`
