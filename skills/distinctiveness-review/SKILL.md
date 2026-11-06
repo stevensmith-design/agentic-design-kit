@@ -20,10 +20,10 @@ whole-product resilience is `/design-refine`'s.
 
 ## Direction-study handoff
 
-Also invoked by `/direction-study` for every rendered proof, independently of reference-similarity
-review. Use native activation or local folder execution with verified sources (the protocol is
-`../design-build/references/skill-invocation.md`). Receive the original brief, actual supplied
-references, provisional direction contract and rendered proof. Do not receive builder preference or
+Also invoked by `/direction-study` for every rendered proof in a completed comparison, independently
+of reference-similarity review. Early previews carry no recommendation or completed-review claim.
+Verify sources and execution via `../design-build/references/skill-invocation.md`. Receive the
+original brief, actual references, provisional contract and render. Do not receive builder preference or
 another reviewer's conclusions. Prefer a fresh context; if unavailable, label the separate unprimed
 pass as degraded isolation. If already primed, request an independent reviewer and leave the proof
 unassessed meanwhile. Dated human study approval authorizes traits without a production system.

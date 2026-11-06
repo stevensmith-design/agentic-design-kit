@@ -1,6 +1,8 @@
 # Comparison report — evidence, recommendation, decision
 
-Read-only: compare the rendered proofs and stop for a person to decide.
+Read-only: compare the rendered proofs and stop for a person to decide. This is the completed,
+reviewed comparison. For early samples use the explicitly unreviewed preview checkpoint in
+`study-review.md`; do not fill review tables with invented passes or recommend a preview.
 
 ```markdown
 # Direction study — <project> — <date>
@@ -9,7 +11,9 @@ Read-only: compare the rendered proofs and stop for a person to decide.
 <brief partition> · <original references and their responsibilities>
 
 ## Reference coverage and agreed intent
-Closeness, dated human trait decisions, image permissions and direction-specific asset plans.
+Requested influence (faithful style, loose inspiration or deliberate mix), alternative versus
+combined sources, dated human trait decisions, image permissions and direction-specific asset plans.
+Link each source's provisional visual guide; summaries below do not replace fuller observations.
 | Original | 3–5 observed defining traits | Lead/contributing directions | Human-confirmed omission if unused |
 |---|---|---|---|
 
@@ -34,7 +38,9 @@ into one score. A resonant or polished direction can still have confirmed generi
 
 ## Against its own direction
 Per direction: which intended qualities are visible, what failed, which assets or states remain
-unassessed, and whether the proof stayed honest about missing evidence.
+unassessed, and whether the proof stayed honest about missing evidence. Explain preserved colour
+roles/coverage, type, components and imagery; distinguish content adaptations from constraint-driven
+departures. Include any discarded previews and the person's feedback as history, not cleared options.
 
 ## Recommendation and human decision
 | Direction | Recommendation | Reasons | Person's verdict | Person's reason |

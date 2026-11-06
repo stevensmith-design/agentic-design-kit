@@ -48,9 +48,14 @@ and an explicit boundary, not a dossier.
 - **Sources are evidence, not authority.** Current project evidence, authoritative components,
   platform convention, accessibility, and this skill's decision gates win any conflict with a
   reference.
-- **Compare, don't copy.** Prefer two or three references and extract the shared *relationship*;
-  a single source copied wholesale imports its identity. Explicitly refuse "make it look like
-  Linear / Stripe / Apple" — reproduce the *reasoning*, not the trade dress.
+- **Preserve the requested influence.** For visual inspiration, use `direction-study` →
+  `references/reference-study.md`: extract each source's visual language separately, including
+  colour roles, type, components and imagery. Contrasting examples may be alternatives, not inputs
+  to a blend. Ask whether the person wants faithful style, loose inspiration or selected combinations;
+  reuse an answer already supplied. Shared techniques, palettes and type characteristics are valid
+  inputs; do not discard them merely to create distance. Adapt to the project's content rather than
+  copying an exact page composition. Identity marks, proprietary assets and branded copy remain
+  bounded; an explicit close-recreation request follows the recorded reference-directed limits.
 - **A found `DESIGN.md` is a hypothesis.** Never install a third-party design-system file as the
   approved project contract unchanged. Verify it against the real source when reachable, then
   synthesize an original, project-specific system via `ui-design-system`.

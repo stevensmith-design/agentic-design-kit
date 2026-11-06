@@ -1,7 +1,31 @@
 # Proof reviews and orchestration evidence
 
-After rendering, review each proof independently from the builder. Prefer a fresh reviewer context
-per lens; delegate through a Skill-capable agent and have it invoke packaged
+## Early feedback checkpoint
+
+For an initial choice of direction, show the smallest useful rendered samples before commissioning
+full reviews, unless the person requested a reviewed comparison immediately. Keep the proof-time
+rules and local output contract: actual originals, minimal contracts, local HTML where applicable,
+and desktop/mobile inspection. Check visual fidelity against the originals, basic text contrast,
+legibility, clipping and asset honesty. Present the source, what is preserved/adapted, departures
+and limitations alongside each sample. This is builder inspection, not independent clearance.
+
+Label the checkpoint **STUDY PREVIEW — FEEDBACK REQUIRED** with reviews pending. Offer no positive
+recommendation, scores or readiness claim. Ask which style interpretation to carry forward or
+correct. A preference is provisional; no full `design-review`, production stamp or token-system
+work is needed to solicit that feedback. Preserve earlier versions. Don't endlessly rerun reviews
+on options the person is still shaping.
+
+When the person requests a completed comparison or confirms candidates for further study, run the
+reviews below on every candidate included in that comparison. Keep discarded preview paths and
+human decisions in a short history; they are not reviewed candidates. A preview does not satisfy
+`check-orchestration.py` and must not be submitted as a completed acceptance receipt. Missing reviews
+remain pending, never passes. If a person explicitly selects a preview for production, disclose and
+complete its outstanding study reviews before handing it to production.
+
+## Completed comparison reviews
+
+After rendering, review each proof in the completed comparison independently from the builder.
+Prefer a fresh reviewer context per lens; delegate through a Skill-capable agent and have it invoke packaged
 `/distinctiveness-review`. Include only the original brief, supplied reference images, provisional
 contract, actual content/assets, rendered proof and implementation access. Exclude builder
 preferences, scores and other reviewers' conclusions. Use the two-stage reference handoff in `similarity-review.md`: original brief, originals and
@@ -28,8 +52,8 @@ occur inside read-only review. Reject-all and no recommendation are valid.
 
 ## Acceptance receipt
 
-During a visual acceptance run, save `study-orchestration.json` after exploration, derived from the
-native tool transcript and artifact paths, using the event schema demonstrated by
+During a completed visual acceptance run (not an early preview), save `study-orchestration.json`
+after exploration, derived from the native tool transcript and artifact paths, using the event schema in
 `../tests/fixtures/orchestration/pass-two-directions.json`. This fixture is synthetic test data,
 not visual evidence. Do not create forms before exploration to generate an aesthetic.
 
@@ -51,6 +75,10 @@ Also record reference-review (`report`, separate `resonance`, `similarity`) afte
 For reference routes, `reference-intake` records `closeness: loose|rearranged|close`,
 `decision_evidence`, `approval_date`, `traits` keyed by original path (3–5 observations each),
 `trait_decisions` (trait, approved|declined|qualified|none-gated decision, actual evidence),
+with fuller observations in linked per-source visual guides; the 3–5 traits are summaries, not a
+limit on extraction. The person's existing concrete style preference can supply closeness evidence;
+use the mapping in `reference-study.md` rather than asking the same question in internal terminology.
+Also record
 `image_permission` and `image_permission_evidence`. Each proof records `asset_plan_evidence` and
 `imagery_status`. Each reference review records `blind_first: true`, `observation_report`,
 `contract_after_observation: true`, `lead_reference`, and `structural_changes` (at least two).

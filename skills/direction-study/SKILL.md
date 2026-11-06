@@ -2,7 +2,7 @@
 name: direction-study
 description: "Explore materially different visual directions before production. Use for broad requests to use this kit for direction and review, supplied references, concepts or alternatives, or when a build has no chosen direction. Keeps original references directly available, makes narrow proofs, reviews similarity and provenance after exploration, and stops for a human decision."
 metadata:
-  version: 0.9.0
+  version: 0.10.0
 ---
 
 # direction-study
@@ -81,23 +81,26 @@ report the limitation instead of silently changing deliverable.
    as composition, type behaviour, image treatment, motion, density or interaction—and what must not
    transfer. One source may contribute to more than one direction for different reasons. Keep every
    original beside the observations; do not anonymise it or flatten several sources into generic taste
-   words. Use `references/reference-study.md` and the optional finding-card or motion-study templates
-   when useful. Before proposing directions, settle three things together with the person:
-   **closeness** (loose inspiration, rearranged, or close), **reference/rule conflicts**, and
-   **imagery permission**. Reuse answers already supplied; otherwise ask one bundled discovery
-   question and wait for the material answers. Do not silently choose loose inspiration.
-   Record 3–5 concrete observed traits per reference, flag traits that meet a Tier-2 gate, and
-   ask which are approved, declined or qualified. Date the actual human answer in the study brief;
-   that record authorizes those traits in proofs without creating production `DESIGN.md`.
-   Approval does not waive contrast, legibility, hierarchy, usability or reduced-motion needs.
-   Follow `references/reference-study.md` for the coverage and image-dependency check.
+   words. Read `references/reference-study.md` and extract a provisional visual guide per source
+   using `references/templates/reference-visual-guide.md`: colour roles and coverage, typography,
+   layout/rhythm, component treatments and imagery. Keep 3–5 defining traits as a summary; distinguish
+   observations, estimates and proposed adaptations. This is not a production design system.
+   Reuse the person's stated influence preference or ask whether to preserve the full visual style,
+   use loose inspiration, or mix selected ideas—and whether examples are alternatives. Style fidelity
+   does not imply copying layout. Resolve material reference/rule conflicts and imagery permissions
+   with concrete questions; wait for unanswered material decisions and record dated actual answers.
+   Flag Tier-2 traits for approval without making the person approve every ordinary observation.
+   Study approval does not waive contrast, legibility, hierarchy, usability or reduced-motion needs.
+   Follow `references/reference-study.md` for conflicts, source coverage and asset fallback handling.
 
 4. **Write a lightweight creative brief and propose directions.** Synthesize the project brief,
    content and references into positive premises. Then propose the number of directions the request
    needs; if it is unspecified, choose a useful number from the material rather than enforcing a
    default. A direction should say what the experience is trying to make felt, how the real content
    behaves, and which reference responsibilities inform it. Do not map reference-led work to a stock
-   direction, house style, familiar product archetype or repeated concept vocabulary.
+   direction, house style, familiar product archetype or repeated concept vocabulary. Contrasting
+   examples supplied as alternatives should yield coherent source-led alternatives, not a blend.
+   Say what each direction preserves and adapts; label project-driven departures honestly.
 
 5. **Check that the directions are worth testing.** Compare their content hierarchy, composition,
    typographic behaviour, material or imagery, interaction and responsive intent. Reject superficial
@@ -106,7 +109,8 @@ report the limitation instead of silently changing deliverable.
 
 6. **Freeze provisional contracts after exploration.** Once the directions exist, capture only enough
    to build each proof consistently: premise, content behaviour, reference responsibilities, key
-   choices, exclusions, responsive intent, motion intent and real-asset constraints. Use
+   choices, exclusions, responsive intent, motion intent and real-asset constraints. Link the visual
+   guide and preserve its colour/type/component roles while adapting the composition to real content. Use
    `references/templates/direction-contract.md`. Record provenance now, after the creative proposal,
    with `references/templates/decision-provenance.md`; provenance explains a direction and does not
    generate one.
@@ -132,6 +136,10 @@ report the limitation instead of silently changing deliverable.
    Approved generated imagery and clearly labelled study-only product mockups are allowed within
    the agreed asset plan. Never present invented testimonials, outcomes, real product capability or
    customer evidence as fact. Check sample dates, sequence and totals for internal consistency.
+   For an initial choice, default to the early feedback checkpoint in `references/study-review.md`:
+   show small rendered previews after checking fidelity and basic legibility, before full reviews.
+   Label them `STUDY PREVIEW — FEEDBACK REQUIRED`; do not recommend, claim completed review or run
+   production sign-off. If the person requested a reviewed comparison now, continue to steps 9–10.
 
 9. **Review similarity, resonance and provenance after the visual exploration.** In a fresh context
    where possible, first observe the original brief and actual references without builder notes;
@@ -139,7 +147,8 @@ report the limitation instead of silently changing deliverable.
    `references/similarity-review.md`. Report both under-influence and excessive resemblance. Confirm
    that major decisions have an honest basis in the brief, content, function or named reference
    responsibility. These checks assess the design; they do not retroactively prescribe its aesthetic.
-   In addition, invoke packaged `/distinctiveness-review` independently for **every rendered proof**,
+   For a completed comparison, invoke packaged `/distinctiveness-review` independently for
+   **every rendered proof** included in that comparison,
    preferably in a fresh context. Give it only the original brief, actual supplied references,
    provisional contract, real content and rendered proof plus implementation access. Give it no
    builder preference or other reviewer's conclusions. It first inspects the render and writes its
@@ -158,7 +167,8 @@ report the limitation instead of silently changing deliverable.
     warning, remove it while preserving evidence, rerun from its original premise, or recommend none.
     Read-only review never silently repairs a finished proof. A pre-presentation exploration iteration
     is a new version from the original premise: preserve the original contract, proof, renders and
-    findings, then rerender and repeat both reviews; it is not a production repair pass.
+    findings, then rerender and repeat both reviews before a completed comparison; it is not a
+    production repair pass. An early preview round may pause before those reviews.
     The valid outcomes include
     selecting one, reserving one, killing one, or **rejecting every direction and requesting a rerun**.
     End at **STUDY — DECISION REQUIRED**.
@@ -169,7 +179,8 @@ The agent recommends; the person decides. A selected direction becomes the human
 If the person refines it, write an amendment with
 `references/templates/contract-amendment.md`; refinement is an amendment, not a rewrite of the frozen
 base contract. Hand `/design-build` the base contract, accepted amendments, original assigned
-references and real assets.
+references, provisional visual guides and real assets. A preview preference identifies a candidate
+for completed study review; it does not clear missing reviews or authorize production sign-off.
 
 ## Optional diagnostics
 
@@ -198,8 +209,10 @@ substitute written abstractions for originals, or move provenance ahead of direc
 3. Directions differ through content and visual behaviour, not a prescribed house style or vocabulary.
 4. Proofs are narrow, rendered and honestly constrained by available assets.
 5. Post-exploration review checks resonance, resemblance and provenance without rewriting the premise.
-   Every rendered proof also completes independent `/distinctiveness-review` before comparison.
+   Every rendered proof in a completed comparison completes independent `/distinctiveness-review`.
+   Early previews are explicitly unreviewed and cannot carry a positive recommendation.
    Visual judgement precedes detector/scan evidence, and confirmed genericness blocks recommendation.
 6. The person may reject all directions and request a rerun.
-7. The study stops at **STUDY — DECISION REQUIRED** or returns one provisional contract to
+7. Early feedback pauses at **STUDY PREVIEW — FEEDBACK REQUIRED**. A completed study stops at
+   **STUDY — DECISION REQUIRED** or returns one provisional contract to
    `/design-build` in single-contract mode.
