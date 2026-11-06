@@ -13,10 +13,16 @@ interpretation cannot define what counts as a match.
 For each result, ask:
 
 - Are the requested qualities visibly present, or did rule compliance erase their character?
+  Check colour roles and coverage (not hue membership alone), type character and hierarchy,
+  component treatments and imagery against the originals. A source's accent becoming the canvas
+  is a departure even when the hue matches. Distinguish project-driven changes from source facts,
+  and check prior human rejections. Use visual guides only after saving originals-first observations.
 - Were those qualities transformed by this project's content and function?
 - Against the lead reference, identify at least **two visible structural changes**: for example,
-  hero composition, section sequence, content hierarchy or the signature object. Colour, font or
-  copy swaps alone do not count. Two changes do not automatically establish enough distance.
+  hero composition, section sequence or content hierarchy. Adapting to the target content may
+  already supply these changes; do not demand novelty devices or abandon the agreed style to
+  meet a count. Colour, font or copy swaps alone do not count. Two changes do not automatically
+  establish enough distance.
 - Is a composition, motion, object, artwork, copy or identity element recognisably copied?
 - Does the result assemble recognisable fragments from several sources?
 - In explicitly authorized close recreation, judge the recorded permission and limits instead of

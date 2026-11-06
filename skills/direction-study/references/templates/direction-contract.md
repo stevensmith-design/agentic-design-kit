@@ -16,7 +16,12 @@ What the experience is trying to make felt and how the real content behaves.
 |---|---|---|---|
 
 Closeness and human-approved traits: link dated discovery answers; do not invent approval.
-Lead reference and planned structural transformation; contribution to overall source coverage.
+Lead reference and linked provisional visual guide; contribution to overall source coverage.
+Reference use: faithful style | loose inspiration | selected combination (and why compatible).
+Preserve: observed colour roles/coverage, type character, component and imagery relationships.
+Adapt: how this content changes composition, hierarchy and reading behaviour.
+Departures: project-driven or new choices, their real basis, and any material conflict/decision.
+Do not attribute a constraint-driven value or proposed substitute to the source.
 
 ## Key choices
 Composition · hierarchy · type behaviour · imagery/material · colour behaviour · interaction/motion ·
