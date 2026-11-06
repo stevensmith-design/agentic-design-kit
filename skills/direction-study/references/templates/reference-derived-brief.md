@@ -9,9 +9,13 @@ available and remains beside them; it does not replace them or precede all creat
 ## Project intent and real content
 Audience, purpose, evidence, sequence and asset constraints.
 
+## Per-source visual guides and requested influence
+Link each original and its provisional visual guide. Record whether the sources are alternative
+styles or deliberate contributions to a combination, and the person's influence preference.
+
 ## Useful reference relationships
-Concrete observations about composition, hierarchy, type, imagery, material, density, interaction or
-motion, linked to the original sources.
+Concrete observations about colour roles/coverage, hierarchy, type, imagery, components, material,
+density, interaction or motion. Keep observations separate from proposed adaptations and unknowns.
 
 ## Productive tensions
 Where the sources suggest genuinely different possibilities.

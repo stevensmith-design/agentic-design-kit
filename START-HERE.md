@@ -50,6 +50,8 @@ Kit maintenance and intentionally located tests/examples are unaffected.
 A broad request to use this kit for directions and review is enough. The orchestrator selects and
 executes supporting workflows; the person does not name each one. `direction-study` owns the
 proof-time guardrail, detailed rules and post-render independent distinctiveness review.
+Initial rendered samples may pause for feedback before full reviews, explicitly labelled
+`STUDY PREVIEW — FEEDBACK REQUIRED`. They are not completed studies or positive recommendations.
 
 Keep original references directly available. For a standalone web study in a connected folder with
 no existing app, save one local HTML/CSS proof per direction, a linking index and desktop/mobile
