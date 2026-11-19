@@ -2,7 +2,7 @@
 
 ![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](https://raw.githubusercontent.com/stevensmith-design/agentic-design-kit/main/.github/assets/hero.jpg)
 
-<sub>[Steven: one line on what this picture shows, for example which side the kit made and from what brief]</sub>
+<sub>Left: what a one-line prompt produced for a fictional weekly planner. Right: the same direction designed further with the kit.</sub>
 
 **Eleven skills that help an AI agent design better.**
 
