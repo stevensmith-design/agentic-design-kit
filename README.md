@@ -1,10 +1,25 @@
-# agentic-design-kit
+# Agentic Design Kit
 
 ![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](https://raw.githubusercontent.com/stevensmith-design/agentic-design-kit/main/.github/assets/hero.jpg)
 
-Eleven first-party skills for AI-assisted interface design, review and refinement. Explore from
-real references, build a selected direction, review the rendered result, and create reusable visual
-guidelines and design systems.
+<sub>[Steven: one line on what this picture shows, for example which side the kit made and from what brief]</sub>
+
+**Eleven skills that help an AI agent design better.**
+
+Made by Steven Smith. More of my work: [stevensmith.dev](https://stevensmith.dev)
+
+For anyone designing pages or apps with an AI agent such as Claude. Explore from real references,
+build a selected direction, review the rendered result, and create reusable visual guidelines and
+design systems.
+
+## Try it
+
+1. Download the `-portable.zip` from the [latest release](https://github.com/stevensmith-design/agentic-design-kit/releases/latest)
+   and unzip it.
+2. Connect the unzipped folder to your agent. In Claude Desktop: start a chat, click **+** →
+   **Add folder** and pick it.
+3. Ask: "Read START-HERE.md and use the kit. Study these screenshots and propose three directions
+   for my landing page."
 
 The kit replaces its earlier external design-skill dependencies with its own workflows. It treats
 common AI-design patterns as contextual signals: a gradient, rounded card or illustration can earn
@@ -19,6 +34,8 @@ references, exploration, reusable guidelines and review. Some examples use earli
 - [日本語: 生成ではなく、デザインを。](https://stevensmith.dev/ja/writing/designed-not-generated)
 
 ## Choose how to use it
+
+All four packages are on the [latest release](https://github.com/stevensmith-design/agentic-design-kit/releases/latest).
 
 | Package | Use | Installation scope |
 |---|---|---|
