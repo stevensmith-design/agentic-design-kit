@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- README: title "Agentic Design Kit", a one-line promise matching the portfolio, a "Made by" line, an audience line, a three-step "Try it" and links to the latest release.
+
 ## 2.0.2 — bundled tooling excluded from app checks
 
 - Project scans (directory, `--staged` and `--diff`) and token-consumer discovery now skip
