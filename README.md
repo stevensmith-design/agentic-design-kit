@@ -2,7 +2,7 @@
 
 ![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](https://raw.githubusercontent.com/stevensmith-design/agentic-design-kit/main/.github/assets/hero.jpg)
 
-<sub>Left: what a one-line prompt produced for a fictional weekly planner. Right: the same direction designed further with the kit.</sub>
+<sub>Margin, an invented weekly planner. Left: a fresh AI session given one line. Right: the same idea taken through a brief, references, a chosen direction and a design system, with an earlier version of this kit. The full story is in [Designed, not generated](https://stevensmith.dev/writing/designed-not-generated).</sub>
 
 **Eleven skills that help an AI agent design better.**
 
