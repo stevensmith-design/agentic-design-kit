@@ -2,11 +2,11 @@
 
 ![Side-by-side landing page for a fictional weekly planner: a one-line generated version on the left, the same direction designed further on the right](https://raw.githubusercontent.com/stevensmith-design/agentic-design-kit/main/.github/assets/hero.jpg)
 
-<sub>Margin, an invented weekly planner. Left: a fresh AI session given one line. Right: the same idea taken through a brief, references, a chosen direction and a design system, with an earlier version of this kit. The full story is in [Designed, not generated](https://stevensmith.dev/writing/designed-not-generated).</sub>
+<sub>Margin, an invented weekly planner. Left: a fresh AI session given one line. Right: the same idea taken through a brief, references, a chosen direction and a design system, with an earlier version of this kit. The full story is in [Designed, not generated](https://stevensmith.dev/writing/designed-not-generated?utm_source=github&utm_campaign=agentic-design-kit).</sub>
 
 **Eleven skills that help an AI agent design better.**
 
-Made by Steven Smith. More of my work: [stevensmith.dev](https://stevensmith.dev)
+Made by Steven Smith. More of my work: [stevensmith.dev](https://stevensmith.dev?utm_source=github&utm_campaign=agentic-design-kit)
 
 For anyone designing pages or apps with an AI agent such as Claude. Explore from real references,
 build a selected direction, review the rendered result, and create reusable visual guidelines and
@@ -30,8 +30,8 @@ its place. Passing a detector is a quality floor, not proof of good design.
 Steven Smith’s field report explains the design approach behind the kit: context, visual
 references, exploration, reusable guidelines and review. Some examples use earlier kit versions.
 
-- [English: Designed, not generated](https://stevensmith.dev/writing/designed-not-generated)
-- [日本語: 生成ではなく、デザインを。](https://stevensmith.dev/ja/writing/designed-not-generated)
+- [English: Designed, not generated](https://stevensmith.dev/writing/designed-not-generated?utm_source=github&utm_campaign=agentic-design-kit)
+- [日本語: 生成ではなく、デザインを。](https://stevensmith.dev/ja/writing/designed-not-generated?utm_source=github&utm_campaign=agentic-design-kit)
 
 ## Choose how to use it
 
