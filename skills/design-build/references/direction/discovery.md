@@ -35,7 +35,8 @@ ahead" or "you decide", infer the answers, state them in one line, and carry on.
 
 When there are no references and no system, mention once, in one line, that a few reference
 images usually lift the result, and offer to suggest direction ideas or search terms. Then carry
-on with the work; don't stop and wait for an answer.
+on with the work; don't stop and wait for an answer. Don't make the offer when the person has
+asked for starters, supplied references, or already declined.
 
 Only when the person asks for that help: give a few direction ideas that come from what the
 content is about, with one line each on why it fits and a recommendation. Then search terms for

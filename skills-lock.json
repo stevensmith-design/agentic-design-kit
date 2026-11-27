@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-27T14:40:01Z",
+  "generated": "2026-11-27T14:53:21Z",
   "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
@@ -25,7 +25,7 @@
     },
     "design-build": {
       "fileCount": 271,
-      "rollup": "1867832759634a6e44d6906546fbd313f9ba73a0cedf6ef10c534f14cc572413",
+      "rollup": "4907efbdd72c21a6be0c961e320f59ecdfce400c744bd57ae960c4c538203005",
       "files": {
         "SKILL.md": "5de51d33ab587bdfc1c57be548a47845f39ed82c00f1c9ab4cfc9f99b48b2bac",
         "evals/evals.json": "0b3a99cfef598afd1df308edf18114dd79ff0837229863a2de25a0aed41b1c0c",
@@ -36,7 +36,7 @@
         "references/build/redesign.md": "ec300b220024f5924f353a6db4f4cc31f14792fe1e529329a57a34544c05c90e",
         "references/build/variation.md": "d38c43ece20ed34eb39c8be67190d4059e40dd04f1322664577a48c1cf11d508",
         "references/direction/custom-direction.md": "cb3636f1e08de330439ac85129c84984c612ce466cd0ef0beaa1537bf547f5b0",
-        "references/direction/discovery.md": "3330d68625649de6542fa8d6820e7a6d8ca239de9026fb51774e20c836da372d",
+        "references/direction/discovery.md": "a40876b2ab2b1814f0563235aff02cd56cd015a9ffdc58efc488afee6d167c74",
         "references/direction/routes.md": "e0486e26eb61a38ac067a9e5184bcf7746c61c4db70f5ec11d66ff6b8602ba15",
         "references/skill-invocation.md": "c68eeeb811539c2bd46239ef605dc73aafd19177c89fd7ddc3309774a94d3ca5",
         "references/structures/index.md": "bb2e2265f9801edbf5098c14905e702bdbf5c5c53816f5063f0a0ad3c1b42600",
@@ -415,9 +415,9 @@
     },
     "direction-study": {
       "fileCount": 73,
-      "rollup": "c2044eaec10efb47abda0e033cdd5e36926898391b2d7e3bcac741341e6df193",
+      "rollup": "5b26cd1a3f871c495d1785ec15a8bafb81f9a1504d98bc566f27b59f003330d3",
       "files": {
-        "SKILL.md": "92228d91ca9313447dc6519eb23d3986d7a86840c2c0f36c2ef98593ede12234",
+        "SKILL.md": "383a9eee274ba4b22a328b00efd099edd216c83ceb07c3a96fba31bd51ffea97",
         "evals/evals.json": "b56867043b8a7c0d73bbf575386552dc5ff202b2415be1ed67c76df6a72295d9",
         "references/comparison-report.md": "b9ac187acf90601328081aca36c9813819256f1f42e29f06c913b86109e57f72",
         "references/diagnostics.md": "3e1b571436fe2d278886d8c7e6e34fa5cbdf977db56e306e4e66e05eaf173efa",
