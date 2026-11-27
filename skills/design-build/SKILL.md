@@ -95,6 +95,8 @@ human-approved direction. No compatible machine-readable brand and no system →
 Create (a prose `BRAND.md` is an input, not a substitute). A system exists → `/ui-design-system`
 Reconcile when the direction adds to it; otherwise consume it. Intent, then principles, then
 tokens. Unsettled things stay provisional until a person accepts them; never invent brand facts.
+This includes a single page or post: create a short page-scoped `DESIGN.md` + `tokens.json` so the
+build and its review have something to hold to. Skip only when the person explicitly says so.
 
 ### 4 · Build
 
@@ -104,31 +106,29 @@ skill running. Invoke by name (`/direction-study`, `/starter-directions`, `/bran
 to refine what exists) and follow it; if you did not, say so.
 
 Build in passes to the production bar in `references/build/passes.md`: evidence on hand, a first
-visual implementation, responsive and state work, tokens by name, then post-build verification,
-the stamp and the log entry
-(`references/build/records.md`). Run `/ui-design-principles` throughout: its
+visual implementation, responsive and state work, tokens by name, then post-build verification, the
+stamp and the log entry (`references/build/records.md`). Run `/ui-design-principles` throughout: its
 `ui-design-principles/references/quick-rules.md` before any visual decision, the named `rules.md`
-section at each decision point. **Where the
-system licenses range, spend it** — a page that never uses a size its system declares has
-under-delivered.
+section at each decision point. **Where the system licenses range, spend it** — a page that never
+uses a size its system declares has under-delivered.
 
 ### 5 · Render it, and look at it
 
 Render the real artifact and **view the image** — desktop and 375px at minimum, an intermediate
 width when it is informative, and every state the surface can actually reach: long, many, empty,
-loading and error as applicable. Not the source or scanner: this step is not satisfied by a
-green scanner; detector output is evidence of defects, never proof of done. Cannot render? Say so and mark visual findings unassessed.
+loading and error as applicable. Not the source or scanner: this step is not satisfied by a green
+scanner; detector output is evidence of defects, never proof of done. Cannot render? Say so and mark
+visual findings unassessed.
 
 **Then check it against the direction you committed to** — the things you set: the brand's prose
 rules line by line; the committed composition, parts and signature moves; the range the system
-licensed; one implementation per component (count them); the floor — `scan.sh` and
-`findings.mjs`. A variation record may diagnose accidental repetition after the build, but it does
-not steer the initial aesthetic. Ask
-of the page: is the idea clear, is the hierarchy earned, is it executed, is it specific to this
-brief, and is it restrained? **After the final artifact edit**, rerun
-the validator and the whole floor; copy their final status words and counts into the report. Exit 0
-may still mean **PASS WITH WARNINGS**: name every WARN, SKIP and UNVERIFIED result rather than
-rounding it to clean. Report what you measured and eyeballed. **This is not a review.**
+licensed; one implementation per component (count them); the floor — `scan.sh` and `findings.mjs`. A
+variation record may diagnose accidental repetition after the build, but it does not steer the
+initial aesthetic. Ask of the page: is the idea clear, is the hierarchy earned, is it executed, is
+it specific to this brief, and is it restrained? **After the final artifact edit**, rerun the
+validator and the whole floor; copy their final status words and counts into the report. Exit 0 may
+still mean **PASS WITH WARNINGS**: name every WARN, SKIP and UNVERIFIED result rather than rounding
+it to clean. Report what you measured and eyeballed. **This is not a review.**
 
 ### 6 · Delegate the review
 
