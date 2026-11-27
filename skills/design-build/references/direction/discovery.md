@@ -25,11 +25,26 @@ once — one bundled question, not a questionnaire:
 
 > Before I start: who is this for, what is the one thing they should do or understand, and what
 > should it feel like — pick an extreme rather than a middle (e.g. "quiet and exact", "loud and
-> warm")?
+> warm") — or something it belongs with (an object, place, era or artefact)?
 
 Name the **visitor mode** of each surface while you are at it: *Persuade* (marketing), *Operate*
 (product UI), *Read* (long-form). It decides more than any style word. If the person says "go
 ahead" or "you decide", infer the answers, state them in one line, and carry on.
+
+## Ideas and inspiration — no references, no system
+
+When there are no references and no system, mention once, in one line, that a few reference
+images usually lift the result, and offer to suggest direction ideas or search terms. Then carry
+on with the work; don't stop and wait for an answer. Don't make the offer when the person has
+asked for starters, supplied references, or already declined.
+
+Only when the person asks for that help: give a few direction ideas that come from what the
+content is about, with one line each on why it fits and a recommendation. Then search terms for
+sites like Dribbble or Behance and for non-UI sources (posters, packaging, manuals, archives),
+saying what to look for in each image. Images that come back make it reference-led; take their
+style, never their logos, marks or names. The agent never supplies reference images itself. If the
+person would rather not search, ready-made starters (`/starter-directions`) remain an option. No
+fixed counts.
 
 ## Discovery — shaping a brief
 
@@ -44,7 +59,8 @@ three decisions before any direction is proposed:
    phone on a dim train platform", "open all day on a second monitor"). It settles dark vs light
    and density better than adjectives.
 3. **References, if any** — the person's own. Named references route the build to
-   reference-led (`/direction-study`); the agent never supplies references of its own.
+   reference-led (`/direction-study`); the agent never supplies references of its own. None yet: see
+   *Ideas and inspiration* below.
 
 State the obvious option and ask the person to confirm it rather than offering a menu. Write the
 result as a short brief (audience, job, content, constraints, visitor mode, colour strategy,

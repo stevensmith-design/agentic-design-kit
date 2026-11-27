@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- No-reference work: discovery mentions once that reference images usually lift the result and
+  offers direction ideas and search terms (UI and non-UI sources) only when asked; the one
+  question also accepts something the work belongs with. Brief-originated work names the obvious
+  idea and discards it.
 - README: links to stevensmith.dev carry `utm_source=github` and the repo name, so visits from the repo can be counted.
 - README: title "Agentic Design Kit", a one-line promise matching the portfolio, a "Made by" line, an audience line, a three-step "Try it" and links to the latest release.
 

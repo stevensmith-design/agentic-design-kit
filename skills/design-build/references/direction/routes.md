@@ -48,6 +48,8 @@ A rich brief, no visual direction. Develop original directions through `/directi
 audience, content and desired experience. Do not open the starter catalogue merely because visual
 direction is missing. Offer `/starter-directions` only when the person says they have no idea,
 explicitly asks for ready-made directions, or hands off the choice after original exploration.
+No references yet: see *Ideas and inspiration* in `discovery.md`. Name the obvious idea for this
+content and discard it.
 
 ## starter-led
 
@@ -59,6 +61,7 @@ it should feel. A brief that answers it is **rich**: use brief-originated. Invok
 custom direction built from the brief (`custom-direction.md`, on demand). Going custom forfeits the
 starter's signature moves and ambition — say what you are giving up. If the person then supplies
 references, the route becomes reference-led.
+No references yet: see *Ideas and inspiration* in `discovery.md`.
 
 **Nobody to ask.** If the person handed the choice back or cannot be reached, pick one of the
 recommended starters (or custom), say which and why, and keep the route **starter-led** with

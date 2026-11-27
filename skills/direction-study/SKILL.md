@@ -60,7 +60,9 @@ report the limitation instead of silently changing deliverable.
   right to do so. Record what may be followed and what must not transfer.
 - **Brief-originated** — when a sufficiently rich brief exists without visual references. Work from
   its content, audience and desired experience. Do not open a starter catalogue unless the person
-  asks for one or explicitly hands off visual direction.
+  asks for one or explicitly hands off visual direction. When the person asks for help finding a
+  direction or inspiration, follow *Ideas and inspiration* in
+  `../design-build/references/direction/discovery.md`.
 - **Single-source study** — when the request is to understand one source rather than make directions.
   Follow `references/source-study.md` and stop without building.
 - **Single-contract mode** — when `/design-build` needs one direction rather than alternatives. Run
