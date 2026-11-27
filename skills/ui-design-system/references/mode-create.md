@@ -55,7 +55,8 @@ hold). A greenfield Create run with an unresolved WARN, a missing Layer-4 record
 **Page-scoped Create.** A single page or post gets a short page-scoped `DESIGN.md` + `tokens.json`.
 It fills the four layers briefly: intent, colour/type/spacing principles, the tokens used, and the
 key relationships (contrast pairs, signature device). Skip component sections the page doesn't
-have. The required outputs and the final `--strict` run above still apply.
+have. Aim for under about 100 lines of DESIGN.md. The required outputs and the final `--strict`
+run above still apply.
 
 ### Worked example — a filled Layer-4 entry
 

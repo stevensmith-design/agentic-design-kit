@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-27T15:31:27Z",
+  "generated": "2026-11-27T16:37:44Z",
   "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
@@ -988,7 +988,7 @@
     },
     "ui-design-system": {
       "fileCount": 59,
-      "rollup": "7f7099b4d97262253598f4e996c53e70fe18a7a1472e0ce5870c433aedab2089",
+      "rollup": "97314564ae7b80f8ee2be31f1c7d49f75d9f4c2daaf5aa8aabf15170a858d8d9",
       "files": {
         "SKILL.md": "887a3bca00535728eff90ee1fd4c259ab5e5631c6e4e742e873fa484406ef87f",
         "evals/evals.json": "16dc7559135db2200834e18eb85a04eca5b90e3d339a8334e4d022ee4b6ab73b",
@@ -997,7 +997,7 @@
         "references/component-spec-template.md": "f8c9f8e329fba6c923ed425e5371068d305cbd6bdcc570f692882e16e41ff8e5",
         "references/design-system-layers.md": "b31ee74b899ce1de2f6c78b578dcb841e818abe22fe2ea674b7c8d114d472383",
         "references/mode-coherence.md": "b1e705607f70b73f8ff2dd600cce4c34452d7455518be4ee4544a44e1a40e8c0",
-        "references/mode-create.md": "5aa2e3fc8d73d4cbf4db6b805111ea85f8268c6a75ef944049b524400485e0fb",
+        "references/mode-create.md": "7227a280394515b5119db3e0d68204a715b26434e6729b49dd4f644bf878d863",
         "references/mode-drift.md": "7b36a5bac578680c2d20b7e597d43e7d6dfcc58a7a2e2fa444b5c0fe7af461f7",
         "references/mode-extract.md": "593cbed9ea7e86a15e1bb780b5787e70676d6384cf4f94052522279a4009283b",
         "references/validator-checks.md": "587548f7b262b10f2bddd65fcf0c413a82dd1cd14c2c7ca25cd6d1a11990019c",

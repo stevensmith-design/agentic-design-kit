@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- A single page or post gets a short page-scoped `DESIGN.md` + `tokens.json` (under about 100 lines
+  of DESIGN.md) unless the person explicitly skips it, so the build and its review have something
+  to hold to.
 - No-reference work: discovery mentions once that reference images usually lift the result and
   offers direction ideas and search terms (UI and non-UI sources) only when asked; the one
   question also accepts something the work belongs with. Brief-originated work names the obvious
