@@ -40,10 +40,9 @@ with tempfile.TemporaryDirectory() as td:
  expect('relocatable',check.returncode==0,check.stderr)
  r=subprocess.run([sys.executable,str(script),'--kit-root',str(moved/'.agentic-design-kit'),'--name','nested'],capture_output=True,text=True)
  expect('embedded-kit-no-recursion',r.returncode==2 and 'embedded kit' in r.stderr and not (moved/'nested').exists(),r.stderr)
- # Raw source under a repository: the app belongs outside the entire checkout.
- checkout=base/'checkout';(checkout/'.git').mkdir(parents=True)
- shutil.copytree(source,checkout/'v2')
- r=subprocess.run([sys.executable,str(script),'--kit-root',str(checkout/'v2'),'--name','outside-checkout'],capture_output=True,text=True)
+ # A repository checkout of the kit: the app belongs outside the entire checkout.
+ checkout=base/'checkout';shutil.copytree(source,checkout);(checkout/'.git').mkdir(exist_ok=True)
+ r=subprocess.run([sys.executable,str(script),'--kit-root',str(checkout),'--name','outside-checkout'],capture_output=True,text=True)
  expect('outside-repository',r.returncode==0 and (base/'outside-checkout').is_dir() and not (checkout/'outside-checkout').exists(),r.stderr)
  native=base/'native-kit';shutil.copytree(source,native);(native/'.claude').mkdir();(native/'skills').rename(native/'.claude/skills');(native/'START-HERE.md').rename(native/'KIT-START-HERE.md')
  r=subprocess.run([sys.executable,str(script),'--kit-root',str(native),'--destination',str(base/'native-project')],capture_output=True,text=True)
