@@ -17,6 +17,7 @@ def commit():
 
 INTERNAL_SCRIPTS=['acceptance-preflight.sh','prepare-acceptance-fixture.sh','publish-folder.sh',
                   'publish-standalone.sh','publish-plugin.sh','git.sh']
+PUBLIC_FILES=['README.md','CHANGELOG.md','CONTRIBUTING.md','INSTALL.md','SECURITY.md','AGENTS.md','.gitignore']
 PUBLIC_DOCS=['CLAUDE-TEMPLATE.md','STANDALONE-START-HERE.md','COWORK-INSTALL.md','COWORK-FOLDER-INSTRUCTIONS.txt']
 def clean_ignore(directory,names):return set(names)&{'.DS_Store','__pycache__','node_modules','_to_delete'}
 def tree(src,dst):shutil.copytree(src,dst,ignore=clean_ignore)
@@ -29,10 +30,9 @@ def export_source(dst,revision):
  (dst/'docs').mkdir()
  for name in PUBLIC_DOCS:copy(KIT/'docs'/name,dst/'docs'/name)
  for name in ['LICENSE','NOTICE','VERSION','skills-lock.json']:copy(KIT/name,dst/name)
- tree(KIT/'public',dst/'public')
- for p in (KIT/'public').iterdir():
-  if p.name=='.github':tree(p,dst/p.name)
-  elif p.is_file():copy(p,dst/p.name)
+ # The public repository is the source of truth: its root metadata and .github ship as they are.
+ for name in PUBLIC_FILES:copy(KIT/name,dst/name)
+ tree(KIT/'.github',dst/'.github')
  copy(KIT/'docs/STANDALONE-START-HERE.md',dst/'START-HERE.md')
  copy(KIT/'docs/STANDALONE-START-HERE.md',dst/'CLAUDE.md')
  copy(KIT/'plugin/plugin.json',dst/'.claude-plugin/plugin.json')

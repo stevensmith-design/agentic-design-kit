@@ -12,11 +12,11 @@ def preflight(kit):
 
 def repo_boundary(kit):
  for parent in [kit,*kit.parents]:
-  if (parent/'.git').exists() and ((parent/'skills-lock.json').is_file() or (parent/'v2/skills-lock.json').is_file()):return parent
+  if (parent/'.git').exists() and (parent/'skills-lock.json').is_file():return parent
  return kit
 
 def metadata_file(kit,name):
- candidates=([kit/'public'/name,kit/name] if name=='README.md' else [kit/name,kit/'public'/name])
+ candidates=[kit/name]
  if name=='START-HERE.md':candidates.extend([kit/'KIT-START-HERE.md',kit/'docs/STANDALONE-START-HERE.md'])
  return next((p for p in candidates if p.is_file()),None)
 

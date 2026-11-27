@@ -305,7 +305,7 @@ if [ -e "$OUT" ]; then
   exit 2
 fi
 mkdir -p "$OUT/.claude"
-sed 's/START-HERE.md/KIT-START-HERE.md/g' "$KIT/public/AGENTS.md" > "$OUT/AGENTS.md"
+sed 's/START-HERE.md/KIT-START-HERE.md/g' "$KIT/AGENTS.md" > "$OUT/AGENTS.md"
 
 cp -R "$KIT/skills" "$OUT/.claude/skills"
 cp "$KIT/skills-lock.json" "$OUT/skills-lock.json"
