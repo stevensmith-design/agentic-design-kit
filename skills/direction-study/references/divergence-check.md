@@ -20,7 +20,3 @@ or signature devices to force divergence. When structural alternatives are reque
 copy swap does not satisfy them. Revise or remove options that do not expose a useful decision.
 Do not force every direction into the same table, proof shape, page skeleton or named mechanism,
 and do not make one deliberately weak to create contrast.
-
-A set that differs only in accent hue, font pair and one device is one direction: regenerate it.
-When the directions originate from the brief rather than from references, each starts from a
-different premise and source world (`../../design-build/references/direction/origination.md`).

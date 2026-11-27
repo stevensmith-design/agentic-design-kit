@@ -2,12 +2,10 @@
 
 ## Unreleased
 
-- No-reference builds: discovery offers an inspiration brief (concept ideas, search terms for UI
-  and non-UI sources, what to collect each image for) before any build, and the one question asks
-  for a concrete anchor instead of an adjective. When the choice is handed over, the new on-demand
-  `origination.md` gives brief-originated work a source-world method and designed-not-generated
-  tests. The divergence check treats hue/font/one-device variants as one direction; the custom
-  direction's accent, type and italic limits become defaults a contract may override with a reason.
+- No-reference work: discovery mentions once that reference images usually lift the result and
+  offers direction ideas and search terms (UI and non-UI sources) only when asked; the one
+  question also accepts something the work belongs with. Brief-originated work names the obvious
+  idea and discards it.
 - README: links to stevensmith.dev carry `utm_source=github` and the repo name, so visits from the repo can be counted.
 - README: title "Agentic Design Kit", a one-line promise matching the portfolio, a "Made by" line, an audience line, a three-step "Try it" and links to the latest release.
 

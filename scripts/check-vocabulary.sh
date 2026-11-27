@@ -159,20 +159,6 @@ must_not_have "the retired live route \"brief-derived\" is gone" "brief-derived"
   "$S/design-build/SKILL.md" "$S/design-build/references" "$S/design-build/evals" \
   "$S/direction-study/SKILL.md" "$S/direction-study/references" "$S/direction-study/evals"
 
-# Origination (2026-11-27). With no references and no system, discovery offers the "inspiration
-# brief" and origination works from a "source world"; the routes and the study name them the same
-# way. The retired adjective prompt asked for a mood extreme instead of a concrete anchor.
-must_have "the no-reference offer is the \"inspiration brief\" wherever it is routed" \
-  "inspiration brief" "$S/design-build/references/direction/discovery.md" \
-  "$S/design-build/references/direction/routes.md" "$S/design-build/references/direction/origination.md" \
-  "$S/direction-study/SKILL.md"
-must_have "an originated direction starts from a \"source world\"" "source world" \
-  "$S/design-build/references/direction/origination.md" \
-  "$S/design-build/references/direction/discovery.md" \
-  "$S/direction-study/references/divergence-check.md"
-must_not_have "the one question asks for a concrete anchor, not an adjective extreme" "pick an extreme" \
-  "$S/design-build" "$S/direction-study" "$S/starter-directions"
-
 # Always-loaded files carry no theme or starter names and no catalogue compositions. A visual
 # example in context is a high-weight prior; these files are in context on every task. Since Phase 4
 # the same holds for every review lens, for design-build and its structure library (evals may name a
