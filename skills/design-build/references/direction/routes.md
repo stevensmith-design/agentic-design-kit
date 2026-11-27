@@ -44,17 +44,21 @@ they are. Distance is **suspended**.
 
 ## brief-originated
 
-A rich brief, no visual direction. Develop original directions through `/direction-study` from the
-audience, content and desired experience. Do not open the starter catalogue merely because visual
-direction is missing. Offer `/starter-directions` only when the person says they have no idea,
-explicitly asks for ready-made directions, or hands off the choice after original exploration.
+A rich brief, no visual direction. Unless the person has already handed the choice over, first
+offer the inspiration brief (`discovery.md`) and wait; images that arrive make it reference-led.
+Otherwise develop original directions through `/direction-study` from the audience, content and
+desired experience, using `origination.md`. Do not open the starter catalogue merely because visual
+direction is missing; "no idea yet" gets the inspiration brief, not starters. Offer
+`/starter-directions` only when the person explicitly asks for ready-made directions or hands off
+the choice after original exploration.
 
 ## starter-led
 
 A sparse brief, no references, no system, and the direction handed to you. **Sparse** means the
 brief cannot answer the one question (`discovery.md`): who it is for, what they come to do, and how
 it should feel. A brief that answers it is **rich**: use brief-originated. Invoke
-`/starter-directions`: it asks what it must, recommends two or three, and waits. Commit to
+`/starter-directions`: it asks what it must, recommends two or three, and waits. In the same
+message, offer the inspiration brief (`discovery.md`) as the alternative to a starter. Commit to
 **exactly one** of: a starter the person selected (then the route becomes approved-direction), or a
 custom direction built from the brief (`custom-direction.md`, on demand). Going custom forfeits the
 starter's signature moves and ambition — say what you are giving up. If the person then supplies

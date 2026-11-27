@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-05T18:10:20Z",
+  "generated": "2026-11-27T13:06:46Z",
   "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
@@ -24,8 +24,8 @@
       }
     },
     "design-build": {
-      "fileCount": 271,
-      "rollup": "b1130fd808d4bf72316cedaf2b4fee8a2f2ba0d400a6ef35d18d2cf7414c2184",
+      "fileCount": 272,
+      "rollup": "32cc5ebe7643b5083def2b4f5f1954678c462799757f3dc821baa1f12e23954b",
       "files": {
         "SKILL.md": "5de51d33ab587bdfc1c57be548a47845f39ed82c00f1c9ab4cfc9f99b48b2bac",
         "evals/evals.json": "0b3a99cfef598afd1df308edf18114dd79ff0837229863a2de25a0aed41b1c0c",
@@ -35,9 +35,10 @@
         "references/build/records.md": "c7e42eeca759ac66d4942ea9da6e1d3803e561db12ecde6a322338728b9ba280",
         "references/build/redesign.md": "ec300b220024f5924f353a6db4f4cc31f14792fe1e529329a57a34544c05c90e",
         "references/build/variation.md": "d38c43ece20ed34eb39c8be67190d4059e40dd04f1322664577a48c1cf11d508",
-        "references/direction/custom-direction.md": "cb3636f1e08de330439ac85129c84984c612ce466cd0ef0beaa1537bf547f5b0",
-        "references/direction/discovery.md": "fd0721c4e0312a0783d263e9730afb405813f458929924e6ed29e4f90495ae3b",
-        "references/direction/routes.md": "ec86aa814e89be95ee74eef2c4973c275f54feac47ca9d31d8fcb701564e6387",
+        "references/direction/custom-direction.md": "0caec32409ac8757741971e30e4f8c7bf3e943ade09fd196ee9c91d0d3806918",
+        "references/direction/discovery.md": "e4e71b7813f4c9bb201ed53d2c44cf54c556a085d87c2d57424f23ed9b17ff03",
+        "references/direction/origination.md": "beca085ca3858d2484513c7cad4b8c63353097316ce04fe5b1468ecac775713f",
+        "references/direction/routes.md": "734cf7ff5dfbd7f6d08c221837630365eb1c4890462f948c2a12959d566bdea8",
         "references/skill-invocation.md": "c68eeeb811539c2bd46239ef605dc73aafd19177c89fd7ddc3309774a94d3ca5",
         "references/structures/index.md": "bb2e2265f9801edbf5098c14905e702bdbf5c5c53816f5063f0a0ad3c1b42600",
         "references/structures/pages/catalogue.md": "785c7ce2e7842378d09bd840b08fbebb2ccef79ae453725870a51a209df204d3",
@@ -415,13 +416,13 @@
     },
     "direction-study": {
       "fileCount": 73,
-      "rollup": "c2044eaec10efb47abda0e033cdd5e36926898391b2d7e3bcac741341e6df193",
+      "rollup": "3aa0085d443431fa4100cfe9a3520995000ea82f18c29e621e6d154fae57ca38",
       "files": {
-        "SKILL.md": "92228d91ca9313447dc6519eb23d3986d7a86840c2c0f36c2ef98593ede12234",
+        "SKILL.md": "c17b560435c33b5bb0bc79e4a9ca2ef79df7c58653c4d3c255345f6742aab03f",
         "evals/evals.json": "b56867043b8a7c0d73bbf575386552dc5ff202b2415be1ed67c76df6a72295d9",
         "references/comparison-report.md": "b9ac187acf90601328081aca36c9813819256f1f42e29f06c913b86109e57f72",
         "references/diagnostics.md": "3e1b571436fe2d278886d8c7e6e34fa5cbdf977db56e306e4e66e05eaf173efa",
-        "references/divergence-check.md": "9a1663a3410ede905426d431b09ff6e60db01e7d98d76282788ce05e4a54d8b7",
+        "references/divergence-check.md": "918ec3c67e438e9d9d9b9b95dabd467f4199a12ed8c7eea34e7bb44f43aed80f",
         "references/reference-study.md": "5d895bbc3b99c8169c5de1ee1a7ae9db7d69db63611f07f3baaeed3d694bd6a3",
         "references/similarity-review.md": "09c67a2934066892593b27004f3d4242cb774120800aed49f4cd3c9c48a186c2",
         "references/source-study.md": "01b235bb724ed504afc948f7d5c4fa5103b7e3aa80615285f5f4945f8cc1b900",

@@ -24,12 +24,28 @@ When the brief does not say who this is for, what they come to do, and how it sh
 once — one bundled question, not a questionnaire:
 
 > Before I start: who is this for, what is the one thing they should do or understand, and what
-> should it feel like — pick an extreme rather than a middle (e.g. "quiet and exact", "loud and
-> warm")?
+> does it belong with — an object, material, place, era or artefact (e.g. "a field notebook", "a
+> 1970s transit map")? A concrete anchor tells me more than adjectives.
 
 Name the **visitor mode** of each surface while you are at it: *Persuade* (marketing), *Operate*
 (product UI), *Read* (long-form). It decides more than any style word. If the person says "go
 ahead" or "you decide", infer the answers, state them in one line, and carry on.
+
+## Inspiration brief — no references, no system
+
+Adjectives produce averages, and UI-only references produce UI averages. When the person supplies
+no references and no system applies, offer an inspiration brief before any build or proof — in
+the same message as the one question when both are needed. Offer two or three concept ideas. Each:
+
+- **Premise** — one line: the idea and the source world it borrows from (`origination.md`).
+- **Search terms** — four to six, for Dribbble, Behance, Savee, Are.na or Cosmos *and* for non-UI
+  sources: book covers, posters, packaging, manuals, signage, archives.
+- **Collect for** — what each image should show: type, colour, composition, texture or imagery.
+
+Ask for three to eight images, at least one of them non-UI, then stop and wait. Images that
+arrive route the work reference-led. "Just go" or "you decide" — now, or already in the request —
+continues brief-originated with `origination.md`; say in one line that the brief was skipped.
+Search terms are not references: the agent still never supplies references of its own.
 
 ## Discovery — shaping a brief
 
@@ -44,7 +60,8 @@ three decisions before any direction is proposed:
    phone on a dim train platform", "open all day on a second monitor"). It settles dark vs light
    and density better than adjectives.
 3. **References, if any** — the person's own. Named references route the build to
-   reference-led (`/direction-study`); the agent never supplies references of its own.
+   reference-led (`/direction-study`); the agent never supplies references of its own. None yet:
+   offer the inspiration brief above.
 
 State the obvious option and ask the person to confirm it rather than offering a menu. Write the
 result as a short brief (audience, job, content, constraints, visitor mode, colour strategy,
