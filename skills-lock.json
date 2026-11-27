@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-27T14:53:21Z",
+  "generated": "2026-11-27T16:37:44Z",
   "provenance": "SHA-256 snapshot of the canonical agentic-design-kit workflow sources",
   "skills": {
     "brand-to-system": {
@@ -25,9 +25,9 @@
     },
     "design-build": {
       "fileCount": 271,
-      "rollup": "4907efbdd72c21a6be0c961e320f59ecdfce400c744bd57ae960c4c538203005",
+      "rollup": "e8beeced9e876cba34567728b73423b0a196ffdf71060f50b32ba474a2c3ea1e",
       "files": {
-        "SKILL.md": "5de51d33ab587bdfc1c57be548a47845f39ed82c00f1c9ab4cfc9f99b48b2bac",
+        "SKILL.md": "a21e4a6e484bf3c783de5109be292a03136b002b70f0d3056d77299b14dfafeb",
         "evals/evals.json": "0b3a99cfef598afd1df308edf18114dd79ff0837229863a2de25a0aed41b1c0c",
         "references/build/component-scope.md": "baa439ab107dc828c5e3eeeeda38f9c7660f0ecf200596c74fb9487e2a5fc8ad",
         "references/build/enrichment.md": "abe461ab5387b070e0e91b3415154e0918d46109b1aacc52e21370e93c032c3b",
@@ -988,7 +988,7 @@
     },
     "ui-design-system": {
       "fileCount": 59,
-      "rollup": "17476f4f3579d1e541e2f67d6f23904fb39814e6b4672be519fd4a4886894d74",
+      "rollup": "97314564ae7b80f8ee2be31f1c7d49f75d9f4c2daaf5aa8aabf15170a858d8d9",
       "files": {
         "SKILL.md": "887a3bca00535728eff90ee1fd4c259ab5e5631c6e4e742e873fa484406ef87f",
         "evals/evals.json": "16dc7559135db2200834e18eb85a04eca5b90e3d339a8334e4d022ee4b6ab73b",
@@ -997,7 +997,7 @@
         "references/component-spec-template.md": "f8c9f8e329fba6c923ed425e5371068d305cbd6bdcc570f692882e16e41ff8e5",
         "references/design-system-layers.md": "b31ee74b899ce1de2f6c78b578dcb841e818abe22fe2ea674b7c8d114d472383",
         "references/mode-coherence.md": "b1e705607f70b73f8ff2dd600cce4c34452d7455518be4ee4544a44e1a40e8c0",
-        "references/mode-create.md": "007ae64c5ef08ebd932154d1310ab4a3611642b0858425f8579ec9dc257ed85e",
+        "references/mode-create.md": "7227a280394515b5119db3e0d68204a715b26434e6729b49dd4f644bf878d863",
         "references/mode-drift.md": "7b36a5bac578680c2d20b7e597d43e7d6dfcc58a7a2e2fa444b5c0fe7af461f7",
         "references/mode-extract.md": "593cbed9ea7e86a15e1bb780b5787e70676d6384cf4f94052522279a4009283b",
         "references/validator-checks.md": "587548f7b262b10f2bddd65fcf0c413a82dd1cd14c2c7ca25cd6d1a11990019c",
