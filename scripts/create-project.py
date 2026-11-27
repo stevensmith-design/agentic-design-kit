@@ -16,7 +16,7 @@ def repo_boundary(kit):
  return kit
 
 def metadata_file(kit,name):
- candidates=([kit/'public'/name,kit/name] if name=='README.md' else [kit/name,kit/'public'/name])
+ candidates=[kit/name]
  if name=='START-HERE.md':candidates.extend([kit/'KIT-START-HERE.md',kit/'docs/STANDALONE-START-HERE.md'])
  return next((p for p in candidates if p.is_file()),None)
 
